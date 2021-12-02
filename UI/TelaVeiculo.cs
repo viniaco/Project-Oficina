@@ -22,6 +22,7 @@ namespace WF_OficinaTcc
 
         private void btnCadastrarVeic_Click(object sender, EventArgs e)
         {
+            //Botao de cadastro
             cadastro = new Veiculo();
             cadastro.Nome = txtNomeVeiculo.Text;
             cadastro.Ano = txtAno.Text;
