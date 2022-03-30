@@ -89,11 +89,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TelaAgendamento.cs">
+    <Compile Include="TelaServicoItem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaAgendamento.Designer.cs">
-      <DependentUpon>TelaAgendamento.cs</DependentUpon>
+    <Compile Include="TelaServicoItem.Designer.cs">
+      <DependentUpon>TelaServicoItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaOS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaOS.Designer.cs">
+      <DependentUpon>TelaOS.cs</DependentUpon>
     </Compile>
     <Compile Include="TelaCliente.cs">
       <SubType>Form</SubType>
@@ -115,8 +121,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="TelaAgendamento.resx">
-      <DependentUpon>TelaAgendamento.cs</DependentUpon>
+    <EmbeddedResource Include="TelaServicoItem.resx">
+      <DependentUpon>TelaServicoItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaOS.resx">
+      <DependentUpon>TelaOS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TelaCliente.resx">
       <DependentUpon>TelaCliente.cs</DependentUpon>

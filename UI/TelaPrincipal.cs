@@ -70,7 +70,7 @@ namespace WF_OficinaTcc
         private void btnAgendamento_Click(object sender, EventArgs e)
         {
             Tela?.Close();
-            Tela = new TelaAgendamento
+            Tela = new TelaOS
             {
                 TopLevel = false,
                 Dock = DockStyle.Fill,

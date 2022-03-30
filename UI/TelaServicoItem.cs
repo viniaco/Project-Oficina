@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace WF_OficinaTcc
 {
-    public partial class TelaAgendamento : Form
+    public partial class TelaServicoItem : Form
     {
-        public TelaAgendamento()
+        public TelaServicoItem()
         {
             InitializeComponent();
         }
 
-        private void TelaAgendamento_Load(object sender, EventArgs e)
+        private void TelaServicoItem_Load(object sender, EventArgs e)
         {
 
         }
