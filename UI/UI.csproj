@@ -89,45 +89,54 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TelaServicoItem.cs">
+    <Compile Include="Formularios\TelaUsuario .cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaServicoItem.Designer.cs">
+    <Compile Include="Formularios\TelaUsuario .Designer.cs">
+      <DependentUpon>TelaUsuario .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\TelaServicoItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\TelaServicoItem.Designer.cs">
       <DependentUpon>TelaServicoItem.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaOS.cs">
+    <Compile Include="Formularios\TelaOS.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaOS.Designer.cs">
+    <Compile Include="Formularios\TelaOS.Designer.cs">
       <DependentUpon>TelaOS.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaCliente.cs">
+    <Compile Include="Formularios\TelaCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaCliente.Designer.cs">
+    <Compile Include="Formularios\TelaCliente.Designer.cs">
       <DependentUpon>TelaCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaPrincipal.cs">
+    <Compile Include="Formularios\TelaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaPrincipal.Designer.cs">
+    <Compile Include="Formularios\TelaPrincipal.Designer.cs">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaVeiculo.cs">
+    <Compile Include="Formularios\TelaVeiculo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaVeiculo.Designer.cs">
+    <Compile Include="Formularios\TelaVeiculo.Designer.cs">
       <DependentUpon>TelaVeiculo.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="TelaServicoItem.resx">
+    <EmbeddedResource Include="Formularios\TelaUsuario .resx">
+      <DependentUpon>TelaUsuario .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\TelaServicoItem.resx">
       <DependentUpon>TelaServicoItem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaOS.resx">
+    <EmbeddedResource Include="Formularios\TelaOS.resx">
       <DependentUpon>TelaOS.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaCliente.resx">
+    <EmbeddedResource Include="Formularios\TelaCliente.resx">
       <DependentUpon>TelaCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -140,10 +149,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="TelaPrincipal.resx">
+    <EmbeddedResource Include="Formularios\TelaPrincipal.resx">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaVeiculo.resx">
+    <EmbeddedResource Include="Formularios\TelaVeiculo.resx">
       <DependentUpon>TelaVeiculo.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
