@@ -52,6 +52,10 @@ namespace WF_OficinaTcc
             this.label10 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.btnBuscaVeic = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -203,7 +207,7 @@ namespace WF_OficinaTcc
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(41, 216);
+            this.label9.Location = new System.Drawing.Point(41, 275);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(90, 17);
             this.label9.TabIndex = 15;
@@ -212,17 +216,17 @@ namespace WF_OficinaTcc
             // txtObs
             // 
             this.txtObs.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtObs.Location = new System.Drawing.Point(46, 236);
+            this.txtObs.Location = new System.Drawing.Point(44, 295);
             this.txtObs.Multiline = true;
             this.txtObs.Name = "txtObs";
-            this.txtObs.Size = new System.Drawing.Size(679, 155);
+            this.txtObs.Size = new System.Drawing.Size(500, 96);
             this.txtObs.TabIndex = 16;
             // 
             // btnCadastrarVeic
             // 
             this.btnCadastrarVeic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnCadastrarVeic.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrarVeic.Location = new System.Drawing.Point(731, 234);
+            this.btnCadastrarVeic.Location = new System.Drawing.Point(731, 416);
             this.btnCadastrarVeic.Name = "btnCadastrarVeic";
             this.btnCadastrarVeic.Size = new System.Drawing.Size(106, 46);
             this.btnCadastrarVeic.TabIndex = 17;
@@ -233,7 +237,7 @@ namespace WF_OficinaTcc
             // btnEditarVeic
             // 
             this.btnEditarVeic.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditarVeic.Location = new System.Drawing.Point(731, 286);
+            this.btnEditarVeic.Location = new System.Drawing.Point(731, 468);
             this.btnEditarVeic.Name = "btnEditarVeic";
             this.btnEditarVeic.Size = new System.Drawing.Size(106, 46);
             this.btnEditarVeic.TabIndex = 18;
@@ -245,7 +249,7 @@ namespace WF_OficinaTcc
             // 
             this.btnExcluirVeic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnExcluirVeic.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluirVeic.Location = new System.Drawing.Point(731, 345);
+            this.btnExcluirVeic.Location = new System.Drawing.Point(731, 520);
             this.btnExcluirVeic.Name = "btnExcluirVeic";
             this.btnExcluirVeic.Size = new System.Drawing.Size(106, 46);
             this.btnExcluirVeic.TabIndex = 19;
@@ -283,11 +287,45 @@ namespace WF_OficinaTcc
             this.btnBuscaVeic.UseVisualStyleBackColor = false;
             this.btnBuscaVeic.Click += new System.EventHandler(this.btnBuscaVeic_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Álcool",
+            "Gasolina",
+            "Diesel"});
+            this.comboBox1.Location = new System.Drawing.Point(44, 237);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(350, 25);
+            this.comboBox1.TabIndex = 24;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(41, 217);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(55, 17);
+            this.label11.TabIndex = 23;
+            this.label11.Text = "Cliente:";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(44, 416);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(681, 150);
+            this.dataGridView1.TabIndex = 25;
+            // 
             // TelaVeiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(880, 405);
+            this.ClientSize = new System.Drawing.Size(877, 610);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.btnBuscaVeic);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label10);
@@ -313,6 +351,7 @@ namespace WF_OficinaTcc
             this.Controls.Add(this.label1);
             this.Name = "TelaVeiculo";
             this.Text = "Form2";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -343,5 +382,8 @@ namespace WF_OficinaTcc
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Button btnBuscaVeic;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

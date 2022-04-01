@@ -26,19 +26,12 @@ namespace WF_OficinaTcc
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
-            Tela?.Close();
-            Tela = new TelaVeiculo
-            {
-                TopLevel = false,
-                Dock = DockStyle.Fill,
-            };
-            panelForms.Controls.Add(Tela);
-            Tela.Show();
+
         }
 
         private void panelForms_Paint(object sender, PaintEventArgs e)
@@ -48,11 +41,11 @@ namespace WF_OficinaTcc
 
         private void TelaPrincipal_Load(object sender, EventArgs e)
         {
-           // this.TopMost = true;
+            // this.TopMost = true;
 
             //this.FormBorderStyle = FormBorderStyle.None; // Full-Screen 
 
-           // this.WindowState = FormWindowState.Maximized;
+            // this.WindowState = FormWindowState.Maximized;
         }
 
         private void toolStripButton5_Click(object sender, EventArgs e)
@@ -63,7 +56,7 @@ namespace WF_OficinaTcc
         private void btnAgendamento_Click(object sender, EventArgs e)
         {
             Tela?.Close();
-            Tela = new TelaOS
+            Tela = new TelaServicoItem
             {
                 TopLevel = false,
                 Dock = DockStyle.Fill,
@@ -89,6 +82,30 @@ namespace WF_OficinaTcc
         {
             Tela?.Close();
             Tela = new TelaUsuario
+            {
+                TopLevel = false,
+                Dock = DockStyle.Fill,
+            };
+            panelForms.Controls.Add(Tela);
+            Tela.Show();
+        }
+
+        private void veiculosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Tela?.Close();
+            Tela = new TelaVeiculo
+            {
+                TopLevel = false,
+                Dock = DockStyle.Fill,
+            };
+            panelForms.Controls.Add(Tela);
+            Tela.Show();
+        }
+
+        private void ordemDeServiçoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Tela?.Close();
+            Tela = new TelaOS
             {
                 TopLevel = false,
                 Dock = DockStyle.Fill,
