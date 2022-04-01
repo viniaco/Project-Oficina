@@ -36,12 +36,14 @@ namespace WF_OficinaTcc
             this.testeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.btnCadCliente = new System.Windows.Forms.ToolStripButton();
             this.btnCadVeiculo = new System.Windows.Forms.ToolStripButton();
             this.btnAgendamento = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.btnSair = new System.Windows.Forms.ToolStripButton();
             this.panelForms = new System.Windows.Forms.Panel();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.btnCadCliente = new System.Windows.Forms.ToolStripDropDownButton();
+            this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -93,20 +95,9 @@ namespace WF_OficinaTcc
             this.btnSair});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1177, 55);
+            this.toolStrip1.Size = new System.Drawing.Size(1569, 55);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // btnCadCliente
-            // 
-            this.btnCadCliente.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnCadCliente.Image = ((System.Drawing.Image)(resources.GetObject("btnCadCliente.Image")));
-            this.btnCadCliente.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.btnCadCliente.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnCadCliente.Name = "btnCadCliente";
-            this.btnCadCliente.Size = new System.Drawing.Size(52, 52);
-            this.btnCadCliente.Text = "Cadastrar Cliente";
-            this.btnCadCliente.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // btnCadVeiculo
             // 
@@ -128,6 +119,15 @@ namespace WF_OficinaTcc
             this.btnAgendamento.Text = "Agendamento";
             this.btnAgendamento.Click += new System.EventHandler(this.btnAgendamento_Click);
             // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(52, 52);
+            this.toolStripButton2.Text = "toolStripButton2";
+            // 
             // btnSair
             // 
             this.btnSair.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -141,30 +141,50 @@ namespace WF_OficinaTcc
             // panelForms
             // 
             this.panelForms.BackColor = System.Drawing.Color.Transparent;
-            this.panelForms.Location = new System.Drawing.Point(12, 58);
+            this.panelForms.Location = new System.Drawing.Point(16, 71);
+            this.panelForms.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelForms.Name = "panelForms";
-            this.panelForms.Size = new System.Drawing.Size(908, 534);
+            this.panelForms.Size = new System.Drawing.Size(1211, 657);
             this.panelForms.TabIndex = 3;
             this.panelForms.Paint += new System.Windows.Forms.PaintEventHandler(this.panelForms_Paint);
             // 
-            // toolStripButton2
+            // btnCadCliente
             // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(52, 52);
-            this.toolStripButton2.Text = "toolStripButton2";
+            this.btnCadCliente.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnCadCliente.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.clienteToolStripMenuItem,
+            this.usuárioToolStripMenuItem});
+            this.btnCadCliente.Image = ((System.Drawing.Image)(resources.GetObject("btnCadCliente.Image")));
+            this.btnCadCliente.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnCadCliente.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCadCliente.Name = "btnCadCliente";
+            this.btnCadCliente.Size = new System.Drawing.Size(62, 52);
+            this.btnCadCliente.Text = "Cadastrar Cliente";
+            this.btnCadCliente.Click += new System.EventHandler(this.toolStripButton2_Click);
+            // 
+            // clienteToolStripMenuItem
+            // 
+            this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.clienteToolStripMenuItem.Text = "Cadastrar Cliente";
+            this.clienteToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
+            // 
+            // usuárioToolStripMenuItem
+            // 
+            this.usuárioToolStripMenuItem.Name = "usuárioToolStripMenuItem";
+            this.usuárioToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.usuárioToolStripMenuItem.Text = "Cadastrar Usuário";
+            this.usuárioToolStripMenuItem.Click += new System.EventHandler(this.usuárioToolStripMenuItem_Click);
             // 
             // TelaPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::WF_OficinaTcc.Properties.Resources.Capa_blog;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1177, 604);
+            this.ClientSize = new System.Drawing.Size(1569, 743);
             this.Controls.Add(this.panelForms);
             this.Controls.Add(this.toolStrip1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "TelaPrincipal";
             this.Text = "TelaPrincipal";
             this.Load += new System.EventHandler(this.TelaPrincipal_Load);
@@ -182,11 +202,13 @@ namespace WF_OficinaTcc
         private System.Windows.Forms.ToolStripMenuItem testeToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton btnCadCliente;
         private System.Windows.Forms.ToolStripButton btnCadVeiculo;
         private System.Windows.Forms.ToolStripButton btnAgendamento;
         private System.Windows.Forms.ToolStripButton btnSair;
         private System.Windows.Forms.Panel panelForms;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripDropDownButton btnCadCliente;
+        private System.Windows.Forms.ToolStripMenuItem clienteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usuárioToolStripMenuItem;
     }
 }

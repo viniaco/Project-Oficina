@@ -26,14 +26,7 @@ namespace WF_OficinaTcc
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            Tela?.Close();
-            Tela = new TelaCliente
-            {
-                TopLevel = false,
-                Dock = DockStyle.Fill,
-            };
-            panelForms.Controls.Add(Tela);
-            Tela.Show();
+            
         }
 
         private void toolStripButton3_Click(object sender, EventArgs e)
@@ -78,6 +71,30 @@ namespace WF_OficinaTcc
             panelForms.Controls.Add(Tela);
             Tela.Show();
 
+        }
+
+        private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Tela?.Close();
+            Tela = new TelaCliente
+            {
+                TopLevel = false,
+                Dock = DockStyle.Fill,
+            };
+            panelForms.Controls.Add(Tela);
+            Tela.Show();
+        }
+
+        private void usuárioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Tela?.Close();
+            Tela = new TelaUsuario
+            {
+                TopLevel = false,
+                Dock = DockStyle.Fill,
+            };
+            panelForms.Controls.Add(Tela);
+            Tela.Show();
         }
     }
 }
