@@ -55,7 +55,6 @@ namespace WF_OficinaTcc
             this.btnExcluir = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtPesquisar = new System.Windows.Forms.MaskedTextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -65,8 +64,11 @@ namespace WF_OficinaTcc
             this.button2 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.tbOrdemServicoDataGridView = new System.Windows.Forms.DataGridView();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbOrdemServicoDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNome
@@ -255,7 +257,7 @@ namespace WF_OficinaTcc
             this.btnCadastrarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnCadastrarCliente.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrarCliente.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnCadastrarCliente.Location = new System.Drawing.Point(12, 512);
+            this.btnCadastrarCliente.Location = new System.Drawing.Point(675, 354);
             this.btnCadastrarCliente.Name = "btnCadastrarCliente";
             this.btnCadastrarCliente.Size = new System.Drawing.Size(102, 27);
             this.btnCadastrarCliente.TabIndex = 26;
@@ -288,7 +290,7 @@ namespace WF_OficinaTcc
             this.btnAtt.BackColor = System.Drawing.Color.Transparent;
             this.btnAtt.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAtt.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnAtt.Location = new System.Drawing.Point(126, 514);
+            this.btnAtt.Location = new System.Drawing.Point(675, 387);
             this.btnAtt.Name = "btnAtt";
             this.btnAtt.Size = new System.Drawing.Size(102, 23);
             this.btnAtt.TabIndex = 31;
@@ -301,7 +303,7 @@ namespace WF_OficinaTcc
             this.btnExcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnExcluir.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.ForeColor = System.Drawing.Color.Black;
-            this.btnExcluir.Location = new System.Drawing.Point(238, 512);
+            this.btnExcluir.Location = new System.Drawing.Point(675, 416);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(102, 25);
             this.btnExcluir.TabIndex = 32;
@@ -326,14 +328,6 @@ namespace WF_OficinaTcc
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(117, 22);
             this.textBox1.TabIndex = 33;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 345);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(869, 150);
-            this.dataGridView1.TabIndex = 37;
             // 
             // groupBox2
             // 
@@ -431,17 +425,43 @@ namespace WF_OficinaTcc
             this.label15.TabIndex = 41;
             this.label15.Text = "Estado:";
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox3.Controls.Add(this.tbOrdemServicoDataGridView);
+            this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(19, 345);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(646, 263);
+            this.groupBox3.TabIndex = 42;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Clientes";
+            // 
+            // tbOrdemServicoDataGridView
+            // 
+            this.tbOrdemServicoDataGridView.AllowUserToAddRows = false;
+            this.tbOrdemServicoDataGridView.AllowUserToDeleteRows = false;
+            this.tbOrdemServicoDataGridView.ColumnHeadersHeight = 29;
+            this.tbOrdemServicoDataGridView.Location = new System.Drawing.Point(20, 19);
+            this.tbOrdemServicoDataGridView.Name = "tbOrdemServicoDataGridView";
+            this.tbOrdemServicoDataGridView.ReadOnly = true;
+            this.tbOrdemServicoDataGridView.RowHeadersWidth = 51;
+            this.tbOrdemServicoDataGridView.Size = new System.Drawing.Size(602, 227);
+            this.tbOrdemServicoDataGridView.TabIndex = 0;
+            // 
             // TelaCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(898, 571);
+            this.ClientSize = new System.Drawing.Size(898, 699);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnExcluir);
@@ -471,9 +491,10 @@ namespace WF_OficinaTcc
             this.Name = "TelaCliente";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.TelaCliente_Load_1);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tbOrdemServicoDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -507,7 +528,6 @@ namespace WF_OficinaTcc
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.MaskedTextBox txtPesquisar;
         private System.Windows.Forms.Button button1;
@@ -517,6 +537,8 @@ namespace WF_OficinaTcc
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.DataGridView tbOrdemServicoDataGridView;
     }
 }
 

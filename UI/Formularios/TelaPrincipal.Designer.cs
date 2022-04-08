@@ -43,6 +43,7 @@ namespace WF_OficinaTcc
             this.veiculosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ordemDeServiçoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAgendamento = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.btnSair = new System.Windows.Forms.ToolStripButton();
             this.panelForms = new System.Windows.Forms.Panel();
             this.toolStrip1.SuspendLayout();
@@ -92,12 +93,14 @@ namespace WF_OficinaTcc
             this.btnCadCliente,
             this.btnCadVeiculo,
             this.btnAgendamento,
+            this.toolStripButton2,
             this.btnSair});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1028, 55);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             // 
             // btnCadCliente
             // 
@@ -164,6 +167,16 @@ namespace WF_OficinaTcc
             this.btnAgendamento.Text = "Agendamento";
             this.btnAgendamento.Click += new System.EventHandler(this.btnAgendamento_Click);
             // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = global::WF_OficinaTcc.Properties.Resources.diary;
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(52, 52);
+            this.toolStripButton2.Text = "btnDiarioOS";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click_1);
+            // 
             // btnSair
             // 
             this.btnSair.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -188,6 +201,7 @@ namespace WF_OficinaTcc
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.BackgroundImage = global::WF_OficinaTcc.Properties.Resources.manutenção_1024x683;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1028, 684);
             this.Controls.Add(this.panelForms);
@@ -218,5 +232,6 @@ namespace WF_OficinaTcc
         private System.Windows.Forms.ToolStripDropDownButton btnCadVeiculo;
         private System.Windows.Forms.ToolStripMenuItem veiculosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ordemDeServiçoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
     }
 }

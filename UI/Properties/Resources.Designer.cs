@@ -19,7 +19,7 @@ namespace WF_OficinaTcc.Properties {
     // através de uma ferramenta como ResGen ou Visual Studio.
     // Para adicionar ou remover um associado, edite o arquivo .ResX e execute ResGen novamente
     // com a opção /str, ou recrie o projeto do VS.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -73,6 +73,16 @@ namespace WF_OficinaTcc.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap diary {
+            get {
+                object obj = ResourceManager.GetObject("diary", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_adicionar_grupo_de_usuários_mulher_homem_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-adicionar-grupo-de-usuários-mulher-homem-48", resourceCulture);
@@ -106,6 +116,16 @@ namespace WF_OficinaTcc.Properties {
         internal static System.Drawing.Bitmap icons8_tarefa_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-tarefa-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap manutenção_1024x683 {
+            get {
+                object obj = ResourceManager.GetObject("manutenção-1024x683", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

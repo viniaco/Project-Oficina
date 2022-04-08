@@ -44,7 +44,14 @@ namespace WF_OficinaTcc
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnAtt = new System.Windows.Forms.Button();
             this.btnCadastrarCliente = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.txtPesquisar = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cbmFiltrar = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtNome
@@ -157,7 +164,7 @@ namespace WF_OficinaTcc
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 300);
+            this.dataGridView1.Location = new System.Drawing.Point(10, 387);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -170,7 +177,7 @@ namespace WF_OficinaTcc
             this.btnExcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnExcluir.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.ForeColor = System.Drawing.Color.Black;
-            this.btnExcluir.Location = new System.Drawing.Point(248, 437);
+            this.btnExcluir.Location = new System.Drawing.Point(483, 449);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(102, 25);
             this.btnExcluir.TabIndex = 38;
@@ -182,7 +189,7 @@ namespace WF_OficinaTcc
             this.btnAtt.BackColor = System.Drawing.Color.Transparent;
             this.btnAtt.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAtt.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnAtt.Location = new System.Drawing.Point(136, 439);
+            this.btnAtt.Location = new System.Drawing.Point(483, 420);
             this.btnAtt.Name = "btnAtt";
             this.btnAtt.Size = new System.Drawing.Size(102, 23);
             this.btnAtt.TabIndex = 37;
@@ -194,12 +201,76 @@ namespace WF_OficinaTcc
             this.btnCadastrarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnCadastrarCliente.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrarCliente.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnCadastrarCliente.Location = new System.Drawing.Point(22, 437);
+            this.btnCadastrarCliente.Location = new System.Drawing.Point(483, 387);
             this.btnCadastrarCliente.Name = "btnCadastrarCliente";
             this.btnCadastrarCliente.Size = new System.Drawing.Size(102, 27);
             this.btnCadastrarCliente.TabIndex = 36;
             this.btnCadastrarCliente.Text = "Cadastrar";
             this.btnCadastrarCliente.UseVisualStyleBackColor = false;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.btnPesquisar);
+            this.groupBox2.Controls.Add(this.txtPesquisar);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.cbmFiltrar);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(10, 302);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(533, 69);
+            this.groupBox2.TabIndex = 39;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Pesquisar Usuário";
+            // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.Location = new System.Drawing.Point(349, 28);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(75, 23);
+            this.btnPesquisar.TabIndex = 4;
+            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            // 
+            // txtPesquisar
+            // 
+            this.txtPesquisar.AcceptsReturn = true;
+            this.txtPesquisar.Location = new System.Drawing.Point(211, 30);
+            this.txtPesquisar.Name = "txtPesquisar";
+            this.txtPesquisar.Size = new System.Drawing.Size(132, 22);
+            this.txtPesquisar.TabIndex = 3;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(192, 33);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(15, 13);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "=";
+            // 
+            // cbmFiltrar
+            // 
+            this.cbmFiltrar.FormattingEnabled = true;
+            this.cbmFiltrar.Items.AddRange(new object[] {
+            "",
+            "Código",
+            "Usuário"});
+            this.cbmFiltrar.Location = new System.Drawing.Point(65, 30);
+            this.cbmFiltrar.Name = "cbmFiltrar";
+            this.cbmFiltrar.Size = new System.Drawing.Size(121, 21);
+            this.cbmFiltrar.TabIndex = 1;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 33);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(61, 13);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Filtrar por:";
             // 
             // TelaUsuario
             // 
@@ -207,6 +278,7 @@ namespace WF_OficinaTcc
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(891, 600);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnAtt);
             this.Controls.Add(this.btnCadastrarCliente);
@@ -226,6 +298,8 @@ namespace WF_OficinaTcc
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.TelaUsuario_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -248,6 +322,12 @@ namespace WF_OficinaTcc
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnAtt;
         private System.Windows.Forms.Button btnCadastrarCliente;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button btnPesquisar;
+        private System.Windows.Forms.TextBox txtPesquisar;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cbmFiltrar;
+        private System.Windows.Forms.Label label6;
     }
 }
 
