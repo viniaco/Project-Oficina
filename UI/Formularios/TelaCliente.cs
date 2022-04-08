@@ -58,7 +58,7 @@ namespace WF_OficinaTcc
         private void btnAtt_Click(object sender, EventArgs e)
         {
             cadastro = new Cliente();
-            cadastro.Id = int.Parse(txtId.Text);
+         //   cadastro.Id = int.Parse(txtId.Text);
             cadastro.Nome = txtNome.Text;
             cadastro.Cpf = mtbCPF.Text;
             cadastro.Email = txtEmail.Text;
@@ -89,7 +89,7 @@ namespace WF_OficinaTcc
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             cadastro = new Cliente();
-            cadastro.Id = int.Parse(txtId.Text);
+           // cadastro.Id = int.Parse(txtId.Text);
             if (cadastro.Excluir())
             {
                 MessageBox.Show("Exluido!");
@@ -104,7 +104,7 @@ namespace WF_OficinaTcc
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
             cadastro = new Cliente();
-            cadastro.Id = int.Parse(txtId.Text);
+          //  cadastro.Id = int.Parse(txtId.Text);
             cadastro.Pesquisar();
             if (cadastro.Id == 0)
             {
@@ -123,6 +123,11 @@ namespace WF_OficinaTcc
                 txtCidade.Text = cadastro.Cidade;
                 mtbTelefone.Text = cadastro.Telefone;
             }
+
+        }
+
+        private void TelaCliente_Load_1(object sender, EventArgs e)
+        {
 
         }
     }
