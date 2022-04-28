@@ -36,16 +36,16 @@ namespace WF_OficinaTcc
             this.testeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.panelForms = new System.Windows.Forms.Panel();
             this.btnCadCliente = new System.Windows.Forms.ToolStripDropDownButton();
             this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnAgendamento = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.btnSair = new System.Windows.Forms.ToolStripButton();
             this.btnCadVeiculo = new System.Windows.Forms.ToolStripDropDownButton();
             this.veiculosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ordemDeServiçoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnAgendamento = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.btnSair = new System.Windows.Forms.ToolStripButton();
+            this.panelForms = new System.Windows.Forms.Panel();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -101,15 +101,6 @@ namespace WF_OficinaTcc
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // panelForms
-            // 
-            this.panelForms.BackColor = System.Drawing.Color.Transparent;
-            this.panelForms.Location = new System.Drawing.Point(12, 58);
-            this.panelForms.Name = "panelForms";
-            this.panelForms.Size = new System.Drawing.Size(908, 614);
-            this.panelForms.TabIndex = 3;
-            this.panelForms.Paint += new System.Windows.Forms.PaintEventHandler(this.panelForms_Paint);
-            // 
             // btnCadCliente
             // 
             this.btnCadCliente.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -127,16 +118,43 @@ namespace WF_OficinaTcc
             // clienteToolStripMenuItem
             // 
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.clienteToolStripMenuItem.Text = "Cadastrar Cliente";
             this.clienteToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
             // 
             // usuárioToolStripMenuItem
             // 
             this.usuárioToolStripMenuItem.Name = "usuárioToolStripMenuItem";
-            this.usuárioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.usuárioToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.usuárioToolStripMenuItem.Text = "Cadastrar Usuário";
             this.usuárioToolStripMenuItem.Click += new System.EventHandler(this.usuárioToolStripMenuItem_Click);
+            // 
+            // btnCadVeiculo
+            // 
+            this.btnCadVeiculo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnCadVeiculo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.veiculosToolStripMenuItem,
+            this.ordemDeServiçoToolStripMenuItem});
+            this.btnCadVeiculo.Image = global::WF_OficinaTcc.Properties.Resources.icons8_serviço_de_carro_48;
+            this.btnCadVeiculo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCadVeiculo.Name = "btnCadVeiculo";
+            this.btnCadVeiculo.Size = new System.Drawing.Size(61, 52);
+            this.btnCadVeiculo.Text = "Cadastrar Veiculo";
+            this.btnCadVeiculo.Click += new System.EventHandler(this.toolStripButton3_Click);
+            // 
+            // veiculosToolStripMenuItem
+            // 
+            this.veiculosToolStripMenuItem.Name = "veiculosToolStripMenuItem";
+            this.veiculosToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.veiculosToolStripMenuItem.Text = "Veiculos";
+            this.veiculosToolStripMenuItem.Click += new System.EventHandler(this.veiculosToolStripMenuItem_Click);
+            // 
+            // ordemDeServiçoToolStripMenuItem
+            // 
+            this.ordemDeServiçoToolStripMenuItem.Name = "ordemDeServiçoToolStripMenuItem";
+            this.ordemDeServiçoToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.ordemDeServiçoToolStripMenuItem.Text = "Ordem de Serviço";
+            this.ordemDeServiçoToolStripMenuItem.Click += new System.EventHandler(this.ordemDeServiçoToolStripMenuItem_Click);
             // 
             // btnAgendamento
             // 
@@ -167,41 +185,25 @@ namespace WF_OficinaTcc
             this.btnSair.Text = "Sair";
             this.btnSair.Click += new System.EventHandler(this.toolStripButton5_Click);
             // 
-            // btnCadVeiculo
+            // panelForms
             // 
-            this.btnCadVeiculo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnCadVeiculo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.veiculosToolStripMenuItem,
-            this.ordemDeServiçoToolStripMenuItem});
-            this.btnCadVeiculo.Image = global::WF_OficinaTcc.Properties.Resources.icons8_serviço_de_carro_48;
-            this.btnCadVeiculo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnCadVeiculo.Name = "btnCadVeiculo";
-            this.btnCadVeiculo.Size = new System.Drawing.Size(61, 52);
-            this.btnCadVeiculo.Text = "Cadastrar Veiculo";
-            this.btnCadVeiculo.Click += new System.EventHandler(this.toolStripButton3_Click);
-            // 
-            // veiculosToolStripMenuItem
-            // 
-            this.veiculosToolStripMenuItem.Name = "veiculosToolStripMenuItem";
-            this.veiculosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.veiculosToolStripMenuItem.Text = "Veiculos";
-            this.veiculosToolStripMenuItem.Click += new System.EventHandler(this.veiculosToolStripMenuItem_Click);
-            // 
-            // ordemDeServiçoToolStripMenuItem
-            // 
-            this.ordemDeServiçoToolStripMenuItem.Name = "ordemDeServiçoToolStripMenuItem";
-            this.ordemDeServiçoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.ordemDeServiçoToolStripMenuItem.Text = "Ordem de Serviço";
-            this.ordemDeServiçoToolStripMenuItem.Click += new System.EventHandler(this.ordemDeServiçoToolStripMenuItem_Click);
+            this.panelForms.BackColor = System.Drawing.Color.Transparent;
+            this.panelForms.Location = new System.Drawing.Point(12, 58);
+            this.panelForms.Name = "panelForms";
+            this.panelForms.Size = new System.Drawing.Size(908, 614);
+            this.panelForms.TabIndex = 3;
+            this.panelForms.Paint += new System.Windows.Forms.PaintEventHandler(this.panelForms_Paint);
             // 
             // TelaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1028, 684);
             this.Controls.Add(this.panelForms);
             this.Controls.Add(this.toolStrip1);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "TelaPrincipal";
             this.Text = "TelaPrincipal";
             this.Load += new System.EventHandler(this.TelaPrincipal_Load);
