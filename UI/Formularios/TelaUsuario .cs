@@ -91,18 +91,11 @@ namespace WF_OficinaTcc
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-            cadastro = new Cliente();
-            cadastro.Id = int.Parse(txtId.Text);
-            cadastro.Pesquisar();
-            if (cadastro.Id == 0)
-            {
-                MessageBox.Show("Desculpe, cliente não encontrado!");
-            }
-            else
-            {
-                txtNome.Text = cadastro.Nome;
-      
-            }
+
+        }
+
+        private void TelaUsuario_Load_1(object sender, EventArgs e)
+        {
 
         }
     }

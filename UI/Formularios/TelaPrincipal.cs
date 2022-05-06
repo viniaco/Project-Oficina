@@ -113,5 +113,22 @@ namespace WF_OficinaTcc
             panelForms.Controls.Add(Tela);
             Tela.Show();
         }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void toolStripButton2_Click_1(object sender, EventArgs e)
+        {
+            Tela?.Close();
+            Tela = new TelaDiarioOS
+            {
+                TopLevel = false,
+                Dock = DockStyle.Fill,
+            };
+            panelForms.Controls.Add(Tela);
+            Tela.Show();
+        }
     }
 }
