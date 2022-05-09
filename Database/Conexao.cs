@@ -1,46 +1,61 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MySql.Data.MySqlClient;  // Não esquecer de adicionar a referência no projeto.
 
 
 namespace Database
 {
-    public class Conexao : IDisposable
+    public class Conexao //Conexão padrão
     {
-        public SqlConnection conn;
-        private readonly string host = "LAB04-50";
-        private readonly string port = "3306";
-        private readonly string db = "dbOficinaTCCSqlServer (1)";
-        private readonly string user = "";
-        private readonly string pass = "";
+        protected MySqlConnection conexao = new MySqlConnection("Server=127.0.0.1;Port=3306;Database=dboficinatccsqlserver;Uid=root;Pwd=UN!F@@T;");
+        protected MySqlCommand cmd;
+        private bool resultado;
 
-        public Conexao()
+        public bool ComandoSQL(string sql)
         {
-            Conectar();
-        }
-
-        private void Conectar()
-        {
-            string StrConn = "Server=" + host + "; Port=" + port + "; Database=" + db + "; Uid=" + user + "; Pwd=" + pass + ";";
-            conn = new SqlConnection(StrConn);
+            resultado = false;
             try
             {
-                conn.Open();
+                conexao.Open();
+                cmd = new MySqlCommand(sql, conexao);
+                cmd.ExecuteNonQuery();
+                resultado = true;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                throw ex;
             }
+            finally
+            {
+                conexao.Close();
+            }
+            return resultado;
         }
 
-        public void Dispose()
+        public DataSet Retorna(string sql) //Representa um cache de dados na mémoria
         {
-            conn.Close();
-            conn.Dispose();
+            try
+            {
+                conexao.Open();
+                cmd = new MySqlCommand(sql, conexao);
+                MySqlDataAdapter da = new MySqlDataAdapter();
+                DataSet ds = new DataSet();
+                da.SelectCommand = cmd;
+                da.Fill(ds);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                conexao.Close();
+            }
         }
     }
 }
