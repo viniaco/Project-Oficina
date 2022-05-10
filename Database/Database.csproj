@@ -91,11 +91,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="_dbOficinaTCCSqlServer__1_DataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>_dbOficinaTCCSqlServer__1_DataSet.xsd</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -103,17 +98,6 @@
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="_dbOficinaTCCSqlServer__1_DataSet.xsc">
-      <DependentUpon>_dbOficinaTCCSqlServer__1_DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="_dbOficinaTCCSqlServer__1_DataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>_dbOficinaTCCSqlServer__1_DataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="_dbOficinaTCCSqlServer__1_DataSet.xss">
-      <DependentUpon>_dbOficinaTCCSqlServer__1_DataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
