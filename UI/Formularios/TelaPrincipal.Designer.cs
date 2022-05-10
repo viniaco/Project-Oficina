@@ -100,10 +100,10 @@ namespace WF_OficinaTcc
             this.toolStrip1.Size = new System.Drawing.Size(1028, 55);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
-<<<<<<< HEAD
-=======
+
+
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
->>>>>>> origin/master
+
             // 
             // btnCadCliente
             // 
@@ -134,7 +134,7 @@ namespace WF_OficinaTcc
             this.usuárioToolStripMenuItem.Click += new System.EventHandler(this.usuárioToolStripMenuItem_Click);
             // 
             // btnCadVeiculo
-<<<<<<< HEAD
+
             // 
             this.btnCadVeiculo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.btnCadVeiculo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -198,7 +198,7 @@ namespace WF_OficinaTcc
             this.panelForms.Size = new System.Drawing.Size(908, 614);
             this.panelForms.TabIndex = 3;
             this.panelForms.Paint += new System.Windows.Forms.PaintEventHandler(this.panelForms_Paint);
-=======
+
             // 
             this.btnCadVeiculo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.btnCadVeiculo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -224,7 +224,7 @@ namespace WF_OficinaTcc
             this.ordemDeServiçoToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.ordemDeServiçoToolStripMenuItem.Text = "Ordem de Serviço";
             this.ordemDeServiçoToolStripMenuItem.Click += new System.EventHandler(this.ordemDeServiçoToolStripMenuItem_Click);
->>>>>>> origin/master
+
             // 
             // btnAgendamento
             // 
@@ -269,12 +269,12 @@ namespace WF_OficinaTcc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
+
             this.BackColor = System.Drawing.Color.LightGray;
-=======
+
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.BackgroundImage = global::WF_OficinaTcc.Properties.Resources.manutenção_1024x683;
->>>>>>> origin/master
+
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1028, 684);
             this.Controls.Add(this.panelForms);

@@ -54,7 +54,7 @@ namespace WF_OficinaTcc
         private void btnAtt_Click(object sender, EventArgs e)
         {
             cadastro = new Cliente();
-            cadastro.Id = int.Parse(txtId.Text);
+            cadastro.IdCliente = int.Parse(txtId.Text);
             cadastro.Nome = txtNome.Text;
          
 
@@ -77,7 +77,7 @@ namespace WF_OficinaTcc
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             cadastro = new Cliente();
-            cadastro.Id = int.Parse(txtId.Text);
+            cadastro.IdCliente = int.Parse(txtId.Text);
             if (cadastro.Excluir())
             {
                 MessageBox.Show("Exluido!");

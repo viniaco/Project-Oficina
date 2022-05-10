@@ -35,7 +35,7 @@ namespace WF_OficinaTcc
             cadastro.Dtnascimento = DateTime.Parse(mtbDataNasc.Text).ToString("yyyy-MM-dd");
             cadastro.Cnh = txtCNH.Text;
             cadastro.Cep = mtbCEP.Text;
-            cadastro.Rua = txtRua.Text;
+            cadastro.Endereco = txtRua.Text;
             cadastro.Cidade = txtCidade.Text;
             cadastro.Telefone = mtbTelefone.Text;
 
@@ -66,7 +66,7 @@ namespace WF_OficinaTcc
             cadastro.Dtnascimento = DateTime.Parse(mtbDataNasc.Text).ToString("yyyy-MM-dd");
             cadastro.Cnh = txtCNH.Text;
             cadastro.Cep = mtbCEP.Text;
-            cadastro.Rua = txtRua.Text;
+            cadastro.Endereco = txtRua.Text;
             cadastro.Cidade = txtCidade.Text;
             cadastro.Telefone = mtbTelefone.Text;
 
@@ -106,7 +106,7 @@ namespace WF_OficinaTcc
             cadastro = new Cliente();
           //  cadastro.Id = int.Parse(txtId.Text);
             cadastro.Pesquisar();
-            if (cadastro.Id == 0)
+            if (cadastro.IdCliente == 0)
             {
                 MessageBox.Show("Desculpe, cliente não encontrado!");
             }
@@ -119,7 +119,7 @@ namespace WF_OficinaTcc
                 mtbDataNasc.Text = cadastro.Dtnascimento;
                 txtCNH.Text = cadastro.Cnh;
                 mtbCEP.Text = cadastro.Cep;
-                txtRua.Text = cadastro.Rua;
+                txtRua.Text = cadastro.Endereco;
                 txtCidade.Text = cadastro.Cidade;
                 mtbTelefone.Text = cadastro.Telefone;
             }

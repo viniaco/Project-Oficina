@@ -169,6 +169,7 @@
     </Compile>
     <EmbeddedResource Include="Formularios\TelaPrincipal.resx">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\TelaVeiculo.resx">
       <DependentUpon>TelaVeiculo.cs</DependentUpon>
