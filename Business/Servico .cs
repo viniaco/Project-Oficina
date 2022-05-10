@@ -28,50 +28,47 @@ namespace Business
         public bool Cadastrar()
         {
             con = new Conexao();
-            string sql = "INSERT INTO tbServico (idCliente, cadastradoPor, aprovada, nomeOS, valor, dataDia) values " +
-                "('" + IdCliente + "', '" + CadastradoPor + "', '" + Aprovada + "', '" + NomeOS + "', '" + Valor + "', '" + Data + "')";
-            return data.
+            string sql = "INSERT INTO tbServico (idOrdem, nome, descricao, obeservacao, valor, datadia,cadastradoPor) values " +
+                "('" + IdOrdem + "', '" + Nome + "', '" + Descricao + "', '" + Observacao + "', '" + Valor + "', '" + DataDia + "', '" + CadastradiPor + "')";
+
+            return con.ComandoSQL(sql);
         }
 
         public bool Atualizar()
         {
             con = new Conexao();
-            string sql = "UPDATE Servicos SET " +
-                "nomeServico='" + Nome + "', cpfServico='" + Cpf + "', emailServico='" + Email + "', cepServico='" + Cep + "', dtNascServico='" + Dtnascimento + "', sexoServico='" + Sexo + "', telefoneServico='" + Telefone + "', cidadeServico='" + Cidade + "', cnhServico='" + Cnh + "' WHERE idServico=" + Id;
+            string sql = "UPDATE tbservico SET " +
+                "idOrdem='" + IdOrdem + "', nome='" + Nome + "', descricao='" + Descricao + "', obeservacao='" + Valor + "', valor='" + DataDia + "', datadia='" + CadastradiPor;
             return con.ComandoSQL(sql);
         }
 
         public bool Excluir()
         {
             con = new Conexao();
-            string sql = "DELETE from Servicos WHERE idServico=" + Id;
+            string sql = "DELETE from tbservico WHERE idServico=" + idServico;
             return con.ComandoSQL(sql);
         }
 
         public void Pesquisar()
         {
             con = new Conexao();
-            string sql = "SELECT * FROM Servicos WHERE idServico=" + Id;
+            string sql = "SELECT * FROM tbservico WHERE idServico=" + idServico;
             DataSet ds;
             ds = con.Retorna(sql);
             if (ds.Tables[0].Rows.Count > 0)
             {
                 Array dados = ds.Tables[0].Rows[0].ItemArray;
-                Id = Convert.ToInt32(dados.GetValue(0));
-                Nome = Convert.ToString(dados.GetValue(1));
-                Cpf = Convert.ToString(dados.GetValue(2));
-                Email = Convert.ToString(dados.GetValue(3));
-                Cep = Convert.ToString(dados.GetValue(4));
-                Rua = Convert.ToString(dados.GetValue(5));
-                Dtnascimento = Convert.ToString(dados.GetValue(6));
-                Sexo = Convert.ToString(dados.GetValue(7));
-                Telefone = Convert.ToString(dados.GetValue(8));
-                Cidade = Convert.ToString(dados.GetValue(9));
-                Cnh = Convert.ToString(dados.GetValue(10));
+                IdServico = Convert.ToInt32(dados.GetValue(0));
+                idOrdem = Convert.ToInt32(dados.GetValue(1));
+                Nome = Convert.ToString(dados.GetValue(2));
+                Descricao = Convert.ToString(dados.GetValue(3));
+                Valor = Convert.ToDouble(dados.GetValue(4));
+                DataDia = Convert.ToString(dados.GetValue(5));
+                CadastradiPor = Convert.ToString(dados.GetValue(6));
             }
             else
             {
-                Id = 0;
+                idServico = 0;
             }
         }
     }

@@ -5,73 +5,100 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
 
 namespace Business
 {
     public class ServicoItemItem
     {
-        private int idServicoItem, idOrdem;
-        private string nome, descricao, observacao, dataDia, cadastradiPor;
+        private int idServicoItem, idServico, checkin, checkout, finalizado;
+        private string usuarioAlocado;
         private double valor;
+        private DateTime prazo, dataCheckin, dataCheckout, dataFinalizacao;
 
-        public int IdServicoItem { get; set; }
-        public int IdOrdem { get; set; }
-        public string Nome { get; set; }
-        public string Descricao { get; set; }
-        public string Observacao { get; set; }
-        public string DataDia { get; set; }
-        public string CadastradiPor { get; set; }
-        public double Valor { get; set; }
 
         Conexao con;
+
+        public int IdServicoItem { get; set; }
+        public int IdServico { get; set; }
+        public int Checkin { get; set; }
+        public int Checkout { get; set; }
+        public int Finalizado { get; set; }
+        public string UsuarioAlocado { get; set; }
+        public double Valor { get; set; }
+        public DateTime Prazo { get; set; }
+        public DateTime DataCheckin { get; set; }
+        public DateTime DataCheckout { get; set; }
+        public DateTime DataFinalizacao { get; set; }
 
         public bool Cadastrar()
         {
             con = new Conexao();
-            string sql = "INSERT INTO tbServicoItem (idCliente, cadastradoPor, aprovada, nomeOS, valor, dataDia) values " +
-                "('" + IdCliente + "', '" + CadastradoPor + "', '" + Aprovada + "', '" + NomeOS + "', '" + Valor + "', '" + Data + "')";
-            return data.
+            string sql = "INSERT INTO tbServicoItem (idServico, valor, prazo, checkin, dataCheckin, UsuarioAlocado,Checkout,dataCheckout,DataFinalizacao,finalizado) values " +
+                "('"
+                + IdServico + "', '"
+                + Valor + "', '"
+                + Prazo + "', '"
+                + Checkin + "', '"
+                + DataCheckin + "', '"
+                + UsuarioAlocado + "', '"
+                + Checkout + "', '"
+                + DataCheckout + "', '"
+                + DataFinalizacao + "', '"
+                + Finalizado + "')";
+
+            return con.ComandoSQL(sql);
         }
 
         public bool Atualizar()
         {
             con = new Conexao();
-            string sql = "UPDATE ServicoItems SET " +
-                "nomeServicoItem='" + Nome + "', cpfServicoItem='" + Cpf + "', emailServicoItem='" + Email + "', cepServicoItem='" + Cep + "', dtNascServicoItem='" + Dtnascimento + "', sexoServicoItem='" + Sexo + "', telefoneServicoItem='" + Telefone + "', cidadeServicoItem='" + Cidade + "', cnhServicoItem='" + Cnh + "' WHERE idServicoItem=" + Id;
+            string sql = "UPDATE tbServicoItem SET " +
+                "idServico='" + IdServico +
+                "', valor='" + Valor +
+                "', prazo='" + Prazo +
+                "', checkin='" + Checkin +
+                "', dataCheckin='" + DataCheckin +
+                "', UsuarioAlocado='" + UsuarioAlocado +
+                "', Checkout='" + Checkout +
+                "', dataCheckout='" + DataCheckout +
+                "', DataFinalizacao='" + DataFinalizacao +
+                 "', finalizado='" + Finalizado +
+                "' WHERE idServicoItem=" + IdServicoItem;
             return con.ComandoSQL(sql);
         }
 
         public bool Excluir()
         {
             con = new Conexao();
-            string sql = "DELETE from ServicoItems WHERE idServicoItem=" + Id;
+            string sql = "DELETE from tbServicoItem WHERE idServicoItem=" + IdServicoItem;
             return con.ComandoSQL(sql);
         }
 
         public void Pesquisar()
         {
             con = new Conexao();
-            string sql = "SELECT * FROM ServicoItems WHERE idServicoItem=" + Id;
+            string sql = "SELECT * FROM tbServicoItem WHERE idServicoItem=" + IdServicoItem;
             DataSet ds;
             ds = con.Retorna(sql);
             if (ds.Tables[0].Rows.Count > 0)
             {
                 Array dados = ds.Tables[0].Rows[0].ItemArray;
-                Id = Convert.ToInt32(dados.GetValue(0));
-                Nome = Convert.ToString(dados.GetValue(1));
-                Cpf = Convert.ToString(dados.GetValue(2));
-                Email = Convert.ToString(dados.GetValue(3));
-                Cep = Convert.ToString(dados.GetValue(4));
-                Rua = Convert.ToString(dados.GetValue(5));
-                Dtnascimento = Convert.ToString(dados.GetValue(6));
-                Sexo = Convert.ToString(dados.GetValue(7));
-                Telefone = Convert.ToString(dados.GetValue(8));
-                Cidade = Convert.ToString(dados.GetValue(9));
-                Cnh = Convert.ToString(dados.GetValue(10));
+                IdServicoItem = Convert.ToInt32(dados.GetValue(0));
+                IdServico = Convert.ToInt32(dados.GetValue(1));
+                Valor = Convert.ToDouble(dados.GetValue(2));
+                Prazo = Convert.ToDateTime(dados.GetValue(3));
+                Checkin = Convert.ToInt32(dados.GetValue(4));
+                DataCheckin = Convert.ToDateTime(dados.GetValue(5));
+                UsuarioAlocado = Convert.ToString(dados.GetValue(6));
+                Checkout = Convert.ToInt32(dados.GetValue(8));
+                DataCheckout = Convert.ToDateTime(dados.GetValue(9));
+                DataFinalizacao = Convert.ToDateTime(dados.GetValue(10));
+                Finalizado = Convert.ToInt32(dados.GetValue(11));
             }
             else
             {
-                Id = 0;
+                IdServicoItem = 0;
             }
         }
     }

@@ -29,48 +29,44 @@ namespace Business
             con = new Conexao();
             string sql = "INSERT INTO tbOrdemServico (idCliente, cadastradoPor, aprovada, nomeOS, valor, dataDia) values " +
                 "('" + IdCliente + "', '" + CadastradoPor + "', '" + Aprovada + "', '" + NomeOS + "', '" + Valor + "', '" + Data + "')";
-            return data.    
+            return con.ComandoSQL(sql);
         }
 
         public bool Atualizar()
         {
             con = new Conexao();
-            string sql = "UPDATE OrdemServicos SET " +
-                "nomeOrdemServico='" + Nome + "', cpfOrdemServico='" + Cpf + "', emailOrdemServico='" + Email + "', cepOrdemServico='" + Cep + "', dtNascOrdemServico='" + Dtnascimento + "', sexoOrdemServico='" + Sexo + "', telefoneOrdemServico='" + Telefone + "', cidadeOrdemServico='" + Cidade + "', cnhOrdemServico='" + Cnh + "' WHERE idOrdemServico=" + Id;
+            string sql = "UPDATE tbordemservico SET " +
+                "idCliente='" + IdCliente + "', cadastradoPor='" + CadastradoPor + "', aprovada='" + Aprovada + "', nomeOS='" + NomeOS + "', valor='" + Valor + "', dataDia='" + Data;
             return con.ComandoSQL(sql);
         }
 
         public bool Excluir()
         {
             con = new Conexao();
-            string sql = "DELETE from OrdemServicos WHERE idOrdemServico=" + Id;
+            string sql = "DELETE from OrdemServicos WHERE idOrdemServico=" + idOrdem;
             return con.ComandoSQL(sql);
         }
 
         public void Pesquisar()
         {
             con = new Conexao();
-            string sql = "SELECT * FROM OrdemServicos WHERE idOrdemServico=" + Id;
+            string sql = "SELECT * FROM OrdemServicos WHERE idOrdemServico=" + idOrdem;
             DataSet ds;
             ds = con.Retorna(sql);
             if (ds.Tables[0].Rows.Count > 0)
             {
                 Array dados = ds.Tables[0].Rows[0].ItemArray;
-                Id = Convert.ToInt32(dados.GetValue(0));
-                Nome = Convert.ToString(dados.GetValue(1));
-                Cpf = Convert.ToString(dados.GetValue(2));
-                Email = Convert.ToString(dados.GetValue(3));
-                Cep = Convert.ToString(dados.GetValue(4));
-                Rua = Convert.ToString(dados.GetValue(5));
-                Dtnascimento = Convert.ToString(dados.GetValue(6));
-                Sexo = Convert.ToString(dados.GetValue(7));
-                Telefone = Convert.ToString(dados.GetValue(8));
-                Cidade = Convert.ToString(dados.GetValue(9));
-                Cnh = Convert.ToString(dados.GetValue(10));
+                IdOrdem = Convert.ToInt32(dados.GetValue(0));
+                IdCliente = Convert.ToInt32(dados.GetValue(1));
+                CadastradoPor = Convert.ToString(dados.GetValue(2));
+                Aprovada = Convert.ToInt32(dados.GetValue(3));
+                NomeOS = Convert.ToString(dados.GetValue(4));
+                Valor = Convert.ToDouble(dados.GetValue(5));
+                Data = Convert.ToString(dados.GetValue(6));
             }
             else
             {
-                Id = 0;
+                idOrdem = 0;
             }
         }
     }
