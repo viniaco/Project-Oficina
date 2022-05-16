@@ -43,14 +43,14 @@ namespace Business
         public bool Excluir()
         {
             con = new Conexao();
-            string sql = "DELETE from OrdemServicos WHERE idOrdemServico=" + idOrdem;
+            string sql = "DELETE from OrdemServicos WHERE idOrdemServico=" + IdOrdem;
             return con.ComandoSQL(sql);
         }
 
         public void Pesquisar()
         {
             con = new Conexao();
-            string sql = "SELECT * FROM OrdemServicos WHERE idOrdemServico=" + idOrdem;
+            string sql = "SELECT * FROM OrdemServicos WHERE idOrdemServico=" + IdOrdem;
             DataSet ds;
             ds = con.Retorna(sql);
             if (ds.Tables[0].Rows.Count > 0)

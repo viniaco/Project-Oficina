@@ -11,7 +11,7 @@ namespace Database
 {
     public class Conexao //Conexão padrão
     {
-        protected MySqlConnection conexao = new MySqlConnection("Server=127.0.0.1;Port=3306;Database=dboficinatccsqlserver;Uid=root;Pwd=UN!F@@T;");
+        protected MySqlConnection conexao = new MySqlConnection("Server=127.0.0.1;Port=3306;Database=db.oficina;Uid=root;Pwd=;"); //UN!F@@T
         protected MySqlCommand cmd;
         private bool resultado;
 

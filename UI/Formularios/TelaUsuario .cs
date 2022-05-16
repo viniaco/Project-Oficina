@@ -29,11 +29,11 @@ namespace WF_OficinaTcc
         {
             cadastro = new Cliente();
             cadastro.Nome = txtNome.Text;
-         
-            cadastro.Email = txtEmail.Text;
-            cadastro.Sexo = cbSexo.Text;
-            
-          
+
+            cadastro.Email = txtSenha.Text;
+            cadastro.Sexo = cbNivelAcesso.Text;
+
+
 
             if (cadastro.Cadastrar())
             {
@@ -54,9 +54,9 @@ namespace WF_OficinaTcc
         private void btnAtt_Click(object sender, EventArgs e)
         {
             cadastro = new Cliente();
-            cadastro.IdCliente = int.Parse(txtId.Text);
+            cadastro.IdCliente = int.Parse(txtUsuario.Text);
             cadastro.Nome = txtNome.Text;
-         
+
 
             if (cadastro.Atualizar())
             {
@@ -77,7 +77,7 @@ namespace WF_OficinaTcc
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             cadastro = new Cliente();
-            cadastro.IdCliente = int.Parse(txtId.Text);
+            cadastro.IdCliente = int.Parse(txtUsuario.Text);
             if (cadastro.Excluir())
             {
                 MessageBox.Show("Exluido!");
@@ -97,6 +97,52 @@ namespace WF_OficinaTcc
         private void TelaUsuario_Load_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnCadastrarCliente_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                //Se os campos estiver preenchido faça
+                if ((txtUsuario.Text != "") && (cbNivelAcesso.Text != "") && (txtSenha.Text != "") && (txtRepitaSenha.Text != ""))
+                {
+                    //Se as senhas forem igual faça
+                    if (txtSenha.Text == txtRepitaSenha.Text)
+                    {
+                        ////Mostrar a Data do Cadastro na Hora
+                        //if (dataDiaTextBox.Text == "")
+                        //{
+                        //    dataDiaTextBox.Text = DateTime.Now.ToString();
+                        //}
+                        //Mostrar quem Cadastrou o usuario
+                        if (txtCadastradoPor.Text == "")
+                        {
+                            txtCadastradoPor.Text = TelaLogin.usuarioConectado;
+                        }
+                        //Executar a aplicação
+                        Usuario user = new Usuario();
+                        user.Cadastrar();
+                        //this.Validate();
+                        //this.tbUsuarioBindingSource.EndEdit();
+                        //this.tbUsuarioTableAdapter.Update(this.servicoDataSet.tbUsuario);
+                    }
+                    else
+                    {
+                        //Caso as senhas são diferentes
+                        MessageBox.Show("As senhas estão diferentes");
+                    }
+                }
+                else
+                {
+                    //Ser os campos não estiverem preenchido
+                    MessageBox.Show("Todos os campos não podem ficar vazio");
+                }
+            }
+            catch (Exception ex)
+            {
+                //Caso haja uma exceção será tratada neste código
+                MessageBox.Show("Não foi possível salvar pelo seguinte motivo: " + ex.Message);
+            }
         }
     }
 }

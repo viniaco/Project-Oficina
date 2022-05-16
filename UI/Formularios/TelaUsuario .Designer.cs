@@ -32,13 +32,13 @@ namespace WF_OficinaTcc
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtSenha = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.cbSexo = new System.Windows.Forms.ComboBox();
+            this.cbNivelAcesso = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.txtRepitaSenha = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnExcluir = new System.Windows.Forms.Button();
@@ -50,6 +50,8 @@ namespace WF_OficinaTcc
             this.label5 = new System.Windows.Forms.Label();
             this.cbmFiltrar = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.txtCadastradoPor = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -83,13 +85,13 @@ namespace WF_OficinaTcc
             this.label3.TabIndex = 5;
             this.label3.Text = "Senha:";
             // 
-            // txtEmail
+            // txtSenha
             // 
-            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(11, 194);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(227, 23);
-            this.txtEmail.TabIndex = 4;
+            this.txtSenha.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSenha.Location = new System.Drawing.Point(11, 194);
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.Size = new System.Drawing.Size(227, 23);
+            this.txtSenha.TabIndex = 4;
             // 
             // label4
             // 
@@ -101,18 +103,18 @@ namespace WF_OficinaTcc
             this.label4.TabIndex = 7;
             this.label4.Text = "Repita Senha:";
             // 
-            // cbSexo
+            // cbNivelAcesso
             // 
-            this.cbSexo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbSexo.FormattingEnabled = true;
-            this.cbSexo.Items.AddRange(new object[] {
-            "Masculino",
-            "Feminino",
-            "Outros"});
-            this.cbSexo.Location = new System.Drawing.Point(10, 257);
-            this.cbSexo.Name = "cbSexo";
-            this.cbSexo.Size = new System.Drawing.Size(166, 23);
-            this.cbSexo.TabIndex = 12;
+            this.cbNivelAcesso.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbNivelAcesso.FormattingEnabled = true;
+            this.cbNivelAcesso.Items.AddRange(new object[] {
+            "",
+            "Administrador",
+            "Operador"});
+            this.cbNivelAcesso.Location = new System.Drawing.Point(10, 257);
+            this.cbNivelAcesso.Name = "cbNivelAcesso";
+            this.cbNivelAcesso.Size = new System.Drawing.Size(166, 23);
+            this.cbNivelAcesso.TabIndex = 12;
             // 
             // label11
             // 
@@ -134,22 +136,22 @@ namespace WF_OficinaTcc
             this.label12.TabIndex = 29;
             this.label12.Text = "Usuário:";
             // 
-            // txtId
+            // txtUsuario
             // 
-            this.txtId.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId.Location = new System.Drawing.Point(10, 77);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(141, 23);
-            this.txtId.TabIndex = 30;
-            this.txtId.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtUsuario.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.Location = new System.Drawing.Point(10, 77);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(141, 23);
+            this.txtUsuario.TabIndex = 30;
+            this.txtUsuario.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox1
+            // txtRepitaSenha
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(254, 194);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(226, 23);
-            this.textBox1.TabIndex = 33;
+            this.txtRepitaSenha.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRepitaSenha.Location = new System.Drawing.Point(254, 194);
+            this.txtRepitaSenha.Name = "txtRepitaSenha";
+            this.txtRepitaSenha.Size = new System.Drawing.Size(226, 23);
+            this.txtRepitaSenha.TabIndex = 33;
             // 
             // label2
             // 
@@ -165,7 +167,7 @@ namespace WF_OficinaTcc
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(10, 387);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -207,6 +209,7 @@ namespace WF_OficinaTcc
             this.btnCadastrarCliente.TabIndex = 36;
             this.btnCadastrarCliente.Text = "Cadastrar";
             this.btnCadastrarCliente.UseVisualStyleBackColor = false;
+            this.btnCadastrarCliente.Click += new System.EventHandler(this.btnCadastrarCliente_Click_1);
             // 
             // groupBox2
             // 
@@ -272,26 +275,46 @@ namespace WF_OficinaTcc
             this.label6.TabIndex = 0;
             this.label6.Text = "Filtrar por:";
             // 
+            // txtCadastradoPor
+            // 
+            this.txtCadastradoPor.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCadastradoPor.Location = new System.Drawing.Point(254, 257);
+            this.txtCadastradoPor.Name = "txtCadastradoPor";
+            this.txtCadastradoPor.Size = new System.Drawing.Size(226, 23);
+            this.txtCadastradoPor.TabIndex = 41;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(252, 241);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(90, 13);
+            this.label7.TabIndex = 40;
+            this.label7.Text = "Cadastrado Por:";
+            // 
             // TelaUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(891, 600);
+            this.Controls.Add(this.txtCadastradoPor);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnAtt);
             this.Controls.Add(this.btnCadastrarCliente);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.txtId);
+            this.Controls.Add(this.txtRepitaSenha);
+            this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.cbSexo);
+            this.Controls.Add(this.cbNivelAcesso);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNome);
             this.Name = "TelaUsuario";
@@ -310,13 +333,13 @@ namespace WF_OficinaTcc
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cbSexo;
+        private System.Windows.Forms.ComboBox cbNivelAcesso;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txtId;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.TextBox txtRepitaSenha;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnExcluir;
@@ -328,6 +351,8 @@ namespace WF_OficinaTcc
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cbmFiltrar;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtCadastradoPor;
+        private System.Windows.Forms.Label label7;
     }
 }
 

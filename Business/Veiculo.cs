@@ -31,7 +31,7 @@ namespace Business
         public bool Cadastrar()
         {
             con = new Conexao();
-            string sql = "INSERT INTO veiculos (nomeVeiculo, anoVeiculo, corVeiculo, cambioVeiculo, kmVeiculo, placaVeiculo, combustivelVeiculo, obsVeiculo, Cliente_idCliente) values " +
+            string sql = "INSERT INTO Usuarios (nomeUsuario, anoUsuario, corUsuario, cambioUsuario, kmUsuario, placaUsuario, combustivelUsuario, obsUsuario, Cliente_idCliente) values " +
                 "('" + Nome + "', '" + Ano + "', '" + Cor + "', '" + Cambio + "', '" + Km + "', '" + Placa + "', '" + Combustivel + "', '" + Observacao + "', '1')";
             return con.ComandoSQL(sql);
         }
@@ -39,22 +39,22 @@ namespace Business
         public bool Atualizar()
         {
             con = new Conexao();
-            string sql = "UPDATE veiculos SET " +
-                "nomeVeiculo='" + Nome + "', anoVeiculo='" + Ano + "', corVeiculo='" + Cor + "', cambioVeiculo='" + Cambio + "', kmVeiculo='" + Km + "', placaVeiculo='" + Placa + "', combustivelVeiculo='" + Combustivel + "', obsVeiculo='" + Observacao + "' WHERE idVeiculo=" + Id;
+            string sql = "UPDATE Usuarios SET " +
+                "nomeUsuario='" + Nome + "', anoUsuario='" + Ano + "', corUsuario='" + Cor + "', cambioUsuario='" + Cambio + "', kmUsuario='" + Km + "', placaUsuario='" + Placa + "', combustivelUsuario='" + Combustivel + "', obsUsuario='" + Observacao + "' WHERE idUsuario=" + Id;
             return con.ComandoSQL(sql);
         }
 
         public bool Excluir()
         {
             con = new Conexao();
-            string sql = "DELETE from Veiculos WHERE idVeiculo=" + Id;
+            string sql = "DELETE from Usuarios WHERE idUsuario=" + Id;
             return con.ComandoSQL(sql);
         }
 
         public void Pesquisar()
         {
             con = new Conexao();
-            string sql = "SELECT * FROM veiculos WHERE idVeiculo=" + Id;
+            string sql = "SELECT * FROM Usuarios WHERE idUsuario=" + Id;
             DataSet ds;
             ds = con.Retorna(sql);
             if (ds.Tables[0].Rows.Count > 0)

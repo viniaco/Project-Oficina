@@ -208,12 +208,19 @@
       <Project>{340edd4a-045c-4594-9988-d1c737a597c8}</Project>
       <Name>Business</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Database\Database.csproj">
+      <Project>{45286BC4-2658-4C18-99D1-631C6E152D15}</Project>
+      <Name>Database</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Imagens\diary.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Imagens\manutenção-1024x683.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\telaLogin.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
