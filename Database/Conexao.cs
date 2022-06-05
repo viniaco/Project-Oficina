@@ -57,5 +57,48 @@ namespace Database
                 conexao.Close();
             }
         }
+
+        //public DataTable CarregarUsuario(string sql)
+        //{
+
+        //    conexao.Open();
+        //    MySqlCommand cmd = new MySqlCommand(sql, conexao);
+        //    DataTable data = new DataTable();
+        //    data.Load(cmd.ExecuteReader());
+        //    conexao.Close();
+        //    conexao.Dispose();
+        //    return data;
+        //}
+
+        public DataTable CarregarUsuario(string sql)
+        {
+            string retorno = "";
+
+            MySqlCommand cmd = new MySqlCommand(sql, conexao);
+            MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+
+            DataTable data = new DataTable();
+            adapter.Fill(data);
+
+            try
+            {
+                conexao.Open();
+                cmd.ExecuteNonQuery();
+                conexao.Close();
+                retorno = "";
+                return data;
+            }
+            catch (MySqlException ex)
+            {
+                retorno = "Erro ao Carregar Grid: " + ex.Message;
+            }
+
+            finally
+            {
+                if (conexao.State == ConnectionState.Open) conexao.Close();
+            }
+            return null;
+        }
+
     }
 }

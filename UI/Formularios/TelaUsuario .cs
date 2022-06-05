@@ -20,6 +20,8 @@ namespace WF_OficinaTcc
 
         Cliente cadastro;
 
+
+
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -96,10 +98,12 @@ namespace WF_OficinaTcc
 
         private void TelaUsuario_Load_1(object sender, EventArgs e)
         {
-
+            Usuario user = new Usuario();
+            var dt = user.GridViewUsuario();
+            dataGridViewUsuario.DataSource = dt;
         }
 
-        private void btnCadastrarCliente_Click_1(object sender, EventArgs e)
+        private void btnCadastrarUsuario_Click(object sender, EventArgs e)
         {
             try
             {
@@ -144,5 +148,12 @@ namespace WF_OficinaTcc
                 MessageBox.Show("Não foi possível salvar pelo seguinte motivo: " + ex.Message);
             }
         }
+
+        private void dataGridViewUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+
     }
 }

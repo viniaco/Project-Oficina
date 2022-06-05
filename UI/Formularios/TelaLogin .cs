@@ -45,7 +45,7 @@ namespace WF_OficinaTcc
                 if ((usuarioTextBox.Text != "") && (nivelAcessoComboBox.Text != "") && (senhaTextBox.Text != ""))
                 {
                     //Responsavel pelo Comando Sql
-                    MySqlCommand comm = new MySqlCommand("Select * From `db.oficina`.tbusuario Where user = @usuario and " +
+                    MySqlCommand comm = new MySqlCommand("Select * From `db.oficina`.tbusuario Where usuario = @usuario and " +
                         "senha = @senha and nivelAcesso=@nivel", conn);
 
                     //Parametizar os codigos

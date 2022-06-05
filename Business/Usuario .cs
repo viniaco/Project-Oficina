@@ -10,8 +10,6 @@ namespace Business
 {
     public class Usuario
     {
-        private int idUsuario;
-        private string usuario, nome, senha, repitaSenha, nivelAcesso, cadastradoPor;
         Conexao con;
         public int IdUsuario { get; set; }
         public string User { get; set; }
@@ -24,9 +22,11 @@ namespace Business
         public bool Cadastrar()
         {
             con = new Conexao();
-            string sql = "INSERT INTO tbusuario (usuario, nome, senha, repitaSenha, nivelAcesso, cadastradiPor) values " +
-                "('" + User + "', '" + Nome + "', '" + Senha + "', '" + RepitaSenha + "', '" + NivelAcesso + "', '" + CadastradoPor + ")";
+            string sql = "INSERT INTO `db.oficina`.`tbusuario` (`usuario`, `nome`, `senha`, `repitaSenha`, `nivelAcesso`, `cadastradiPor`) values " +
+                "(`" + User + "`, `" + Nome + "`, `" + Senha + "`, `" + RepitaSenha + "`, `" + NivelAcesso + "`, `" + CadastradoPor + "`)";
             return con.ComandoSQL(sql);
+
+            string abc = "INSERT INTO `db.oficina`.`tbusuario`(`idUsuario`,`usuario`,`nome`,`senha`,`repitaSenha`,`nivelAcesso`,`cadastradiPor`)";
         }
 
         public bool Atualizar()
@@ -65,6 +65,13 @@ namespace Business
             {
                 IdUsuario = 0;
             }
+        }
+
+        public DataTable GridViewUsuario()
+        {
+            con = new Conexao();
+            string sql = "select * from tbusuario";
+            return con.CarregarUsuario(sql);
         }
     }
 }

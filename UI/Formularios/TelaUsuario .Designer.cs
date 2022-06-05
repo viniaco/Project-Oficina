@@ -40,10 +40,10 @@ namespace WF_OficinaTcc
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtRepitaSenha = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewUsuario = new System.Windows.Forms.DataGridView();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnAtt = new System.Windows.Forms.Button();
-            this.btnCadastrarCliente = new System.Windows.Forms.Button();
+            this.btnCadastrarUsuario = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.txtPesquisar = new System.Windows.Forms.TextBox();
@@ -52,7 +52,7 @@ namespace WF_OficinaTcc
             this.label6 = new System.Windows.Forms.Label();
             this.txtCadastradoPor = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsuario)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -163,16 +163,17 @@ namespace WF_OficinaTcc
             this.label2.TabIndex = 34;
             this.label2.Text = "Nível de acesso:";
             // 
-            // dataGridView1
+            // dataGridViewUsuario
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(10, 387);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(468, 122);
-            this.dataGridView1.TabIndex = 35;
+            this.dataGridViewUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewUsuario.Location = new System.Drawing.Point(10, 387);
+            this.dataGridViewUsuario.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridViewUsuario.Name = "dataGridViewUsuario";
+            this.dataGridViewUsuario.RowHeadersWidth = 51;
+            this.dataGridViewUsuario.RowTemplate.Height = 24;
+            this.dataGridViewUsuario.Size = new System.Drawing.Size(468, 122);
+            this.dataGridViewUsuario.TabIndex = 35;
+            this.dataGridViewUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewUsuario_CellContentClick);
             // 
             // btnExcluir
             // 
@@ -198,18 +199,18 @@ namespace WF_OficinaTcc
             this.btnAtt.Text = "Atualizar";
             this.btnAtt.UseVisualStyleBackColor = false;
             // 
-            // btnCadastrarCliente
+            // btnCadastrarUsuario
             // 
-            this.btnCadastrarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnCadastrarCliente.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrarCliente.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnCadastrarCliente.Location = new System.Drawing.Point(483, 387);
-            this.btnCadastrarCliente.Name = "btnCadastrarCliente";
-            this.btnCadastrarCliente.Size = new System.Drawing.Size(102, 27);
-            this.btnCadastrarCliente.TabIndex = 36;
-            this.btnCadastrarCliente.Text = "Cadastrar";
-            this.btnCadastrarCliente.UseVisualStyleBackColor = false;
-            this.btnCadastrarCliente.Click += new System.EventHandler(this.btnCadastrarCliente_Click_1);
+            this.btnCadastrarUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnCadastrarUsuario.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrarUsuario.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnCadastrarUsuario.Location = new System.Drawing.Point(483, 387);
+            this.btnCadastrarUsuario.Name = "btnCadastrarUsuario";
+            this.btnCadastrarUsuario.Size = new System.Drawing.Size(102, 27);
+            this.btnCadastrarUsuario.TabIndex = 36;
+            this.btnCadastrarUsuario.Text = "Cadastrar";
+            this.btnCadastrarUsuario.UseVisualStyleBackColor = false;
+            this.btnCadastrarUsuario.Click += new System.EventHandler(this.btnCadastrarUsuario_Click);
             // 
             // groupBox2
             // 
@@ -304,8 +305,8 @@ namespace WF_OficinaTcc
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnAtt);
-            this.Controls.Add(this.btnCadastrarCliente);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btnCadastrarUsuario);
+            this.Controls.Add(this.dataGridViewUsuario);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtRepitaSenha);
             this.Controls.Add(this.txtUsuario);
@@ -320,7 +321,7 @@ namespace WF_OficinaTcc
             this.Name = "TelaUsuario";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.TelaUsuario_Load_1);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsuario)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -341,10 +342,10 @@ namespace WF_OficinaTcc
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtRepitaSenha;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewUsuario;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnAtt;
-        private System.Windows.Forms.Button btnCadastrarCliente;
+        private System.Windows.Forms.Button btnCadastrarUsuario;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.TextBox txtPesquisar;
