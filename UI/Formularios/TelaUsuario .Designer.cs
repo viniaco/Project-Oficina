@@ -188,7 +188,6 @@ namespace WF_OficinaTcc
             this.dataGridViewUsuario.RowTemplate.Height = 24;
             this.dataGridViewUsuario.Size = new System.Drawing.Size(843, 215);
             this.dataGridViewUsuario.TabIndex = 35;
-            this.dataGridViewUsuario.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewUsuario_CellContentDoubleClick);
             this.dataGridViewUsuario.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dataGridViewUsuario_MouseDoubleClick);
             // 
             // btnExcluir

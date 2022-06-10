@@ -84,11 +84,6 @@ namespace WF_OficinaTcc
         {
 
         }
-
-        private void dataGridViewUsuario_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
         private void LimparCampo()
         {
             txtIdUser.Clear();
