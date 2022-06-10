@@ -100,10 +100,7 @@ namespace WF_OficinaTcc
             this.toolStrip1.Size = new System.Drawing.Size(1028, 55);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
-
-
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
-
             // 
             // btnCadCliente
             // 
@@ -134,7 +131,6 @@ namespace WF_OficinaTcc
             this.usuárioToolStripMenuItem.Click += new System.EventHandler(this.usuárioToolStripMenuItem_Click);
             // 
             // btnCadVeiculo
-
             // 
             this.btnCadVeiculo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.btnCadVeiculo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -160,71 +156,6 @@ namespace WF_OficinaTcc
             this.ordemDeServiçoToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.ordemDeServiçoToolStripMenuItem.Text = "Ordem de Serviço";
             this.ordemDeServiçoToolStripMenuItem.Click += new System.EventHandler(this.ordemDeServiçoToolStripMenuItem_Click);
-            // 
-            // btnAgendamento
-            // 
-            this.btnAgendamento.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnAgendamento.Image = global::WF_OficinaTcc.Properties.Resources.icons8_tarefa_48;
-            this.btnAgendamento.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnAgendamento.Name = "btnAgendamento";
-            this.btnAgendamento.Size = new System.Drawing.Size(52, 52);
-            this.btnAgendamento.Text = "Agendamento";
-            this.btnAgendamento.Click += new System.EventHandler(this.btnAgendamento_Click);
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(52, 52);
-            this.toolStripButton2.Text = "toolStripButton2";
-            // 
-            // btnSair
-            // 
-            this.btnSair.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnSair.Image = global::WF_OficinaTcc.Properties.Resources.icons8_cancelar_48;
-            this.btnSair.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(52, 52);
-            this.btnSair.Text = "Sair";
-            this.btnSair.Click += new System.EventHandler(this.toolStripButton5_Click);
-            // 
-            // panelForms
-            // 
-            this.panelForms.BackColor = System.Drawing.Color.Transparent;
-            this.panelForms.Location = new System.Drawing.Point(12, 58);
-            this.panelForms.Name = "panelForms";
-            this.panelForms.Size = new System.Drawing.Size(908, 614);
-            this.panelForms.TabIndex = 3;
-            this.panelForms.Paint += new System.Windows.Forms.PaintEventHandler(this.panelForms_Paint);
-
-            // 
-            this.btnCadVeiculo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnCadVeiculo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.veiculosToolStripMenuItem,
-            this.ordemDeServiçoToolStripMenuItem});
-            this.btnCadVeiculo.Image = global::WF_OficinaTcc.Properties.Resources.icons8_serviço_de_carro_48;
-            this.btnCadVeiculo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnCadVeiculo.Name = "btnCadVeiculo";
-            this.btnCadVeiculo.Size = new System.Drawing.Size(61, 52);
-            this.btnCadVeiculo.Text = "Cadastrar Veiculo";
-            this.btnCadVeiculo.Click += new System.EventHandler(this.toolStripButton3_Click);
-            // 
-            // veiculosToolStripMenuItem
-            // 
-            this.veiculosToolStripMenuItem.Name = "veiculosToolStripMenuItem";
-            this.veiculosToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
-            this.veiculosToolStripMenuItem.Text = "Veiculos";
-            this.veiculosToolStripMenuItem.Click += new System.EventHandler(this.veiculosToolStripMenuItem_Click);
-            // 
-            // ordemDeServiçoToolStripMenuItem
-            // 
-            this.ordemDeServiçoToolStripMenuItem.Name = "ordemDeServiçoToolStripMenuItem";
-            this.ordemDeServiçoToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
-            this.ordemDeServiçoToolStripMenuItem.Text = "Ordem de Serviço";
-            this.ordemDeServiçoToolStripMenuItem.Click += new System.EventHandler(this.ordemDeServiçoToolStripMenuItem_Click);
-
             // 
             // btnAgendamento
             // 
@@ -261,7 +192,7 @@ namespace WF_OficinaTcc
             this.panelForms.BackColor = System.Drawing.Color.Transparent;
             this.panelForms.Location = new System.Drawing.Point(12, 58);
             this.panelForms.Name = "panelForms";
-            this.panelForms.Size = new System.Drawing.Size(908, 614);
+            this.panelForms.Size = new System.Drawing.Size(1004, 614);
             this.panelForms.TabIndex = 3;
             this.panelForms.Paint += new System.Windows.Forms.PaintEventHandler(this.panelForms_Paint);
             // 
@@ -269,12 +200,8 @@ namespace WF_OficinaTcc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-
-            this.BackColor = System.Drawing.Color.LightGray;
-
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.BackgroundImage = global::WF_OficinaTcc.Properties.Resources.manutenção_1024x683;
-
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1028, 684);
             this.Controls.Add(this.panelForms);

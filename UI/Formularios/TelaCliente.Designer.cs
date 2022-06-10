@@ -65,10 +65,10 @@ namespace WF_OficinaTcc
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.tbOrdemServicoDataGridView = new System.Windows.Forms.DataGridView();
+            this.DataGridViewCliente = new System.Windows.Forms.DataGridView();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tbOrdemServicoDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridViewCliente)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNome
@@ -430,7 +430,7 @@ namespace WF_OficinaTcc
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox3.Controls.Add(this.tbOrdemServicoDataGridView);
+            this.groupBox3.Controls.Add(this.DataGridViewCliente);
             this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(19, 345);
             this.groupBox3.Name = "groupBox3";
@@ -439,17 +439,17 @@ namespace WF_OficinaTcc
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Clientes";
             // 
-            // tbOrdemServicoDataGridView
+            // DataGridViewCliente
             // 
-            this.tbOrdemServicoDataGridView.AllowUserToAddRows = false;
-            this.tbOrdemServicoDataGridView.AllowUserToDeleteRows = false;
-            this.tbOrdemServicoDataGridView.ColumnHeadersHeight = 29;
-            this.tbOrdemServicoDataGridView.Location = new System.Drawing.Point(20, 19);
-            this.tbOrdemServicoDataGridView.Name = "tbOrdemServicoDataGridView";
-            this.tbOrdemServicoDataGridView.ReadOnly = true;
-            this.tbOrdemServicoDataGridView.RowHeadersWidth = 51;
-            this.tbOrdemServicoDataGridView.Size = new System.Drawing.Size(602, 227);
-            this.tbOrdemServicoDataGridView.TabIndex = 0;
+            this.DataGridViewCliente.AllowUserToAddRows = false;
+            this.DataGridViewCliente.AllowUserToDeleteRows = false;
+            this.DataGridViewCliente.ColumnHeadersHeight = 29;
+            this.DataGridViewCliente.Location = new System.Drawing.Point(20, 19);
+            this.DataGridViewCliente.Name = "DataGridViewCliente";
+            this.DataGridViewCliente.ReadOnly = true;
+            this.DataGridViewCliente.RowHeadersWidth = 51;
+            this.DataGridViewCliente.Size = new System.Drawing.Size(602, 227);
+            this.DataGridViewCliente.TabIndex = 0;
             // 
             // TelaCliente
             // 
@@ -494,7 +494,7 @@ namespace WF_OficinaTcc
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.tbOrdemServicoDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridViewCliente)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -538,7 +538,7 @@ namespace WF_OficinaTcc
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.DataGridView tbOrdemServicoDataGridView;
+        private System.Windows.Forms.DataGridView DataGridViewCliente;
     }
 }
 

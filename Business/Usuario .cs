@@ -22,11 +22,10 @@ namespace Business
         public bool Cadastrar()
         {
             con = new Conexao();
-            string sql = "INSERT INTO `db.oficina`.`tbusuario` (`usuario`, `nome`, `senha`, `repitaSenha`, `nivelAcesso`, `cadastradiPor`) values " +
-                "(`" + User + "`, `" + Nome + "`, `" + Senha + "`, `" + RepitaSenha + "`, `" + NivelAcesso + "`, `" + CadastradoPor + "`)";
+            string sql = "INSERT INTO tbusuario (`usuario`, `nome`, `senha`, `repitaSenha`, `nivelAcesso`, `cadastradoPor`) values " +
+                "('" + User + "','" + Nome + "','" + Senha + "','" + RepitaSenha + "','" + NivelAcesso + "','" + CadastradoPor + "');";
             return con.ComandoSQL(sql);
 
-            string abc = "INSERT INTO `db.oficina`.`tbusuario`(`idUsuario`,`usuario`,`nome`,`senha`,`repitaSenha`,`nivelAcesso`,`cadastradiPor`)";
         }
 
         public bool Atualizar()

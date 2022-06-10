@@ -128,7 +128,9 @@ namespace WF_OficinaTcc
 
         private void TelaCliente_Load_1(object sender, EventArgs e)
         {
-
+            Cliente cli = new Cliente();
+            var dt = cli.GridViewCliente();
+            DataGridViewCliente.DataSource = dt;
         }
 
 

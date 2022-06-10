@@ -28,7 +28,7 @@ namespace Business
         public string Estado { get; set; }
         public string Bairro { get; set; }
         public string Dtnascimento { get; set; }
-        
+
 
 
         Conexao con;
@@ -102,6 +102,13 @@ namespace Business
             {
                 IdCliente = 0;
             }
+        }
+
+        public DataTable GridViewCliente()
+        {
+            con = new Conexao();
+            string sql = "select * from tbcliente";
+            return con.CarregarUsuario(sql);
         }
     }
 }

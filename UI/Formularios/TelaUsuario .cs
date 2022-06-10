@@ -13,6 +13,7 @@ namespace WF_OficinaTcc
 {
     public partial class TelaUsuario : Form
     {
+        string User, nome, senha, repitaSenha, nivelAcesso, cadastradoPor;
         public TelaUsuario()
         {
             InitializeComponent();
@@ -76,6 +77,17 @@ namespace WF_OficinaTcc
 
         }
 
+        private void dataGridViewUsuario_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Usuario user = (Usuario)dataGridViewUsuario.Rows[e.RowIndex].DataBoundItem;
+            txtUsuario.Text = user.User;
+            txtNome.Text = user.Nome;
+            txtSenha.Text = user.Senha;
+            txtRepitaSenha.Text = user.RepitaSenha;
+            cbNivelAcesso.Text = user.NivelAcesso;
+            txtCadastradoPor.Text = user.CadastradoPor;
+        }
+
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             cadastro = new Cliente();
@@ -118,14 +130,23 @@ namespace WF_OficinaTcc
                         //{
                         //    dataDiaTextBox.Text = DateTime.Now.ToString();
                         //}
+
                         //Mostrar quem Cadastrou o usuario
                         if (txtCadastradoPor.Text == "")
                         {
                             txtCadastradoPor.Text = TelaLogin.usuarioConectado;
                         }
+
                         //Executar a aplicação
                         Usuario user = new Usuario();
+                        user.User = txtUsuario.Text;
+                        user.Nome = txtNome.Text;
+                        user.Senha = txtSenha.Text;
+                        user.RepitaSenha = txtRepitaSenha.Text;
+                        user.NivelAcesso = cbNivelAcesso.Text;
+                        user.CadastradoPor = txtCadastradoPor.Text;
                         user.Cadastrar();
+                        MessageBox.Show("Usuário cadastrado!");
                         //this.Validate();
                         //this.tbUsuarioBindingSource.EndEdit();
                         //this.tbUsuarioTableAdapter.Update(this.servicoDataSet.tbUsuario);
