@@ -30,14 +30,15 @@ namespace WF_OficinaTcc
             cadastro = new Cliente();
             cadastro.Nome = txtNome.Text;
             cadastro.Cpf = mtbCPF.Text;
+            cadastro.Telefone = mtbTelefone.Text;
             cadastro.Email = txtEmail.Text;
-            cadastro.Sexo = cbSexo.Text;
-            cadastro.Dtnascimento = DateTime.Parse(mtbDataNasc.Text).ToString("yyyy-MM-dd");
+            cadastro.Endereco = txtEndereco.Text;
             cadastro.Cnh = txtCNH.Text;
             cadastro.Cep = mtbCEP.Text;
-            cadastro.Endereco = txtRua.Text;
+            cadastro.Bairro = txtBairro.Text;
             cadastro.Cidade = txtCidade.Text;
-            cadastro.Telefone = mtbTelefone.Text;
+            cadastro.Estado = cbEstado.Text;
+            cadastro.Tipocliente = cbTipoCliente.Text;
 
             if (cadastro.Cadastrar())
             {
@@ -58,17 +59,18 @@ namespace WF_OficinaTcc
         private void btnAtt_Click(object sender, EventArgs e)
         {
             cadastro = new Cliente();
-         //   cadastro.Id = int.Parse(txtId.Text);
+            cadastro.IdCliente = int.Parse(txtIdCliente.Text);
             cadastro.Nome = txtNome.Text;
             cadastro.Cpf = mtbCPF.Text;
+            cadastro.Telefone = mtbTelefone.Text;
             cadastro.Email = txtEmail.Text;
-            cadastro.Sexo = cbSexo.Text;
-            cadastro.Dtnascimento = DateTime.Parse(mtbDataNasc.Text).ToString("yyyy-MM-dd");
+            cadastro.Endereco = txtEndereco.Text;
             cadastro.Cnh = txtCNH.Text;
             cadastro.Cep = mtbCEP.Text;
-            cadastro.Endereco = txtRua.Text;
+            cadastro.Bairro = txtBairro.Text;
             cadastro.Cidade = txtCidade.Text;
-            cadastro.Telefone = mtbTelefone.Text;
+            cadastro.Estado = cbEstado.Text;
+            cadastro.Tipocliente = cbTipoCliente.Text;
 
             if (cadastro.Atualizar())
             {
@@ -89,7 +91,7 @@ namespace WF_OficinaTcc
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             cadastro = new Cliente();
-           // cadastro.Id = int.Parse(txtId.Text);
+            cadastro.IdCliente = int.Parse(txtIdCliente.Text);
             if (cadastro.Excluir())
             {
                 MessageBox.Show("Exluido!");
@@ -104,7 +106,7 @@ namespace WF_OficinaTcc
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
             cadastro = new Cliente();
-          //  cadastro.Id = int.Parse(txtId.Text);
+            cadastro.IdCliente = int.Parse(txtIdCliente.Text);
             cadastro.Pesquisar();
             if (cadastro.IdCliente == 0)
             {
@@ -115,13 +117,15 @@ namespace WF_OficinaTcc
                 txtNome.Text = cadastro.Nome;
                 mtbCPF.Text = cadastro.Cpf;
                 txtEmail.Text = cadastro.Email;
-                cbSexo.Text = cadastro.Sexo;
-                mtbDataNasc.Text = cadastro.Dtnascimento;
                 txtCNH.Text = cadastro.Cnh;
                 mtbCEP.Text = cadastro.Cep;
-                txtRua.Text = cadastro.Endereco;
+                txtEndereco.Text = cadastro.Endereco;
                 txtCidade.Text = cadastro.Cidade;
                 mtbTelefone.Text = cadastro.Telefone;
+                txtBairro.Text = cadastro.Bairro;
+                cbEstado.Text = cadastro.Estado;
+                cbTipoCliente.Text = cadastro.Tipocliente;
+
             }
 
         }
@@ -133,6 +137,34 @@ namespace WF_OficinaTcc
             DataGridViewCliente.DataSource = dt;
         }
 
+        private void LimparCampo()
+        {
+            txtNome.Clear();
+            mtbCPF.Clear();
+            txtEmail.Clear();
+            txtCNH.Clear();
+            mtbCEP.Clear();
+            txtEndereco.Clear();
+            txtCidade.Clear();
+            mtbTelefone.Clear();
+            txtBairro.Clear();
+            cbEstado.SelectedIndex = -1;
+            cbTipoCliente.SelectedIndex = -1;
+        }
 
+        private void DataGridViewCliente_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            LimparCampo();
+
+            txtIdCliente.Text = DataGridViewCliente.CurrentRow.Cells[0].Value.ToString();
+            txtNome.Text = DataGridViewCliente.CurrentRow.Cells[1].Value.ToString();
+            mtbCPF.Text = DataGridViewCliente.CurrentRow.Cells[2].Value.ToString();
+            mtbTelefone.Text = DataGridViewCliente.CurrentRow.Cells[3].Value.ToString();
+            txtEmail.Text = DataGridViewCliente.CurrentRow.Cells[4].Value.ToString();
+            txtEndereco.Text = DataGridViewCliente.CurrentRow.Cells[4].Value.ToString();
+            mtbCEP.Text = DataGridViewCliente.CurrentRow.Cells[5].Value.ToString();
+            txtBairro.Text = DataGridViewCliente.CurrentRow.Cells[6].Value.ToString();
+
+        }
     }
 }

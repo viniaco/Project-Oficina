@@ -32,7 +32,7 @@ namespace Business
         {
             con = new Conexao();
             string sql = "UPDATE tbusuario SET " +
-                "usuario='" + User + "', nome='" + Nome + "', senha='" + Senha + "', repitaSenha='" + RepitaSenha + "', nivelAcesso='" + NivelAcesso + "', cadastradiPor='" + CadastradoPor + "' WHERE idVeiculo=" + IdUsuario;
+                "usuario='" + User + "', nome='" + Nome + "', senha='" + Senha + "', repitaSenha='" + RepitaSenha + "', nivelAcesso='" + NivelAcesso + "', cadastradoPor='" + CadastradoPor + "' WHERE idUsuario=" + IdUsuario;
             return con.ComandoSQL(sql);
         }
 

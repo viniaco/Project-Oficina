@@ -97,7 +97,7 @@ namespace WF_OficinaTcc
             this.btnSair});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1028, 55);
+            this.toolStrip1.Size = new System.Drawing.Size(1371, 55);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
@@ -112,21 +112,21 @@ namespace WF_OficinaTcc
             this.btnCadCliente.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnCadCliente.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnCadCliente.Name = "btnCadCliente";
-            this.btnCadCliente.Size = new System.Drawing.Size(61, 52);
+            this.btnCadCliente.Size = new System.Drawing.Size(62, 52);
             this.btnCadCliente.Text = "Cadastrar Cliente";
             this.btnCadCliente.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // clienteToolStripMenuItem
             // 
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(209, 26);
             this.clienteToolStripMenuItem.Text = "Cadastrar Cliente";
             this.clienteToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
             // 
             // usuárioToolStripMenuItem
             // 
             this.usuárioToolStripMenuItem.Name = "usuárioToolStripMenuItem";
-            this.usuárioToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.usuárioToolStripMenuItem.Size = new System.Drawing.Size(209, 26);
             this.usuárioToolStripMenuItem.Text = "Cadastrar Usuário";
             this.usuárioToolStripMenuItem.Click += new System.EventHandler(this.usuárioToolStripMenuItem_Click);
             // 
@@ -139,21 +139,21 @@ namespace WF_OficinaTcc
             this.btnCadVeiculo.Image = global::WF_OficinaTcc.Properties.Resources.icons8_serviço_de_carro_48;
             this.btnCadVeiculo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnCadVeiculo.Name = "btnCadVeiculo";
-            this.btnCadVeiculo.Size = new System.Drawing.Size(61, 52);
+            this.btnCadVeiculo.Size = new System.Drawing.Size(62, 52);
             this.btnCadVeiculo.Text = "Cadastrar Veiculo";
             this.btnCadVeiculo.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // veiculosToolStripMenuItem
             // 
             this.veiculosToolStripMenuItem.Name = "veiculosToolStripMenuItem";
-            this.veiculosToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.veiculosToolStripMenuItem.Size = new System.Drawing.Size(211, 26);
             this.veiculosToolStripMenuItem.Text = "Veiculos";
             this.veiculosToolStripMenuItem.Click += new System.EventHandler(this.veiculosToolStripMenuItem_Click);
             // 
             // ordemDeServiçoToolStripMenuItem
             // 
             this.ordemDeServiçoToolStripMenuItem.Name = "ordemDeServiçoToolStripMenuItem";
-            this.ordemDeServiçoToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.ordemDeServiçoToolStripMenuItem.Size = new System.Drawing.Size(211, 26);
             this.ordemDeServiçoToolStripMenuItem.Text = "Ordem de Serviço";
             this.ordemDeServiçoToolStripMenuItem.Click += new System.EventHandler(this.ordemDeServiçoToolStripMenuItem_Click);
             // 
@@ -189,24 +189,27 @@ namespace WF_OficinaTcc
             // 
             // panelForms
             // 
+            this.panelForms.AutoSize = true;
             this.panelForms.BackColor = System.Drawing.Color.Transparent;
-            this.panelForms.Location = new System.Drawing.Point(12, 58);
+            this.panelForms.Location = new System.Drawing.Point(16, 71);
+            this.panelForms.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelForms.Name = "panelForms";
-            this.panelForms.Size = new System.Drawing.Size(1004, 614);
+            this.panelForms.Size = new System.Drawing.Size(1339, 971);
             this.panelForms.TabIndex = 3;
             this.panelForms.Paint += new System.Windows.Forms.PaintEventHandler(this.panelForms_Paint);
             // 
             // TelaPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.BackgroundImage = global::WF_OficinaTcc.Properties.Resources.manutenção_1024x683;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1028, 684);
+            this.ClientSize = new System.Drawing.Size(1371, 1055);
             this.Controls.Add(this.panelForms);
             this.Controls.Add(this.toolStrip1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "TelaPrincipal";
             this.Text = "TelaPrincipal";
             this.Load += new System.EventHandler(this.TelaPrincipal_Load);

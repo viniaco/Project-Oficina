@@ -15,7 +15,7 @@ namespace Business
         private string nome, cep, cnh, cpf, sexo, telefone, cidade, email, endereco, bairro, estado, dtnascimento;
 
         public int IdCliente { get; set; }
-        public int Tipocliente { get; set; }
+        public string Tipocliente { get; set; }
         public string Nome { get; set; }
         public string Cep { get; set; }
         public string Cnh { get; set; }
@@ -36,7 +36,7 @@ namespace Business
         public bool Cadastrar()
         {
             con = new Conexao();
-            string sql = "INSERT INTO tbCliente (nome, cpf, telefone, email, endereco, cep, bairro, cidade, estado, cnh, tipocliente) values " +
+            string sql = "INSERT INTO tbCliente (`nome`, `cpf`, `telefone`, `email`, `endereco`, `cep`, `vbairro`, `cidade`, `estado`, `cnh`, `tipocliente`) values " +
                 "('" + Nome + "', '" +
                 Cpf + "', '" +
                 Telefone + "', '" +
@@ -96,7 +96,7 @@ namespace Business
                 Cidade = Convert.ToString(dados.GetValue(8));
                 Estado = Convert.ToString(dados.GetValue(9));
                 Cnh = Convert.ToString(dados.GetValue(10));
-                Tipocliente = Convert.ToInt32(dados.GetValue(11));
+                Tipocliente = Convert.ToString(dados.GetValue(11));
             }
             else
             {

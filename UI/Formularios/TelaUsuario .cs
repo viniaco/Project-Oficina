@@ -19,7 +19,7 @@ namespace WF_OficinaTcc
             InitializeComponent();
         }
 
-        Cliente cadastro;
+        Usuario cadastro;
 
 
 
@@ -30,13 +30,15 @@ namespace WF_OficinaTcc
 
         private void btnCadastrarCliente_Click(object sender, EventArgs e)
         {
-            cadastro = new Cliente();
+            cadastro = new Usuario();
+
             cadastro.Nome = txtNome.Text;
-
-            cadastro.Email = txtSenha.Text;
-            cadastro.Sexo = cbNivelAcesso.Text;
-
-
+            cadastro.User = txtUsuario.Text;
+            cadastro.Nome = txtNome.Text;
+            cadastro.Senha = txtSenha.Text;
+            cadastro.RepitaSenha = txtRepitaSenha.Text;
+            cadastro.NivelAcesso = cbNivelAcesso.Text;
+            cadastro.CadastradoPor = txtCadastradoPor.Text;
 
             if (cadastro.Cadastrar())
             {
@@ -56,9 +58,15 @@ namespace WF_OficinaTcc
 
         private void btnAtt_Click(object sender, EventArgs e)
         {
-            cadastro = new Cliente();
-            cadastro.IdCliente = int.Parse(txtUsuario.Text);
+            cadastro = new Usuario();
+            cadastro.IdUsuario = Convert.ToInt32(txtIdUser.Text);
             cadastro.Nome = txtNome.Text;
+            cadastro.User = txtUsuario.Text;
+            cadastro.Nome = txtNome.Text;
+            cadastro.Senha = txtSenha.Text;
+            cadastro.RepitaSenha = txtRepitaSenha.Text;
+            cadastro.NivelAcesso = cbNivelAcesso.Text;
+            cadastro.CadastradoPor = txtCadastradoPor.Text;
 
 
             if (cadastro.Atualizar())
@@ -79,19 +87,39 @@ namespace WF_OficinaTcc
 
         private void dataGridViewUsuario_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            Usuario user = (Usuario)dataGridViewUsuario.Rows[e.RowIndex].DataBoundItem;
-            txtUsuario.Text = user.User;
-            txtNome.Text = user.Nome;
-            txtSenha.Text = user.Senha;
-            txtRepitaSenha.Text = user.RepitaSenha;
-            cbNivelAcesso.Text = user.NivelAcesso;
-            txtCadastradoPor.Text = user.CadastradoPor;
+
+        }
+        private void LimparCampo()
+        {
+            txtIdUser.Clear();
+            txtUsuario.Clear();
+            txtNome.Clear();
+            txtSenha.Clear();
+            txtRepitaSenha.Clear();
+            cbNivelAcesso.SelectedIndex = -1;
+            txtCadastradoPor.Clear();
+        }
+        private void dataGridViewUsuario_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            LimparCampo();
+            txtIdUser.Text = dataGridViewUsuario.CurrentRow.Cells[0].Value.ToString();
+            txtUsuario.Text = dataGridViewUsuario.CurrentRow.Cells[1].Value.ToString();
+            txtNome.Text = dataGridViewUsuario.CurrentRow.Cells[2].Value.ToString();
+            txtSenha.Text = dataGridViewUsuario.CurrentRow.Cells[3].Value.ToString();
+            txtRepitaSenha.Text = dataGridViewUsuario.CurrentRow.Cells[4].Value.ToString();
+            cbNivelAcesso.Text = dataGridViewUsuario.CurrentRow.Cells[5].Value.ToString();
+            txtCadastradoPor.Text = dataGridViewUsuario.CurrentRow.Cells[6].Value.ToString();
+        }
+
+        private void btnAtt_Click_1(object sender, EventArgs e)
+        {
+
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            cadastro = new Cliente();
-            cadastro.IdCliente = int.Parse(txtUsuario.Text);
+            cadastro = new Usuario();
+            cadastro.IdUsuario = int.Parse(txtIdUser.Text);
             if (cadastro.Excluir())
             {
                 MessageBox.Show("Exluido!");
