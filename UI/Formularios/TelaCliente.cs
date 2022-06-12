@@ -48,6 +48,7 @@ namespace WF_OficinaTcc
             {
                 MessageBox.Show("Cadastro não realizado!");
             }
+            return;
 
         }
 
@@ -161,9 +162,13 @@ namespace WF_OficinaTcc
             mtbCPF.Text = DataGridViewCliente.CurrentRow.Cells[2].Value.ToString();
             mtbTelefone.Text = DataGridViewCliente.CurrentRow.Cells[3].Value.ToString();
             txtEmail.Text = DataGridViewCliente.CurrentRow.Cells[4].Value.ToString();
-            txtEndereco.Text = DataGridViewCliente.CurrentRow.Cells[4].Value.ToString();
-            mtbCEP.Text = DataGridViewCliente.CurrentRow.Cells[5].Value.ToString();
-            txtBairro.Text = DataGridViewCliente.CurrentRow.Cells[6].Value.ToString();
+            txtEndereco.Text = DataGridViewCliente.CurrentRow.Cells[5].Value.ToString();
+            mtbCEP.Text = DataGridViewCliente.CurrentRow.Cells[6].Value.ToString();
+            txtBairro.Text = DataGridViewCliente.CurrentRow.Cells[7].Value.ToString();
+            txtCidade.Text = DataGridViewCliente.CurrentRow.Cells[8].Value.ToString();
+            cbEstado.Text = DataGridViewCliente.CurrentRow.Cells[9].Value.ToString();
+            txtCNH.Text = DataGridViewCliente.CurrentRow.Cells[10].Value.ToString();
+            cbTipoCliente.Text = DataGridViewCliente.CurrentRow.Cells[11].Value.ToString();
 
         }
     }

@@ -69,15 +69,78 @@ namespace WF_OficinaTcc
             ((System.ComponentModel.ISupportInitialize)(this.tbServicoDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
+            // idServicoLabel
+            // 
+            idServicoLabel.AutoSize = true;
+            idServicoLabel.Location = new System.Drawing.Point(6, 27);
+            idServicoLabel.Name = "idServicoLabel";
+            idServicoLabel.Size = new System.Drawing.Size(51, 13);
+            idServicoLabel.TabIndex = 0;
+            idServicoLabel.Text = "Código: ";
+            // 
+            // nomeLabel
+            // 
+            nomeLabel.AutoSize = true;
+            nomeLabel.Location = new System.Drawing.Point(112, 27);
+            nomeLabel.Name = "nomeLabel";
+            nomeLabel.Size = new System.Drawing.Size(45, 13);
+            nomeLabel.TabIndex = 2;
+            nomeLabel.Text = "Nome: ";
+            // 
+            // descricaoLabel
+            // 
+            descricaoLabel.AutoSize = true;
+            descricaoLabel.Location = new System.Drawing.Point(6, 66);
+            descricaoLabel.Name = "descricaoLabel";
+            descricaoLabel.Size = new System.Drawing.Size(62, 13);
+            descricaoLabel.TabIndex = 4;
+            descricaoLabel.Text = "Descrição: ";
+            // 
+            // observacaoLabel
+            // 
+            observacaoLabel.AutoSize = true;
+            observacaoLabel.Location = new System.Drawing.Point(3, 127);
+            observacaoLabel.Name = "observacaoLabel";
+            observacaoLabel.Size = new System.Drawing.Size(73, 13);
+            observacaoLabel.TabIndex = 6;
+            observacaoLabel.Text = "Observação: ";
+            // 
+            // valorLabel
+            // 
+            valorLabel.AutoSize = true;
+            valorLabel.Location = new System.Drawing.Point(6, 188);
+            valorLabel.Name = "valorLabel";
+            valorLabel.Size = new System.Drawing.Size(39, 13);
+            valorLabel.TabIndex = 8;
+            valorLabel.Text = "Valor: ";
+            // 
+            // dataDiaLabel
+            // 
+            dataDiaLabel.AutoSize = true;
+            dataDiaLabel.Location = new System.Drawing.Point(112, 188);
+            dataDiaLabel.Name = "dataDiaLabel";
+            dataDiaLabel.Size = new System.Drawing.Size(103, 13);
+            dataDiaLabel.TabIndex = 10;
+            dataDiaLabel.Text = "Data do Cadastro: ";
+            // 
+            // cadastradoPorLabel
+            // 
+            cadastradoPorLabel.AutoSize = true;
+            cadastradoPorLabel.Location = new System.Drawing.Point(250, 188);
+            cadastradoPorLabel.Name = "cadastradoPorLabel";
+            cadastradoPorLabel.Size = new System.Drawing.Size(93, 13);
+            cadastradoPorLabel.TabIndex = 12;
+            cadastradoPorLabel.Text = "Cadastrado Por: ";
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(12, 9);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(178, 40);
+            this.label6.Size = new System.Drawing.Size(127, 40);
             this.label6.TabIndex = 13;
-            this.label6.Text = "Itens da O.S";
+            this.label6.Text = "Serviços";
             // 
             // groupBox1
             // 
@@ -105,15 +168,6 @@ namespace WF_OficinaTcc
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados Pessoais";
             // 
-            // idServicoLabel
-            // 
-            idServicoLabel.AutoSize = true;
-            idServicoLabel.Location = new System.Drawing.Point(6, 27);
-            idServicoLabel.Name = "idServicoLabel";
-            idServicoLabel.Size = new System.Drawing.Size(51, 13);
-            idServicoLabel.TabIndex = 0;
-            idServicoLabel.Text = "Código: ";
-            // 
             // idServicoTextBox
             // 
             this.idServicoTextBox.Enabled = false;
@@ -122,30 +176,12 @@ namespace WF_OficinaTcc
             this.idServicoTextBox.Size = new System.Drawing.Size(100, 22);
             this.idServicoTextBox.TabIndex = 1;
             // 
-            // nomeLabel
-            // 
-            nomeLabel.AutoSize = true;
-            nomeLabel.Location = new System.Drawing.Point(112, 27);
-            nomeLabel.Name = "nomeLabel";
-            nomeLabel.Size = new System.Drawing.Size(45, 13);
-            nomeLabel.TabIndex = 2;
-            nomeLabel.Text = "Nome: ";
-            // 
             // nomeTextBox
             // 
             this.nomeTextBox.Location = new System.Drawing.Point(115, 43);
             this.nomeTextBox.Name = "nomeTextBox";
             this.nomeTextBox.Size = new System.Drawing.Size(424, 22);
             this.nomeTextBox.TabIndex = 3;
-            // 
-            // descricaoLabel
-            // 
-            descricaoLabel.AutoSize = true;
-            descricaoLabel.Location = new System.Drawing.Point(6, 66);
-            descricaoLabel.Name = "descricaoLabel";
-            descricaoLabel.Size = new System.Drawing.Size(62, 13);
-            descricaoLabel.TabIndex = 4;
-            descricaoLabel.Text = "Descrição: ";
             // 
             // descricaoTextBox
             // 
@@ -156,15 +192,6 @@ namespace WF_OficinaTcc
             this.descricaoTextBox.Size = new System.Drawing.Size(529, 42);
             this.descricaoTextBox.TabIndex = 5;
             // 
-            // observacaoLabel
-            // 
-            observacaoLabel.AutoSize = true;
-            observacaoLabel.Location = new System.Drawing.Point(3, 127);
-            observacaoLabel.Name = "observacaoLabel";
-            observacaoLabel.Size = new System.Drawing.Size(73, 13);
-            observacaoLabel.TabIndex = 6;
-            observacaoLabel.Text = "Observação: ";
-            // 
             // observacaoTextBox
             // 
             this.observacaoTextBox.Location = new System.Drawing.Point(6, 143);
@@ -174,30 +201,12 @@ namespace WF_OficinaTcc
             this.observacaoTextBox.Size = new System.Drawing.Size(529, 42);
             this.observacaoTextBox.TabIndex = 7;
             // 
-            // valorLabel
-            // 
-            valorLabel.AutoSize = true;
-            valorLabel.Location = new System.Drawing.Point(6, 188);
-            valorLabel.Name = "valorLabel";
-            valorLabel.Size = new System.Drawing.Size(39, 13);
-            valorLabel.TabIndex = 8;
-            valorLabel.Text = "Valor: ";
-            // 
             // valorTextBox
             // 
             this.valorTextBox.Location = new System.Drawing.Point(9, 204);
             this.valorTextBox.Name = "valorTextBox";
             this.valorTextBox.Size = new System.Drawing.Size(100, 22);
             this.valorTextBox.TabIndex = 9;
-            // 
-            // dataDiaLabel
-            // 
-            dataDiaLabel.AutoSize = true;
-            dataDiaLabel.Location = new System.Drawing.Point(112, 188);
-            dataDiaLabel.Name = "dataDiaLabel";
-            dataDiaLabel.Size = new System.Drawing.Size(103, 13);
-            dataDiaLabel.TabIndex = 10;
-            dataDiaLabel.Text = "Data do Cadastro: ";
             // 
             // dataDiaTextBox
             // 
@@ -206,15 +215,6 @@ namespace WF_OficinaTcc
             this.dataDiaTextBox.Name = "dataDiaTextBox";
             this.dataDiaTextBox.Size = new System.Drawing.Size(129, 22);
             this.dataDiaTextBox.TabIndex = 11;
-            // 
-            // cadastradoPorLabel
-            // 
-            cadastradoPorLabel.AutoSize = true;
-            cadastradoPorLabel.Location = new System.Drawing.Point(250, 188);
-            cadastradoPorLabel.Name = "cadastradoPorLabel";
-            cadastradoPorLabel.Size = new System.Drawing.Size(93, 13);
-            cadastradoPorLabel.TabIndex = 12;
-            cadastradoPorLabel.Text = "Cadastrado Por: ";
             // 
             // cadastradoPorTextBox
             // 

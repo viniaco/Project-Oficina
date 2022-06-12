@@ -49,19 +49,19 @@ namespace WF_OficinaTcc
             this.label10 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.btnBuscaVeic = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbCliente = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewVeiculo = new System.Windows.Forms.DataGridView();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnAtt = new System.Windows.Forms.Button();
-            this.btnCadastrarCliente = new System.Windows.Forms.Button();
+            this.btnCadastrarVeic = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtPesquisar = new System.Windows.Forms.MaskedTextBox();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.cbmFiltrar = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVeiculo)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,7 +78,7 @@ namespace WF_OficinaTcc
             // txtNomeVeiculo
             // 
             this.txtNomeVeiculo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNomeVeiculo.Location = new System.Drawing.Point(44, 126);
+            this.txtNomeVeiculo.Location = new System.Drawing.Point(42, 124);
             this.txtNomeVeiculo.Name = "txtNomeVeiculo";
             this.txtNomeVeiculo.Size = new System.Drawing.Size(245, 23);
             this.txtNomeVeiculo.TabIndex = 1;
@@ -162,6 +162,7 @@ namespace WF_OficinaTcc
             this.cbCambio.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCambio.FormattingEnabled = true;
             this.cbCambio.Items.AddRange(new object[] {
+            "",
             "Manual",
             "Automático"});
             this.cbCambio.Location = new System.Drawing.Point(604, 124);
@@ -172,7 +173,7 @@ namespace WF_OficinaTcc
             // txtPlaca
             // 
             this.txtPlaca.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPlaca.Location = new System.Drawing.Point(223, 172);
+            this.txtPlaca.Location = new System.Drawing.Point(237, 172);
             this.txtPlaca.Name = "txtPlaca";
             this.txtPlaca.Size = new System.Drawing.Size(171, 23);
             this.txtPlaca.TabIndex = 12;
@@ -181,7 +182,7 @@ namespace WF_OficinaTcc
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(224, 152);
+            this.label7.Location = new System.Drawing.Point(234, 152);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(37, 13);
             this.label7.TabIndex = 11;
@@ -191,7 +192,7 @@ namespace WF_OficinaTcc
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(397, 150);
+            this.label8.Location = new System.Drawing.Point(424, 150);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(75, 13);
             this.label8.TabIndex = 13;
@@ -202,10 +203,11 @@ namespace WF_OficinaTcc
             this.cbCombustivel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCombustivel.FormattingEnabled = true;
             this.cbCombustivel.Items.AddRange(new object[] {
+            "",
             "Álcool",
             "Gasolina",
             "Diesel"});
-            this.cbCombustivel.Location = new System.Drawing.Point(400, 170);
+            this.cbCombustivel.Location = new System.Drawing.Point(427, 170);
             this.cbCombustivel.Name = "cbCombustivel";
             this.cbCombustivel.Size = new System.Drawing.Size(144, 25);
             this.cbCombustivel.TabIndex = 14;
@@ -259,18 +261,18 @@ namespace WF_OficinaTcc
             this.btnBuscaVeic.UseVisualStyleBackColor = false;
             this.btnBuscaVeic.Click += new System.EventHandler(this.btnBuscaVeic_Click);
             // 
-            // comboBox1
+            // cbCliente
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbCliente.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCliente.FormattingEnabled = true;
+            this.cbCliente.Items.AddRange(new object[] {
             "Álcool",
             "Gasolina",
             "Diesel"});
-            this.comboBox1.Location = new System.Drawing.Point(44, 218);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(350, 23);
-            this.comboBox1.TabIndex = 24;
+            this.cbCliente.Location = new System.Drawing.Point(44, 218);
+            this.cbCliente.Name = "cbCliente";
+            this.cbCliente.Size = new System.Drawing.Size(350, 23);
+            this.cbCliente.TabIndex = 24;
             // 
             // label11
             // 
@@ -282,13 +284,15 @@ namespace WF_OficinaTcc
             this.label11.TabIndex = 23;
             this.label11.Text = "Cliente:";
             // 
-            // dataGridView1
+            // dataGridViewVeiculo
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(42, 448);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(681, 150);
-            this.dataGridView1.TabIndex = 25;
+            this.dataGridViewVeiculo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewVeiculo.Location = new System.Drawing.Point(42, 448);
+            this.dataGridViewVeiculo.Name = "dataGridViewVeiculo";
+            this.dataGridViewVeiculo.Size = new System.Drawing.Size(681, 150);
+            this.dataGridViewVeiculo.TabIndex = 25;
+            this.dataGridViewVeiculo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewVeiculo_CellContentClick);
+            this.dataGridViewVeiculo.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dataGridViewVeiculo_MouseDoubleClick);
             // 
             // btnExcluir
             // 
@@ -301,6 +305,7 @@ namespace WF_OficinaTcc
             this.btnExcluir.TabIndex = 44;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnAtt
             // 
@@ -313,18 +318,20 @@ namespace WF_OficinaTcc
             this.btnAtt.TabIndex = 43;
             this.btnAtt.Text = "Atualizar";
             this.btnAtt.UseVisualStyleBackColor = false;
+            this.btnAtt.Click += new System.EventHandler(this.btnAtt_Click);
             // 
-            // btnCadastrarCliente
+            // btnCadastrarVeic
             // 
-            this.btnCadastrarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnCadastrarCliente.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrarCliente.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnCadastrarCliente.Location = new System.Drawing.Point(739, 448);
-            this.btnCadastrarCliente.Name = "btnCadastrarCliente";
-            this.btnCadastrarCliente.Size = new System.Drawing.Size(102, 27);
-            this.btnCadastrarCliente.TabIndex = 42;
-            this.btnCadastrarCliente.Text = "Cadastrar";
-            this.btnCadastrarCliente.UseVisualStyleBackColor = false;
+            this.btnCadastrarVeic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnCadastrarVeic.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrarVeic.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnCadastrarVeic.Location = new System.Drawing.Point(739, 448);
+            this.btnCadastrarVeic.Name = "btnCadastrarVeic";
+            this.btnCadastrarVeic.Size = new System.Drawing.Size(102, 27);
+            this.btnCadastrarVeic.TabIndex = 42;
+            this.btnCadastrarVeic.Text = "Cadastrar";
+            this.btnCadastrarVeic.UseVisualStyleBackColor = false;
+            this.btnCadastrarVeic.Click += new System.EventHandler(this.btnCadastrarVeic_Click);
             // 
             // groupBox2
             // 
@@ -398,9 +405,9 @@ namespace WF_OficinaTcc
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnAtt);
-            this.Controls.Add(this.btnCadastrarCliente);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.btnCadastrarVeic);
+            this.Controls.Add(this.dataGridViewVeiculo);
+            this.Controls.Add(this.cbCliente);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.btnBuscaVeic);
             this.Controls.Add(this.txtId);
@@ -424,7 +431,8 @@ namespace WF_OficinaTcc
             this.Controls.Add(this.label1);
             this.Name = "TelaVeiculo";
             this.Text = "Form2";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.TelaVeiculo_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVeiculo)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -454,12 +462,12 @@ namespace WF_OficinaTcc
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Button btnBuscaVeic;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbCliente;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewVeiculo;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnAtt;
-        private System.Windows.Forms.Button btnCadastrarCliente;
+        private System.Windows.Forms.Button btnCadastrarVeic;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.MaskedTextBox txtPesquisar;
         private System.Windows.Forms.Button btnPesquisar;

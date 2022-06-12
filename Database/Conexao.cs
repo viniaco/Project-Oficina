@@ -70,7 +70,7 @@ namespace Database
         //    return data;
         //}
 
-        public DataTable CarregarUsuario(string sql)
+        public DataTable CarregarGridView(string sql)
         {
             string retorno = "";
 

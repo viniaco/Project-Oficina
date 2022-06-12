@@ -70,7 +70,7 @@ namespace Business
         {
             con = new Conexao();
             string sql = "select * from tbusuario";
-            return con.CarregarUsuario(sql);
+            return con.CarregarGridView(sql);
         }
     }
 }

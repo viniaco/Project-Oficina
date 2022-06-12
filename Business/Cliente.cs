@@ -11,9 +11,6 @@ namespace Business
 {
     public class Cliente
     {
-        private int idCliente, tipocliente;
-        private string nome, cep, cnh, cpf, sexo, telefone, cidade, email, endereco, bairro, estado, dtnascimento;
-
         public int IdCliente { get; set; }
         public string Tipocliente { get; set; }
         public string Nome { get; set; }
@@ -36,7 +33,7 @@ namespace Business
         public bool Cadastrar()
         {
             con = new Conexao();
-            string sql = "INSERT INTO tbCliente (`nome`, `cpf`, `telefone`, `email`, `endereco`, `cep`, `vbairro`, `cidade`, `estado`, `cnh`, `tipocliente`) values " +
+            string sql = "INSERT INTO tbCliente (`nome`, `cpf`, `telefone`, `email`, `endereco`, `cep`, `bairro`, `cidade`, `estado`, `cnh`, `tipocliente`) values " +
                 "('" + Nome + "', '" +
                 Cpf + "', '" +
                 Telefone + "', '" +
@@ -47,7 +44,7 @@ namespace Business
                 Cidade + "', '" +
                 Estado + "', '" +
                 Cnh + "', '" +
-                Tipocliente + ")";
+                Tipocliente + "');";
 
             return con.ComandoSQL(sql);
         }
@@ -55,16 +52,18 @@ namespace Business
         public bool Atualizar()
         {
             con = new Conexao();
-            string sql = "UPDATE clientes SET " +
-                "nomeCliente='" + Nome +
-                "', cpfCliente='" + Cpf +
-                "', emailCliente='" + Email +
-                "', cepCliente='" + Cep +
-                "', dtNascCliente='" + Dtnascimento +
-                "', sexoCliente='" + Sexo +
-                "', telefoneCliente='" + Telefone +
-                "', cidadeCliente='" + Cidade +
-                "', cnhCliente='" + Cnh +
+            string sql = "UPDATE tbCliente SET " +
+                "nome='" + Nome +
+                "', cpf='" + Cpf +
+                "', telefone='" + Telefone +
+                "', email='" + Cep +
+                "', endereco='" + Endereco +
+                "', cep='" + Cep +
+                "', bairro='" + Bairro +
+                "', cidade='" + Cidade +
+                "', estado='" + Estado +
+                "', cnh='" + Cnh +
+                "', tipocliente='" + Tipocliente +
                 "' WHERE idCliente=" + IdCliente;
             return con.ComandoSQL(sql);
         }
@@ -108,7 +107,7 @@ namespace Business
         {
             con = new Conexao();
             string sql = "select * from tbcliente";
-            return con.CarregarUsuario(sql);
+            return con.CarregarGridView(sql);
         }
     }
 }

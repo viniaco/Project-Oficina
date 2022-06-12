@@ -10,20 +10,16 @@ namespace Business
 {
     public class Veiculo
     {
-        private int id;
-        private string nome, ano, cor, cambio, km, placa, combustivel, observacao;
-
-
-        public int Id { get => id; set => id = value; }
-        public string Nome { get => nome; set => nome = value; }
-        public string Ano { get => ano; set => ano = value; }
-        public string Cor { get => cor; set => cor = value; }
-        public string Cambio { get => cambio; set => cambio = value; }
-        public string Km { get => km; set => km = value; }
-        public string Placa { get => placa; set => placa = value; }
-        public string Combustivel { get => combustivel; set => combustivel = value; }
-        public string Observacao { get => observacao; set => observacao = value; }
-        //public string Fkcliente { get => fkcliente; set => fkcliente = value; }
+        public int Id { get; set; }
+        public int IdCliente { get; set; }
+        public string Nome { get; set; }
+        public string Ano { get; set; }
+        public string Cor { get; set; }
+        public string Cambio { get; set; }
+        public string Km { get; set; }
+        public string Placa { get; set; }
+        public string Combustivel { get; set; }
+        public string Observacao { get; set; }
 
         Conexao con;
 
@@ -31,30 +27,47 @@ namespace Business
         public bool Cadastrar()
         {
             con = new Conexao();
-            string sql = "INSERT INTO Usuarios (nomeUsuario, anoUsuario, corUsuario, cambioUsuario, kmUsuario, placaUsuario, combustivelUsuario, obsUsuario, Cliente_idCliente) values " +
-                "('" + Nome + "', '" + Ano + "', '" + Cor + "', '" + Cambio + "', '" + Km + "', '" + Placa + "', '" + Combustivel + "', '" + Observacao + "', '1')";
+            string sql = "INSERT INTO tbveiculo (`nome`,`ano`,`cor`,`cambio`,`km`,`placa`,`combustivel`,`observacao`,`idCliente`) values " +
+                "('" + Nome + "', '" +
+                Ano + "', '" +
+                Cor + "', '" +
+                Cambio + "', '" +
+                Km + "', '" +
+                Placa + "', '" +
+                Combustivel + "', '" +
+                Observacao + "', '" +
+                IdCliente + "');";
+
             return con.ComandoSQL(sql);
         }
 
         public bool Atualizar()
         {
             con = new Conexao();
-            string sql = "UPDATE Usuarios SET " +
-                "nomeUsuario='" + Nome + "', anoUsuario='" + Ano + "', corUsuario='" + Cor + "', cambioUsuario='" + Cambio + "', kmUsuario='" + Km + "', placaUsuario='" + Placa + "', combustivelUsuario='" + Combustivel + "', obsUsuario='" + Observacao + "' WHERE idUsuario=" + Id;
+            string sql = "UPDATE tbveiculo SET " +
+                "nome='" + Nome +
+                "', ano='" + Ano +
+                "', cor='" + Cor +
+                "', cambio='" + Cambio +
+                "', km='" + Km +
+                "', placa='" + Placa +
+                "', combustivel='" + Combustivel +
+                "', observacao='" + Observacao +
+                "' WHERE idVeiculo=" + Id; ;
             return con.ComandoSQL(sql);
         }
 
         public bool Excluir()
         {
             con = new Conexao();
-            string sql = "DELETE from Usuarios WHERE idUsuario=" + Id;
+            string sql = "DELETE from tbveiculo WHERE idVeiculo=" + Id;
             return con.ComandoSQL(sql);
         }
 
         public void Pesquisar()
         {
             con = new Conexao();
-            string sql = "SELECT * FROM Usuarios WHERE idUsuario=" + Id;
+            string sql = "SELECT * FROM tbveiculo WHERE idVeiculo=" + Id;
             DataSet ds;
             ds = con.Retorna(sql);
             if (ds.Tables[0].Rows.Count > 0)
@@ -69,12 +82,19 @@ namespace Business
                 Placa = Convert.ToString(dados.GetValue(6));
                 Combustivel = Convert.ToString(dados.GetValue(7));
                 Observacao = Convert.ToString(dados.GetValue(8));
-                //Fkcliente = Convert.ToString(dados.GetValue(9));
+                IdCliente = Convert.ToInt32(dados.GetValue(9));
             }
             else
             {
                 Id = 0;
             }
+        }
+
+        public DataTable GridViewVeiculo()
+        {
+            con = new Conexao();
+            string sql = "select * from tbveiculo";
+            return con.CarregarGridView(sql);
         }
     }
 }
