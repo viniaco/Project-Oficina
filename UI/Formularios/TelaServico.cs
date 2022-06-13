@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WF_OficinaTcc
 {
-    public partial class TelaServicoItem : Form
+    public partial class TelaServico : Form
     {
-        public TelaServicoItem()
+        public TelaServico()
         {
             InitializeComponent();
         }

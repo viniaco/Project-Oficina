@@ -1,7 +1,7 @@
 ﻿
 namespace WF_OficinaTcc
 {
-    partial class TelaServicoItem
+    partial class TelaServico
     {
         /// <summary>
         /// Required designer variable.
