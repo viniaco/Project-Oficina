@@ -38,13 +38,13 @@ namespace WF_OficinaTcc
             System.Windows.Forms.Label cadastradoPorLabel;
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.idServicoTextBox = new System.Windows.Forms.TextBox();
-            this.nomeTextBox = new System.Windows.Forms.TextBox();
-            this.descricaoTextBox = new System.Windows.Forms.TextBox();
-            this.observacaoTextBox = new System.Windows.Forms.TextBox();
-            this.valorTextBox = new System.Windows.Forms.TextBox();
-            this.dataDiaTextBox = new System.Windows.Forms.TextBox();
-            this.cadastradoPorTextBox = new System.Windows.Forms.TextBox();
+            this.txtIdServico = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.txtDesc = new System.Windows.Forms.TextBox();
+            this.txtObs = new System.Windows.Forms.TextBox();
+            this.txtValor = new System.Windows.Forms.TextBox();
+            this.txtDatadia = new System.Windows.Forms.TextBox();
+            this.txtCadastradoPor = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.txtPesquisar = new System.Windows.Forms.TextBox();
@@ -52,10 +52,10 @@ namespace WF_OficinaTcc
             this.cbmFiltrar = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.tbServicoDataGridView = new System.Windows.Forms.DataGridView();
+            this.ServicoDataGridView = new System.Windows.Forms.DataGridView();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnAtt = new System.Windows.Forms.Button();
-            this.btnCadastrarCliente = new System.Windows.Forms.Button();
+            this.btnCadastrar = new System.Windows.Forms.Button();
             idServicoLabel = new System.Windows.Forms.Label();
             nomeLabel = new System.Windows.Forms.Label();
             descricaoLabel = new System.Windows.Forms.Label();
@@ -66,7 +66,7 @@ namespace WF_OficinaTcc
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tbServicoDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ServicoDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // idServicoLabel
@@ -147,19 +147,19 @@ namespace WF_OficinaTcc
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(idServicoLabel);
-            this.groupBox1.Controls.Add(this.idServicoTextBox);
+            this.groupBox1.Controls.Add(this.txtIdServico);
             this.groupBox1.Controls.Add(nomeLabel);
-            this.groupBox1.Controls.Add(this.nomeTextBox);
+            this.groupBox1.Controls.Add(this.txtNome);
             this.groupBox1.Controls.Add(descricaoLabel);
-            this.groupBox1.Controls.Add(this.descricaoTextBox);
+            this.groupBox1.Controls.Add(this.txtDesc);
             this.groupBox1.Controls.Add(observacaoLabel);
-            this.groupBox1.Controls.Add(this.observacaoTextBox);
+            this.groupBox1.Controls.Add(this.txtObs);
             this.groupBox1.Controls.Add(valorLabel);
-            this.groupBox1.Controls.Add(this.valorTextBox);
+            this.groupBox1.Controls.Add(this.txtValor);
             this.groupBox1.Controls.Add(dataDiaLabel);
-            this.groupBox1.Controls.Add(this.dataDiaTextBox);
+            this.groupBox1.Controls.Add(this.txtDatadia);
             this.groupBox1.Controls.Add(cadastradoPorLabel);
-            this.groupBox1.Controls.Add(this.cadastradoPorTextBox);
+            this.groupBox1.Controls.Add(this.txtCadastradoPor);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(19, 52);
             this.groupBox1.Name = "groupBox1";
@@ -168,61 +168,61 @@ namespace WF_OficinaTcc
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados Pessoais";
             // 
-            // idServicoTextBox
+            // txtIdServico
             // 
-            this.idServicoTextBox.Enabled = false;
-            this.idServicoTextBox.Location = new System.Drawing.Point(9, 43);
-            this.idServicoTextBox.Name = "idServicoTextBox";
-            this.idServicoTextBox.Size = new System.Drawing.Size(100, 22);
-            this.idServicoTextBox.TabIndex = 1;
+            this.txtIdServico.Enabled = false;
+            this.txtIdServico.Location = new System.Drawing.Point(9, 43);
+            this.txtIdServico.Name = "txtIdServico";
+            this.txtIdServico.Size = new System.Drawing.Size(100, 22);
+            this.txtIdServico.TabIndex = 1;
             // 
-            // nomeTextBox
+            // txtNome
             // 
-            this.nomeTextBox.Location = new System.Drawing.Point(115, 43);
-            this.nomeTextBox.Name = "nomeTextBox";
-            this.nomeTextBox.Size = new System.Drawing.Size(424, 22);
-            this.nomeTextBox.TabIndex = 3;
+            this.txtNome.Location = new System.Drawing.Point(115, 43);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(424, 22);
+            this.txtNome.TabIndex = 3;
             // 
-            // descricaoTextBox
+            // txtDesc
             // 
-            this.descricaoTextBox.Location = new System.Drawing.Point(6, 82);
-            this.descricaoTextBox.Multiline = true;
-            this.descricaoTextBox.Name = "descricaoTextBox";
-            this.descricaoTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.descricaoTextBox.Size = new System.Drawing.Size(529, 42);
-            this.descricaoTextBox.TabIndex = 5;
+            this.txtDesc.Location = new System.Drawing.Point(6, 82);
+            this.txtDesc.Multiline = true;
+            this.txtDesc.Name = "txtDesc";
+            this.txtDesc.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtDesc.Size = new System.Drawing.Size(529, 42);
+            this.txtDesc.TabIndex = 5;
             // 
-            // observacaoTextBox
+            // txtObs
             // 
-            this.observacaoTextBox.Location = new System.Drawing.Point(6, 143);
-            this.observacaoTextBox.Multiline = true;
-            this.observacaoTextBox.Name = "observacaoTextBox";
-            this.observacaoTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.observacaoTextBox.Size = new System.Drawing.Size(529, 42);
-            this.observacaoTextBox.TabIndex = 7;
+            this.txtObs.Location = new System.Drawing.Point(6, 143);
+            this.txtObs.Multiline = true;
+            this.txtObs.Name = "txtObs";
+            this.txtObs.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtObs.Size = new System.Drawing.Size(529, 42);
+            this.txtObs.TabIndex = 7;
             // 
-            // valorTextBox
+            // txtValor
             // 
-            this.valorTextBox.Location = new System.Drawing.Point(9, 204);
-            this.valorTextBox.Name = "valorTextBox";
-            this.valorTextBox.Size = new System.Drawing.Size(100, 22);
-            this.valorTextBox.TabIndex = 9;
+            this.txtValor.Location = new System.Drawing.Point(9, 204);
+            this.txtValor.Name = "txtValor";
+            this.txtValor.Size = new System.Drawing.Size(100, 22);
+            this.txtValor.TabIndex = 9;
             // 
-            // dataDiaTextBox
+            // txtDatadia
             // 
-            this.dataDiaTextBox.Enabled = false;
-            this.dataDiaTextBox.Location = new System.Drawing.Point(115, 204);
-            this.dataDiaTextBox.Name = "dataDiaTextBox";
-            this.dataDiaTextBox.Size = new System.Drawing.Size(129, 22);
-            this.dataDiaTextBox.TabIndex = 11;
+            this.txtDatadia.Enabled = false;
+            this.txtDatadia.Location = new System.Drawing.Point(115, 204);
+            this.txtDatadia.Name = "txtDatadia";
+            this.txtDatadia.Size = new System.Drawing.Size(129, 22);
+            this.txtDatadia.TabIndex = 11;
             // 
-            // cadastradoPorTextBox
+            // txtCadastradoPor
             // 
-            this.cadastradoPorTextBox.Enabled = false;
-            this.cadastradoPorTextBox.Location = new System.Drawing.Point(250, 204);
-            this.cadastradoPorTextBox.Name = "cadastradoPorTextBox";
-            this.cadastradoPorTextBox.Size = new System.Drawing.Size(185, 22);
-            this.cadastradoPorTextBox.TabIndex = 13;
+            this.txtCadastradoPor.Enabled = false;
+            this.txtCadastradoPor.Location = new System.Drawing.Point(250, 204);
+            this.txtCadastradoPor.Name = "txtCadastradoPor";
+            this.txtCadastradoPor.Size = new System.Drawing.Size(185, 22);
+            this.txtCadastradoPor.TabIndex = 13;
             // 
             // groupBox2
             // 
@@ -293,7 +293,7 @@ namespace WF_OficinaTcc
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox3.Controls.Add(this.tbServicoDataGridView);
+            this.groupBox3.Controls.Add(this.ServicoDataGridView);
             this.groupBox3.Location = new System.Drawing.Point(28, 370);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(659, 79);
@@ -301,56 +301,59 @@ namespace WF_OficinaTcc
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Serviço(s)";
             // 
-            // tbServicoDataGridView
+            // ServicoDataGridView
             // 
-            this.tbServicoDataGridView.AllowUserToAddRows = false;
-            this.tbServicoDataGridView.AllowUserToDeleteRows = false;
-            this.tbServicoDataGridView.ColumnHeadersHeight = 29;
-            this.tbServicoDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbServicoDataGridView.Location = new System.Drawing.Point(3, 16);
-            this.tbServicoDataGridView.Name = "tbServicoDataGridView";
-            this.tbServicoDataGridView.ReadOnly = true;
-            this.tbServicoDataGridView.RowHeadersWidth = 51;
-            this.tbServicoDataGridView.Size = new System.Drawing.Size(653, 60);
-            this.tbServicoDataGridView.TabIndex = 0;
+            this.ServicoDataGridView.AllowUserToAddRows = false;
+            this.ServicoDataGridView.AllowUserToDeleteRows = false;
+            this.ServicoDataGridView.ColumnHeadersHeight = 29;
+            this.ServicoDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ServicoDataGridView.Location = new System.Drawing.Point(3, 16);
+            this.ServicoDataGridView.Name = "ServicoDataGridView";
+            this.ServicoDataGridView.ReadOnly = true;
+            this.ServicoDataGridView.RowHeadersWidth = 51;
+            this.ServicoDataGridView.Size = new System.Drawing.Size(653, 60);
+            this.ServicoDataGridView.TabIndex = 0;
             // 
             // btnExcluir
             // 
             this.btnExcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnExcluir.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.ForeColor = System.Drawing.Color.Black;
-            this.btnExcluir.Location = new System.Drawing.Point(693, 448);
+            this.btnExcluir.Location = new System.Drawing.Point(778, 441);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(102, 23);
             this.btnExcluir.TabIndex = 47;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnAtt
             // 
             this.btnAtt.BackColor = System.Drawing.Color.Transparent;
             this.btnAtt.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAtt.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnAtt.Location = new System.Drawing.Point(693, 419);
+            this.btnAtt.Location = new System.Drawing.Point(778, 412);
             this.btnAtt.Name = "btnAtt";
             this.btnAtt.Size = new System.Drawing.Size(102, 23);
             this.btnAtt.TabIndex = 46;
             this.btnAtt.Text = "Atualizar";
             this.btnAtt.UseVisualStyleBackColor = false;
+            this.btnAtt.Click += new System.EventHandler(this.btnAtt_Click);
             // 
-            // btnCadastrarCliente
+            // btnCadastrar
             // 
-            this.btnCadastrarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnCadastrarCliente.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrarCliente.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnCadastrarCliente.Location = new System.Drawing.Point(693, 386);
-            this.btnCadastrarCliente.Name = "btnCadastrarCliente";
-            this.btnCadastrarCliente.Size = new System.Drawing.Size(102, 27);
-            this.btnCadastrarCliente.TabIndex = 45;
-            this.btnCadastrarCliente.Text = "Cadastrar";
-            this.btnCadastrarCliente.UseVisualStyleBackColor = false;
+            this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnCadastrar.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnCadastrar.Location = new System.Drawing.Point(778, 379);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(102, 27);
+            this.btnCadastrar.TabIndex = 45;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
-            // TelaServicoItem
+            // TelaServico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -360,16 +363,17 @@ namespace WF_OficinaTcc
             this.Controls.Add(this.btnAtt);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btnCadastrarCliente);
+            this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.label6);
-            this.Name = "TelaServicoItem";
+            this.Name = "TelaServico";
             this.Text = "TelaAgendamento";
+            this.Load += new System.EventHandler(this.TelaServico_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.tbServicoDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ServicoDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -378,13 +382,13 @@ namespace WF_OficinaTcc
         #endregion
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox idServicoTextBox;
-        private System.Windows.Forms.TextBox nomeTextBox;
-        private System.Windows.Forms.TextBox descricaoTextBox;
-        private System.Windows.Forms.TextBox observacaoTextBox;
-        private System.Windows.Forms.TextBox valorTextBox;
-        private System.Windows.Forms.TextBox dataDiaTextBox;
-        private System.Windows.Forms.TextBox cadastradoPorTextBox;
+        private System.Windows.Forms.TextBox txtIdServico;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.TextBox txtDesc;
+        private System.Windows.Forms.TextBox txtObs;
+        private System.Windows.Forms.TextBox txtValor;
+        private System.Windows.Forms.TextBox txtDatadia;
+        private System.Windows.Forms.TextBox txtCadastradoPor;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.TextBox txtPesquisar;
@@ -392,9 +396,9 @@ namespace WF_OficinaTcc
         private System.Windows.Forms.ComboBox cbmFiltrar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.DataGridView tbServicoDataGridView;
+        private System.Windows.Forms.DataGridView ServicoDataGridView;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnAtt;
-        private System.Windows.Forms.Button btnCadastrarCliente;
+        private System.Windows.Forms.Button btnCadastrar;
     }
 }
