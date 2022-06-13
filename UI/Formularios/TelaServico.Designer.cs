@@ -72,63 +72,70 @@ namespace WF_OficinaTcc
             // idServicoLabel
             // 
             idServicoLabel.AutoSize = true;
-            idServicoLabel.Location = new System.Drawing.Point(6, 27);
+            idServicoLabel.Location = new System.Drawing.Point(8, 33);
+            idServicoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             idServicoLabel.Name = "idServicoLabel";
-            idServicoLabel.Size = new System.Drawing.Size(51, 13);
+            idServicoLabel.Size = new System.Drawing.Size(66, 19);
             idServicoLabel.TabIndex = 0;
             idServicoLabel.Text = "Código: ";
             // 
             // nomeLabel
             // 
             nomeLabel.AutoSize = true;
-            nomeLabel.Location = new System.Drawing.Point(112, 27);
+            nomeLabel.Location = new System.Drawing.Point(149, 33);
+            nomeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             nomeLabel.Name = "nomeLabel";
-            nomeLabel.Size = new System.Drawing.Size(45, 13);
+            nomeLabel.Size = new System.Drawing.Size(58, 19);
             nomeLabel.TabIndex = 2;
             nomeLabel.Text = "Nome: ";
             // 
             // descricaoLabel
             // 
             descricaoLabel.AutoSize = true;
-            descricaoLabel.Location = new System.Drawing.Point(6, 66);
+            descricaoLabel.Location = new System.Drawing.Point(8, 81);
+            descricaoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             descricaoLabel.Name = "descricaoLabel";
-            descricaoLabel.Size = new System.Drawing.Size(62, 13);
+            descricaoLabel.Size = new System.Drawing.Size(82, 19);
             descricaoLabel.TabIndex = 4;
             descricaoLabel.Text = "Descrição: ";
             // 
             // observacaoLabel
             // 
             observacaoLabel.AutoSize = true;
-            observacaoLabel.Location = new System.Drawing.Point(3, 127);
+            observacaoLabel.Location = new System.Drawing.Point(4, 156);
+            observacaoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             observacaoLabel.Name = "observacaoLabel";
-            observacaoLabel.Size = new System.Drawing.Size(73, 13);
+            observacaoLabel.Size = new System.Drawing.Size(98, 19);
             observacaoLabel.TabIndex = 6;
             observacaoLabel.Text = "Observação: ";
             // 
             // valorLabel
             // 
             valorLabel.AutoSize = true;
-            valorLabel.Location = new System.Drawing.Point(6, 188);
+            valorLabel.Location = new System.Drawing.Point(8, 231);
+            valorLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             valorLabel.Name = "valorLabel";
-            valorLabel.Size = new System.Drawing.Size(39, 13);
+            valorLabel.Size = new System.Drawing.Size(53, 19);
             valorLabel.TabIndex = 8;
             valorLabel.Text = "Valor: ";
             // 
             // dataDiaLabel
             // 
             dataDiaLabel.AutoSize = true;
-            dataDiaLabel.Location = new System.Drawing.Point(112, 188);
+            dataDiaLabel.Location = new System.Drawing.Point(149, 231);
+            dataDiaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             dataDiaLabel.Name = "dataDiaLabel";
-            dataDiaLabel.Size = new System.Drawing.Size(103, 13);
+            dataDiaLabel.Size = new System.Drawing.Size(134, 19);
             dataDiaLabel.TabIndex = 10;
             dataDiaLabel.Text = "Data do Cadastro: ";
             // 
             // cadastradoPorLabel
             // 
             cadastradoPorLabel.AutoSize = true;
-            cadastradoPorLabel.Location = new System.Drawing.Point(250, 188);
+            cadastradoPorLabel.Location = new System.Drawing.Point(333, 231);
+            cadastradoPorLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             cadastradoPorLabel.Name = "cadastradoPorLabel";
-            cadastradoPorLabel.Size = new System.Drawing.Size(93, 13);
+            cadastradoPorLabel.Size = new System.Drawing.Size(123, 19);
             cadastradoPorLabel.TabIndex = 12;
             cadastradoPorLabel.Text = "Cadastrado Por: ";
             // 
@@ -136,9 +143,10 @@ namespace WF_OficinaTcc
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(12, 9);
+            this.label6.Location = new System.Drawing.Point(16, 11);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(127, 40);
+            this.label6.Size = new System.Drawing.Size(162, 50);
             this.label6.TabIndex = 13;
             this.label6.Text = "Serviços";
             // 
@@ -161,9 +169,11 @@ namespace WF_OficinaTcc
             this.groupBox1.Controls.Add(cadastradoPorLabel);
             this.groupBox1.Controls.Add(this.txtCadastradoPor);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(19, 52);
+            this.groupBox1.Location = new System.Drawing.Point(25, 64);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(852, 230);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(1136, 283);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados Pessoais";
@@ -171,57 +181,64 @@ namespace WF_OficinaTcc
             // txtIdServico
             // 
             this.txtIdServico.Enabled = false;
-            this.txtIdServico.Location = new System.Drawing.Point(9, 43);
+            this.txtIdServico.Location = new System.Drawing.Point(12, 53);
+            this.txtIdServico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtIdServico.Name = "txtIdServico";
-            this.txtIdServico.Size = new System.Drawing.Size(100, 22);
+            this.txtIdServico.Size = new System.Drawing.Size(132, 26);
             this.txtIdServico.TabIndex = 1;
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(115, 43);
+            this.txtNome.Location = new System.Drawing.Point(153, 53);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(424, 22);
+            this.txtNome.Size = new System.Drawing.Size(564, 26);
             this.txtNome.TabIndex = 3;
             // 
             // txtDesc
             // 
-            this.txtDesc.Location = new System.Drawing.Point(6, 82);
+            this.txtDesc.Location = new System.Drawing.Point(8, 101);
+            this.txtDesc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDesc.Multiline = true;
             this.txtDesc.Name = "txtDesc";
             this.txtDesc.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtDesc.Size = new System.Drawing.Size(529, 42);
+            this.txtDesc.Size = new System.Drawing.Size(704, 51);
             this.txtDesc.TabIndex = 5;
             // 
             // txtObs
             // 
-            this.txtObs.Location = new System.Drawing.Point(6, 143);
+            this.txtObs.Location = new System.Drawing.Point(8, 176);
+            this.txtObs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtObs.Multiline = true;
             this.txtObs.Name = "txtObs";
             this.txtObs.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtObs.Size = new System.Drawing.Size(529, 42);
+            this.txtObs.Size = new System.Drawing.Size(704, 51);
             this.txtObs.TabIndex = 7;
             // 
             // txtValor
             // 
-            this.txtValor.Location = new System.Drawing.Point(9, 204);
+            this.txtValor.Location = new System.Drawing.Point(12, 251);
+            this.txtValor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtValor.Name = "txtValor";
-            this.txtValor.Size = new System.Drawing.Size(100, 22);
+            this.txtValor.Size = new System.Drawing.Size(132, 26);
             this.txtValor.TabIndex = 9;
             // 
             // txtDatadia
             // 
             this.txtDatadia.Enabled = false;
-            this.txtDatadia.Location = new System.Drawing.Point(115, 204);
+            this.txtDatadia.Location = new System.Drawing.Point(153, 251);
+            this.txtDatadia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDatadia.Name = "txtDatadia";
-            this.txtDatadia.Size = new System.Drawing.Size(129, 22);
+            this.txtDatadia.Size = new System.Drawing.Size(171, 26);
             this.txtDatadia.TabIndex = 11;
             // 
             // txtCadastradoPor
             // 
             this.txtCadastradoPor.Enabled = false;
-            this.txtCadastradoPor.Location = new System.Drawing.Point(250, 204);
+            this.txtCadastradoPor.Location = new System.Drawing.Point(333, 251);
+            this.txtCadastradoPor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCadastradoPor.Name = "txtCadastradoPor";
-            this.txtCadastradoPor.Size = new System.Drawing.Size(185, 22);
+            this.txtCadastradoPor.Size = new System.Drawing.Size(245, 26);
             this.txtCadastradoPor.TabIndex = 13;
             // 
             // groupBox2
@@ -234,18 +251,21 @@ namespace WF_OficinaTcc
             this.groupBox2.Controls.Add(this.cbmFiltrar);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(28, 298);
+            this.groupBox2.Location = new System.Drawing.Point(37, 367);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(852, 66);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(1136, 81);
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Pesquisar";
             // 
             // btnPesquisar
             // 
-            this.btnPesquisar.Location = new System.Drawing.Point(401, 26);
+            this.btnPesquisar.Location = new System.Drawing.Point(535, 32);
+            this.btnPesquisar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(75, 23);
+            this.btnPesquisar.Size = new System.Drawing.Size(100, 28);
             this.btnPesquisar.TabIndex = 4;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = true;
@@ -253,17 +273,19 @@ namespace WF_OficinaTcc
             // txtPesquisar
             // 
             this.txtPesquisar.AcceptsReturn = true;
-            this.txtPesquisar.Location = new System.Drawing.Point(211, 28);
+            this.txtPesquisar.Location = new System.Drawing.Point(281, 34);
+            this.txtPesquisar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPesquisar.Name = "txtPesquisar";
-            this.txtPesquisar.Size = new System.Drawing.Size(183, 22);
+            this.txtPesquisar.Size = new System.Drawing.Size(243, 26);
             this.txtPesquisar.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(192, 31);
+            this.label2.Location = new System.Drawing.Point(256, 38);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(15, 13);
+            this.label2.Size = new System.Drawing.Size(19, 19);
             this.label2.TabIndex = 2;
             this.label2.Text = "=";
             // 
@@ -274,17 +296,19 @@ namespace WF_OficinaTcc
             "",
             "Código",
             "Nome"});
-            this.cbmFiltrar.Location = new System.Drawing.Point(65, 28);
+            this.cbmFiltrar.Location = new System.Drawing.Point(87, 34);
+            this.cbmFiltrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbmFiltrar.Name = "cbmFiltrar";
-            this.cbmFiltrar.Size = new System.Drawing.Size(121, 21);
+            this.cbmFiltrar.Size = new System.Drawing.Size(160, 27);
             this.cbmFiltrar.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 31);
+            this.label1.Location = new System.Drawing.Point(8, 38);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 13);
+            this.label1.Size = new System.Drawing.Size(86, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "Filtrar por: ";
             // 
@@ -294,9 +318,11 @@ namespace WF_OficinaTcc
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.ServicoDataGridView);
-            this.groupBox3.Location = new System.Drawing.Point(28, 370);
+            this.groupBox3.Location = new System.Drawing.Point(37, 455);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(659, 79);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Size = new System.Drawing.Size(879, 97);
             this.groupBox3.TabIndex = 16;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Serviço(s)";
@@ -307,21 +333,24 @@ namespace WF_OficinaTcc
             this.ServicoDataGridView.AllowUserToDeleteRows = false;
             this.ServicoDataGridView.ColumnHeadersHeight = 29;
             this.ServicoDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ServicoDataGridView.Location = new System.Drawing.Point(3, 16);
+            this.ServicoDataGridView.Location = new System.Drawing.Point(4, 19);
+            this.ServicoDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ServicoDataGridView.Name = "ServicoDataGridView";
             this.ServicoDataGridView.ReadOnly = true;
             this.ServicoDataGridView.RowHeadersWidth = 51;
-            this.ServicoDataGridView.Size = new System.Drawing.Size(653, 60);
+            this.ServicoDataGridView.Size = new System.Drawing.Size(871, 74);
             this.ServicoDataGridView.TabIndex = 0;
+            this.ServicoDataGridView.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ServicoDataGridView_MouseDoubleClick);
             // 
             // btnExcluir
             // 
             this.btnExcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnExcluir.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.ForeColor = System.Drawing.Color.Black;
-            this.btnExcluir.Location = new System.Drawing.Point(778, 441);
+            this.btnExcluir.Location = new System.Drawing.Point(1037, 543);
+            this.btnExcluir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(102, 23);
+            this.btnExcluir.Size = new System.Drawing.Size(136, 28);
             this.btnExcluir.TabIndex = 47;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = false;
@@ -332,9 +361,10 @@ namespace WF_OficinaTcc
             this.btnAtt.BackColor = System.Drawing.Color.Transparent;
             this.btnAtt.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAtt.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnAtt.Location = new System.Drawing.Point(778, 412);
+            this.btnAtt.Location = new System.Drawing.Point(1037, 507);
+            this.btnAtt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAtt.Name = "btnAtt";
-            this.btnAtt.Size = new System.Drawing.Size(102, 23);
+            this.btnAtt.Size = new System.Drawing.Size(136, 28);
             this.btnAtt.TabIndex = 46;
             this.btnAtt.Text = "Atualizar";
             this.btnAtt.UseVisualStyleBackColor = false;
@@ -345,9 +375,10 @@ namespace WF_OficinaTcc
             this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnCadastrar.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnCadastrar.Location = new System.Drawing.Point(778, 379);
+            this.btnCadastrar.Location = new System.Drawing.Point(1037, 466);
+            this.btnCadastrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(102, 27);
+            this.btnCadastrar.Size = new System.Drawing.Size(136, 33);
             this.btnCadastrar.TabIndex = 45;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = false;
@@ -355,9 +386,9 @@ namespace WF_OficinaTcc
             // 
             // TelaServico
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(966, 489);
+            this.ClientSize = new System.Drawing.Size(1288, 602);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.btnAtt);
@@ -365,6 +396,7 @@ namespace WF_OficinaTcc
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.label6);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "TelaServico";
             this.Text = "TelaAgendamento";
             this.Load += new System.EventHandler(this.TelaServico_Load);

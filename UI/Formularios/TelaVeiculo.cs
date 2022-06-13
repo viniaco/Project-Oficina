@@ -122,6 +122,8 @@ namespace WF_OficinaTcc
             cbCliente.DisplayMember = "nome";
             cbCliente.Update();
 
+            cbCliente.SelectedIndex = -1;
+
         }
         private void LimparCampo()
         {

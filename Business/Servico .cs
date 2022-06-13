@@ -11,7 +11,6 @@ namespace Business
     public class Servico
     {
         public int IdServico { get; set; }
-        public int IdOrdem { get; set; }
         public string Nome { get; set; }
         public string Descricao { get; set; }
         public string Observacao { get; set; }
@@ -24,8 +23,8 @@ namespace Business
         public bool Cadastrar()
         {
             con = new Conexao();
-            string sql = "INSERT INTO tbservico (`nome`,`descricao`,`observacao`,`valor`,`datadia`,`cadastradoPor`,`idOrdem`) values " +
-                "('" + Nome + "', '" + Descricao + "', '" + Observacao + "', '" + Valor + "', '" + DataDia + "', '" + CadastradoPor + "','" + IdOrdem + "')";
+            string sql = "INSERT INTO tbservico (`nome`,`descricao`,`observacao`,`valor`,`datadia`,`cadastradoPor`) values " +
+                "('" + Nome + "', '" + Descricao + "', '" + Observacao + "', '" + Valor + "', '" + DataDia + "', '" + CadastradoPor + "');";
 
             return con.ComandoSQL(sql);
         }
@@ -34,7 +33,8 @@ namespace Business
         {
             con = new Conexao();
             string sql = "UPDATE tbservico SET " +
-                "nome='" + Nome + "', descricao='" + Descricao + "', obeservacao='" + Valor + "', valor='" + DataDia + "', datadia='" + CadastradoPor + "', idOrdem = '" + IdOrdem;
+                "nome='" + Nome + "', descricao='" + Descricao + "', observacao='" + Observacao + "', valor='" + Valor + "', datadia='" + DataDia + "', cadastradoPor='" + CadastradoPor +
+                "' WHERE idServico=" + IdServico;
             return con.ComandoSQL(sql);
         }
 
@@ -61,7 +61,6 @@ namespace Business
                 Valor = Convert.ToDouble(dados.GetValue(4));
                 DataDia = Convert.ToString(dados.GetValue(5));
                 CadastradoPor = Convert.ToString(dados.GetValue(6));
-                IdOrdem = Convert.ToInt32(dados.GetValue(7));
             }
             else
             {

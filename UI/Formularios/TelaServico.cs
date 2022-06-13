@@ -19,19 +19,16 @@ namespace WF_OficinaTcc
         }
 
         Servico cadastro;
-        OrdemServico OS;
-
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             cadastro = new Servico();
-
             cadastro.Nome = txtNome.Text;
             cadastro.Descricao = txtDesc.Text;
             cadastro.Observacao = txtDesc.Text;
             cadastro.Valor = Convert.ToDouble(txtValor.Text);
-            cadastro.DataDia = txtDatadia.Text;
-            cadastro.CadastradoPor = txtCadastradoPor.Text;
+            cadastro.DataDia = Convert.ToString(DateTime.Today);
+            cadastro.CadastradoPor = TelaLogin.usuarioConectado;
 
             if (cadastro.Cadastrar())
             {
@@ -41,6 +38,10 @@ namespace WF_OficinaTcc
             {
                 MessageBox.Show("Cadastro não realizado!");
             }
+
+            LimparCampo();
+            ServicoDataGridView.Update();
+            ServicoDataGridView.Refresh();
         }
 
         private void btnAtt_Click(object sender, EventArgs e)
@@ -58,7 +59,7 @@ namespace WF_OficinaTcc
 
             if (cadastro.Atualizar())
             {
-                MessageBox.Show("Veiculo foi atualizado com sucesso!");
+                MessageBox.Show("O Serviço foi atualizado com sucesso!");
             }
             else
             {
@@ -97,6 +98,19 @@ namespace WF_OficinaTcc
             txtValor.Clear();
             txtDatadia.Clear();
             txtCadastradoPor.Clear();
+        }
+
+        private void ServicoDataGridView_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            LimparCampo();
+
+            txtIdServico.Text = ServicoDataGridView.CurrentRow.Cells[0].Value.ToString();
+            txtNome.Text = ServicoDataGridView.CurrentRow.Cells[1].Value.ToString();
+            txtDesc.Text = ServicoDataGridView.CurrentRow.Cells[2].Value.ToString();
+            txtObs.Text = ServicoDataGridView.CurrentRow.Cells[3].Value.ToString();
+            txtValor.Text = ServicoDataGridView.CurrentRow.Cells[4].Value.ToString();
+            txtDatadia.Text = ServicoDataGridView.CurrentRow.Cells[5].Value.ToString();
+            txtCadastradoPor.Text = ServicoDataGridView.CurrentRow.Cells[6].Value.ToString();
 
         }
     }
