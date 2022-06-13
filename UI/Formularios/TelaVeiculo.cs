@@ -58,6 +58,7 @@ namespace WF_OficinaTcc
             cadastro.Placa = txtPlaca.Text;
             cadastro.Combustivel = cbCombustivel.Text;
             cadastro.Observacao = txtObs.Text;
+
             if (cadastro.Atualizar())
             {
                 MessageBox.Show("Veiculo foi atualizado com sucesso!");

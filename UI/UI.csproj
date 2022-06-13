@@ -107,11 +107,11 @@
     <Compile Include="Formularios\TelaUsuario .Designer.cs">
       <DependentUpon>TelaUsuario .cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\TelaServicoItem.cs">
+    <Compile Include="Formularios\TelaServico.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\TelaServicoItem.Designer.cs">
-      <DependentUpon>TelaServicoItem.cs</DependentUpon>
+    <Compile Include="Formularios\TelaServico.Designer.cs">
+      <DependentUpon>TelaServico.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\TelaOS.cs">
       <SubType>Form</SubType>
@@ -148,8 +148,8 @@
     <EmbeddedResource Include="Formularios\TelaUsuario .resx">
       <DependentUpon>TelaUsuario .cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\TelaServicoItem.resx">
-      <DependentUpon>TelaServicoItem.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\TelaServico.resx">
+      <DependentUpon>TelaServico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\TelaOS.resx">
       <DependentUpon>TelaOS.cs</DependentUpon>
