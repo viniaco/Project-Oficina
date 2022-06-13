@@ -41,11 +41,12 @@ namespace WF_OficinaTcc
 
         private void TelaPrincipal_Load(object sender, EventArgs e)
         {
-            // this.TopMost = true;
+
+            //this.TopMost = true;
 
             //this.FormBorderStyle = FormBorderStyle.None; // Full-Screen 
 
-            // this.WindowState = FormWindowState.Maximized;
+            //this.WindowState = FormWindowState.Maximized;
         }
 
         private void toolStripButton5_Click(object sender, EventArgs e)

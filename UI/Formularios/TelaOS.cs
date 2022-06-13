@@ -61,6 +61,17 @@ namespace WF_OficinaTcc
 
         }
 
+        private void GridLoad()
+        {
+            OrdemServico dt = new OrdemServico();
+
+            BindingSource bs = new BindingSource();
+
+            bs.DataSource = dt.GridViewOS();
+
+            DataGridViewOS.DataSource = bs;
+        }
+
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             servi = new Servico();
@@ -85,7 +96,7 @@ namespace WF_OficinaTcc
             }
 
             LimparCampo();
-            DataGridViewOS.Refresh();
+            GridLoad();
         }
 
         private void btnAtt_Click(object sender, EventArgs e)
@@ -111,6 +122,9 @@ namespace WF_OficinaTcc
             {
                 MessageBox.Show("Atualização não realizada!");
             }
+
+            LimparCampo();
+            GridLoad();
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
@@ -125,6 +139,9 @@ namespace WF_OficinaTcc
             {
                 MessageBox.Show("Exclusão não efetuada!");
             }
+
+            LimparCampo();
+            GridLoad();
         }
 
         private void LimparCampo()

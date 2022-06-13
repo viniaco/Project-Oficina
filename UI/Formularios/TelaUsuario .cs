@@ -77,6 +77,8 @@ namespace WF_OficinaTcc
             {
                 MessageBox.Show("Atualização não realizada!");
             }
+            LimparCampo();
+            GridLoad();
 
         }
 
@@ -124,6 +126,9 @@ namespace WF_OficinaTcc
                 MessageBox.Show("Exclusão não efetuada!");
             }
 
+            LimparCampo();
+            GridLoad();
+
         }
 
         private void btnPesquisar_Click(object sender, EventArgs e)
@@ -136,6 +141,17 @@ namespace WF_OficinaTcc
             Usuario user = new Usuario();
             var dt = user.GridViewUsuario();
             dataGridViewUsuario.DataSource = dt;
+        }
+
+        private void GridLoad()
+        {
+            Usuario dt = new Usuario();
+
+            BindingSource bs = new BindingSource();
+
+            bs.DataSource = dt.GridViewUsuario();
+
+            dataGridViewUsuario.DataSource = bs;
         }
 
         private void btnCadastrarUsuario_Click(object sender, EventArgs e)
@@ -185,6 +201,8 @@ namespace WF_OficinaTcc
                     //Ser os campos não estiverem preenchido
                     MessageBox.Show("Todos os campos não podem ficar vazio");
                 }
+                LimparCampo();
+                GridLoad();
             }
             catch (Exception ex)
             {

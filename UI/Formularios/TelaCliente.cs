@@ -25,6 +25,17 @@ namespace WF_OficinaTcc
 
         }
 
+        private void GridLoad()
+        {
+            Cliente dt = new Cliente();
+
+            BindingSource bs = new BindingSource();
+
+            bs.DataSource = dt.GridViewCliente();
+
+            DataGridViewCliente.DataSource = bs;
+        }
+
         private void btnCadastrarCliente_Click(object sender, EventArgs e)
         {
             cadastro = new Cliente();
@@ -48,7 +59,10 @@ namespace WF_OficinaTcc
             {
                 MessageBox.Show("Cadastro não realizado!");
             }
-            return;
+
+            LimparCampo();
+            GridLoad();
+
 
         }
 
@@ -82,12 +96,11 @@ namespace WF_OficinaTcc
                 MessageBox.Show("Atualização não realizada!");
             }
 
-        }
-
-        private void TelaCliente_Load(object sender, EventArgs e)
-        {
+            LimparCampo();
+            GridLoad();
 
         }
+
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
@@ -101,6 +114,9 @@ namespace WF_OficinaTcc
             {
                 MessageBox.Show("Exclusão não efetuada!");
             }
+
+            LimparCampo();
+            GridLoad();
 
         }
 
@@ -131,7 +147,7 @@ namespace WF_OficinaTcc
 
         }
 
-        private void TelaCliente_Load_1(object sender, EventArgs e)
+        private void TelaCliente_Load(object sender, EventArgs e)
         {
             Cliente cli = new Cliente();
             var dt = cli.GridViewCliente();
@@ -140,6 +156,7 @@ namespace WF_OficinaTcc
 
         private void LimparCampo()
         {
+            txtIdCliente.Clear();
             txtNome.Clear();
             mtbCPF.Clear();
             txtEmail.Clear();

@@ -21,6 +21,17 @@ namespace WF_OficinaTcc
         Veiculo cadastro;
         Cliente cli;
 
+        private void GridLoad()
+        {
+            Veiculo dt = new Veiculo();
+
+            BindingSource bs = new BindingSource();
+
+            bs.DataSource = dt.GridViewVeiculo();
+
+            dataGridViewVeiculo.DataSource = bs;
+        }
+
         private void btnCadastrarVeic_Click(object sender, EventArgs e)
         {
             cli = new Cliente();
@@ -43,6 +54,8 @@ namespace WF_OficinaTcc
             {
                 MessageBox.Show("Cadastro não realizado!");
             }
+            LimparCampo();
+            GridLoad();
         }
 
         private void btnEditarVeic_Click(object sender, EventArgs e)
@@ -67,6 +80,8 @@ namespace WF_OficinaTcc
             {
                 MessageBox.Show("Atualização não realizada!");
             }
+            LimparCampo();
+            GridLoad();
         }
 
         private void btnBuscaVeic_Click(object sender, EventArgs e)
@@ -103,6 +118,8 @@ namespace WF_OficinaTcc
             {
                 MessageBox.Show("Exclusão não efetuada!");
             }
+            LimparCampo();
+            GridLoad();
         }
 
         private void TelaVeiculo_Load(object sender, EventArgs e)
@@ -176,6 +193,9 @@ namespace WF_OficinaTcc
             {
                 MessageBox.Show("Atualização não realizada!");
             }
+
+            LimparCampo();
+            GridLoad();
         }
 
         private void dataGridViewVeiculo_CellContentClick(object sender, DataGridViewCellEventArgs e)

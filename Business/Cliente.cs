@@ -56,7 +56,7 @@ namespace Business
                 "nome='" + Nome +
                 "', cpf='" + Cpf +
                 "', telefone='" + Telefone +
-                "', email='" + Cep +
+                "', email='" + Email +
                 "', endereco='" + Endereco +
                 "', cep='" + Cep +
                 "', bairro='" + Bairro +
