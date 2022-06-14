@@ -32,7 +32,7 @@ namespace WF_OficinaTcc
             OrdemServico OS = new OrdemServico();
             var dt = OS.GridViewOS();
 
-            DataGridViewOS.DataSource = dt;
+            gdvOS.DataSource = dt;
 
 
             cbVeiculo.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -69,12 +69,13 @@ namespace WF_OficinaTcc
 
             bs.DataSource = dt.GridViewOS();
 
-            DataGridViewOS.DataSource = bs;
+            gdvOS.DataSource = bs;
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             servi = new Servico();
+            var 
             cadastro = new OrdemServico();
             cadastro.CadastradoPor = TelaLogin.usuarioConectado;
             cadastro.Aprovada = 1;
@@ -159,15 +160,15 @@ namespace WF_OficinaTcc
         {
             LimparCampo();
 
-            txtidOrdem.Text = DataGridViewOS.CurrentRow.Cells[0].Value.ToString();
-            txtCadastradoPor.Text = DataGridViewOS.CurrentRow.Cells[1].Value.ToString();
+            txtidOrdem.Text = gdvOS.CurrentRow.Cells[0].Value.ToString();
+            txtCadastradoPor.Text = gdvOS.CurrentRow.Cells[1].Value.ToString();
             //.Text = dataGridViewVeiculo.CurrentRow.Cells[2].Value.ToString(); - APROVADA
-            txtNomeOS.Text = DataGridViewOS.CurrentRow.Cells[3].Value.ToString();
+            txtNomeOS.Text = gdvOS.CurrentRow.Cells[3].Value.ToString();
             //.Text = dataGridViewVeiculo.CurrentRow.Cells[4].Value.ToString(); - VALOR 
-            txtDatadia.Text = DataGridViewOS.CurrentRow.Cells[5].Value.ToString();
-            cbCliente.Text = DataGridViewOS.CurrentRow.Cells[6].Value.ToString();
-            cbVeiculo.Text = DataGridViewOS.CurrentRow.Cells[7].Value.ToString();
-            cbVeiculo.Text = DataGridViewOS.CurrentRow.Cells[8].Value.ToString();
+            txtDatadia.Text = gdvOS.CurrentRow.Cells[5].Value.ToString();
+            cbCliente.Text = gdvOS.CurrentRow.Cells[6].Value.ToString();
+            cbVeiculo.Text = gdvOS.CurrentRow.Cells[7].Value.ToString();
+            cbVeiculo.Text = gdvOS.CurrentRow.Cells[8].Value.ToString();
         }
     }
 }

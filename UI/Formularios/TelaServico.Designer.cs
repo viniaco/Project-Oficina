@@ -45,17 +45,17 @@ namespace WF_OficinaTcc
             this.txtValor = new System.Windows.Forms.TextBox();
             this.txtDatadia = new System.Windows.Forms.TextBox();
             this.txtCadastradoPor = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnPesquisar = new System.Windows.Forms.Button();
-            this.txtPesquisar = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cbmFiltrar = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.ServicoDataGridView = new System.Windows.Forms.DataGridView();
+            this.gdvServico = new System.Windows.Forms.DataGridView();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnAtt = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbmFiltrar = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtPesquisar = new System.Windows.Forms.TextBox();
+            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             idServicoLabel = new System.Windows.Forms.Label();
             nomeLabel = new System.Windows.Forms.Label();
             descricaoLabel = new System.Windows.Forms.Label();
@@ -64,9 +64,9 @@ namespace WF_OficinaTcc
             dataDiaLabel = new System.Windows.Forms.Label();
             cadastradoPorLabel = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ServicoDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gdvServico)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // idServicoLabel
@@ -170,9 +170,9 @@ namespace WF_OficinaTcc
             this.groupBox1.Controls.Add(this.txtCadastradoPor);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(25, 64);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(1136, 283);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
@@ -182,7 +182,7 @@ namespace WF_OficinaTcc
             // 
             this.txtIdServico.Enabled = false;
             this.txtIdServico.Location = new System.Drawing.Point(12, 53);
-            this.txtIdServico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIdServico.Margin = new System.Windows.Forms.Padding(4);
             this.txtIdServico.Name = "txtIdServico";
             this.txtIdServico.Size = new System.Drawing.Size(132, 26);
             this.txtIdServico.TabIndex = 1;
@@ -190,7 +190,7 @@ namespace WF_OficinaTcc
             // txtNome
             // 
             this.txtNome.Location = new System.Drawing.Point(153, 53);
-            this.txtNome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(4);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(564, 26);
             this.txtNome.TabIndex = 3;
@@ -198,7 +198,7 @@ namespace WF_OficinaTcc
             // txtDesc
             // 
             this.txtDesc.Location = new System.Drawing.Point(8, 101);
-            this.txtDesc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDesc.Margin = new System.Windows.Forms.Padding(4);
             this.txtDesc.Multiline = true;
             this.txtDesc.Name = "txtDesc";
             this.txtDesc.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -208,7 +208,7 @@ namespace WF_OficinaTcc
             // txtObs
             // 
             this.txtObs.Location = new System.Drawing.Point(8, 176);
-            this.txtObs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtObs.Margin = new System.Windows.Forms.Padding(4);
             this.txtObs.Multiline = true;
             this.txtObs.Name = "txtObs";
             this.txtObs.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -218,7 +218,7 @@ namespace WF_OficinaTcc
             // txtValor
             // 
             this.txtValor.Location = new System.Drawing.Point(12, 251);
-            this.txtValor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtValor.Margin = new System.Windows.Forms.Padding(4);
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(132, 26);
             this.txtValor.TabIndex = 9;
@@ -227,7 +227,7 @@ namespace WF_OficinaTcc
             // 
             this.txtDatadia.Enabled = false;
             this.txtDatadia.Location = new System.Drawing.Point(153, 251);
-            this.txtDatadia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDatadia.Margin = new System.Windows.Forms.Padding(4);
             this.txtDatadia.Name = "txtDatadia";
             this.txtDatadia.Size = new System.Drawing.Size(171, 26);
             this.txtDatadia.TabIndex = 11;
@@ -236,111 +236,40 @@ namespace WF_OficinaTcc
             // 
             this.txtCadastradoPor.Enabled = false;
             this.txtCadastradoPor.Location = new System.Drawing.Point(333, 251);
-            this.txtCadastradoPor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCadastradoPor.Margin = new System.Windows.Forms.Padding(4);
             this.txtCadastradoPor.Name = "txtCadastradoPor";
             this.txtCadastradoPor.Size = new System.Drawing.Size(245, 26);
             this.txtCadastradoPor.TabIndex = 13;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.btnPesquisar);
-            this.groupBox2.Controls.Add(this.txtPesquisar);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.cbmFiltrar);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(37, 367);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox2.Size = new System.Drawing.Size(1136, 81);
-            this.groupBox2.TabIndex = 15;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Pesquisar";
-            // 
-            // btnPesquisar
-            // 
-            this.btnPesquisar.Location = new System.Drawing.Point(535, 32);
-            this.btnPesquisar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(100, 28);
-            this.btnPesquisar.TabIndex = 4;
-            this.btnPesquisar.Text = "Pesquisar";
-            this.btnPesquisar.UseVisualStyleBackColor = true;
-            // 
-            // txtPesquisar
-            // 
-            this.txtPesquisar.AcceptsReturn = true;
-            this.txtPesquisar.Location = new System.Drawing.Point(281, 34);
-            this.txtPesquisar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtPesquisar.Name = "txtPesquisar";
-            this.txtPesquisar.Size = new System.Drawing.Size(243, 26);
-            this.txtPesquisar.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(256, 38);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(19, 19);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "=";
-            // 
-            // cbmFiltrar
-            // 
-            this.cbmFiltrar.FormattingEnabled = true;
-            this.cbmFiltrar.Items.AddRange(new object[] {
-            "",
-            "Código",
-            "Nome"});
-            this.cbmFiltrar.Location = new System.Drawing.Point(87, 34);
-            this.cbmFiltrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.cbmFiltrar.Name = "cbmFiltrar";
-            this.cbmFiltrar.Size = new System.Drawing.Size(160, 27);
-            this.cbmFiltrar.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 38);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 19);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Filtrar por: ";
             // 
             // groupBox3
             // 
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox3.Controls.Add(this.ServicoDataGridView);
+            this.groupBox3.Controls.Add(this.gdvServico);
             this.groupBox3.Location = new System.Drawing.Point(37, 455);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.Size = new System.Drawing.Size(879, 97);
             this.groupBox3.TabIndex = 16;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Serviço(s)";
             // 
-            // ServicoDataGridView
+            // gdvServico
             // 
-            this.ServicoDataGridView.AllowUserToAddRows = false;
-            this.ServicoDataGridView.AllowUserToDeleteRows = false;
-            this.ServicoDataGridView.ColumnHeadersHeight = 29;
-            this.ServicoDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ServicoDataGridView.Location = new System.Drawing.Point(4, 19);
-            this.ServicoDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.ServicoDataGridView.Name = "ServicoDataGridView";
-            this.ServicoDataGridView.ReadOnly = true;
-            this.ServicoDataGridView.RowHeadersWidth = 51;
-            this.ServicoDataGridView.Size = new System.Drawing.Size(871, 74);
-            this.ServicoDataGridView.TabIndex = 0;
-            this.ServicoDataGridView.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ServicoDataGridView_MouseDoubleClick);
+            this.gdvServico.AllowUserToAddRows = false;
+            this.gdvServico.AllowUserToDeleteRows = false;
+            this.gdvServico.ColumnHeadersHeight = 29;
+            this.gdvServico.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gdvServico.Location = new System.Drawing.Point(4, 19);
+            this.gdvServico.Margin = new System.Windows.Forms.Padding(4);
+            this.gdvServico.Name = "gdvServico";
+            this.gdvServico.ReadOnly = true;
+            this.gdvServico.RowHeadersWidth = 51;
+            this.gdvServico.Size = new System.Drawing.Size(871, 74);
+            this.gdvServico.TabIndex = 0;
+            this.gdvServico.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ServicoDataGridView_MouseDoubleClick);
             // 
             // btnExcluir
             // 
@@ -348,7 +277,7 @@ namespace WF_OficinaTcc
             this.btnExcluir.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.ForeColor = System.Drawing.Color.Black;
             this.btnExcluir.Location = new System.Drawing.Point(1037, 543);
-            this.btnExcluir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExcluir.Margin = new System.Windows.Forms.Padding(4);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(136, 28);
             this.btnExcluir.TabIndex = 47;
@@ -362,7 +291,7 @@ namespace WF_OficinaTcc
             this.btnAtt.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAtt.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnAtt.Location = new System.Drawing.Point(1037, 507);
-            this.btnAtt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAtt.Margin = new System.Windows.Forms.Padding(4);
             this.btnAtt.Name = "btnAtt";
             this.btnAtt.Size = new System.Drawing.Size(136, 28);
             this.btnAtt.TabIndex = 46;
@@ -376,13 +305,84 @@ namespace WF_OficinaTcc
             this.btnCadastrar.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnCadastrar.Location = new System.Drawing.Point(1037, 466);
-            this.btnCadastrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCadastrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(136, 33);
             this.btnCadastrar.TabIndex = 45;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = false;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(8, 38);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(86, 19);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Filtrar por: ";
+            // 
+            // cbmFiltrar
+            // 
+            this.cbmFiltrar.FormattingEnabled = true;
+            this.cbmFiltrar.Items.AddRange(new object[] {
+            "",
+            "Código",
+            "Nome"});
+            this.cbmFiltrar.Location = new System.Drawing.Point(87, 34);
+            this.cbmFiltrar.Margin = new System.Windows.Forms.Padding(4);
+            this.cbmFiltrar.Name = "cbmFiltrar";
+            this.cbmFiltrar.Size = new System.Drawing.Size(160, 27);
+            this.cbmFiltrar.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(256, 38);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(19, 19);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "=";
+            // 
+            // txtPesquisar
+            // 
+            this.txtPesquisar.AcceptsReturn = true;
+            this.txtPesquisar.Location = new System.Drawing.Point(281, 34);
+            this.txtPesquisar.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPesquisar.Name = "txtPesquisar";
+            this.txtPesquisar.Size = new System.Drawing.Size(243, 26);
+            this.txtPesquisar.TabIndex = 3;
+            // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.Location = new System.Drawing.Point(535, 32);
+            this.btnPesquisar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(100, 28);
+            this.btnPesquisar.TabIndex = 4;
+            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.btnPesquisar);
+            this.groupBox2.Controls.Add(this.txtPesquisar);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.cbmFiltrar);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(37, 367);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Size = new System.Drawing.Size(1136, 81);
+            this.groupBox2.TabIndex = 15;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Pesquisar";
             // 
             // TelaServico
             // 
@@ -396,16 +396,16 @@ namespace WF_OficinaTcc
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.label6);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TelaServico";
             this.Text = "TelaAgendamento";
             this.Load += new System.EventHandler(this.TelaServico_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gdvServico)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ServicoDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -421,16 +421,16 @@ namespace WF_OficinaTcc
         private System.Windows.Forms.TextBox txtValor;
         private System.Windows.Forms.TextBox txtDatadia;
         private System.Windows.Forms.TextBox txtCadastradoPor;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button btnPesquisar;
-        private System.Windows.Forms.TextBox txtPesquisar;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cbmFiltrar;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.DataGridView ServicoDataGridView;
+        private System.Windows.Forms.DataGridView gdvServico;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnAtt;
         private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cbmFiltrar;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtPesquisar;
+        private System.Windows.Forms.Button btnPesquisar;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }

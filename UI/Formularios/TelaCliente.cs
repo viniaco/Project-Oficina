@@ -33,7 +33,7 @@ namespace WF_OficinaTcc
 
             bs.DataSource = dt.GridViewCliente();
 
-            DataGridViewCliente.DataSource = bs;
+            gdvCliente.DataSource = bs;
         }
 
         private void btnCadastrarCliente_Click(object sender, EventArgs e)
@@ -151,7 +151,7 @@ namespace WF_OficinaTcc
         {
             Cliente cli = new Cliente();
             var dt = cli.GridViewCliente();
-            DataGridViewCliente.DataSource = dt;
+            gdvCliente.DataSource = dt;
         }
 
         private void LimparCampo()
@@ -174,18 +174,18 @@ namespace WF_OficinaTcc
         {
             LimparCampo();
 
-            txtIdCliente.Text = DataGridViewCliente.CurrentRow.Cells[0].Value.ToString();
-            txtNome.Text = DataGridViewCliente.CurrentRow.Cells[1].Value.ToString();
-            mtbCPF.Text = DataGridViewCliente.CurrentRow.Cells[2].Value.ToString();
-            mtbTelefone.Text = DataGridViewCliente.CurrentRow.Cells[3].Value.ToString();
-            txtEmail.Text = DataGridViewCliente.CurrentRow.Cells[4].Value.ToString();
-            txtEndereco.Text = DataGridViewCliente.CurrentRow.Cells[5].Value.ToString();
-            mtbCEP.Text = DataGridViewCliente.CurrentRow.Cells[6].Value.ToString();
-            txtBairro.Text = DataGridViewCliente.CurrentRow.Cells[7].Value.ToString();
-            txtCidade.Text = DataGridViewCliente.CurrentRow.Cells[8].Value.ToString();
-            cbEstado.Text = DataGridViewCliente.CurrentRow.Cells[9].Value.ToString();
-            txtCNH.Text = DataGridViewCliente.CurrentRow.Cells[10].Value.ToString();
-            cbTipoCliente.Text = DataGridViewCliente.CurrentRow.Cells[11].Value.ToString();
+            txtIdCliente.Text = gdvCliente.CurrentRow.Cells[0].Value.ToString();
+            txtNome.Text = gdvCliente.CurrentRow.Cells[1].Value.ToString();
+            mtbCPF.Text = gdvCliente.CurrentRow.Cells[2].Value.ToString();
+            mtbTelefone.Text = gdvCliente.CurrentRow.Cells[3].Value.ToString();
+            txtEmail.Text = gdvCliente.CurrentRow.Cells[4].Value.ToString();
+            txtEndereco.Text = gdvCliente.CurrentRow.Cells[5].Value.ToString();
+            mtbCEP.Text = gdvCliente.CurrentRow.Cells[6].Value.ToString();
+            txtBairro.Text = gdvCliente.CurrentRow.Cells[7].Value.ToString();
+            txtCidade.Text = gdvCliente.CurrentRow.Cells[8].Value.ToString();
+            cbEstado.Text = gdvCliente.CurrentRow.Cells[9].Value.ToString();
+            txtCNH.Text = gdvCliente.CurrentRow.Cells[10].Value.ToString();
+            cbTipoCliente.Text = gdvCliente.CurrentRow.Cells[11].Value.ToString();
 
         }
     }

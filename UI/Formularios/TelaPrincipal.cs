@@ -131,5 +131,17 @@ namespace WF_OficinaTcc
             panelForms.Controls.Add(Tela);
             Tela.Show();
         }
+
+        private void orçamentosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Tela?.Close();
+            Tela = new TelaOrcamento
+            {
+                TopLevel = false,
+                Dock = DockStyle.Fill,
+            };
+            panelForms.Controls.Add(Tela);
+            Tela.Show();
+        }
     }
 }

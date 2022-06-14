@@ -29,7 +29,7 @@ namespace WF_OficinaTcc
 
             bs.DataSource = dt.GridViewVeiculo();
 
-            dataGridViewVeiculo.DataSource = bs;
+            gdvVeiculo.DataSource = bs;
         }
 
         private void btnCadastrarVeic_Click(object sender, EventArgs e)
@@ -131,7 +131,7 @@ namespace WF_OficinaTcc
             Veiculo veic = new Veiculo();
             var dt = veic.GridViewVeiculo();
 
-            dataGridViewVeiculo.DataSource = dt;
+            gdvVeiculo.DataSource = dt;
 
             cbCliente.DropDownStyle = ComboBoxStyle.DropDownList;
             cbCliente.DataSource = cli.GridViewCliente();
@@ -159,16 +159,16 @@ namespace WF_OficinaTcc
         {
             LimparCampo();
 
-            txtId.Text = dataGridViewVeiculo.CurrentRow.Cells[0].Value.ToString();
-            txtNomeVeiculo.Text = dataGridViewVeiculo.CurrentRow.Cells[1].Value.ToString();
-            txtAno.Text = dataGridViewVeiculo.CurrentRow.Cells[2].Value.ToString();
-            txtCor.Text = dataGridViewVeiculo.CurrentRow.Cells[3].Value.ToString();
-            cbCambio.Text = dataGridViewVeiculo.CurrentRow.Cells[4].Value.ToString();
-            txtKM.Text = dataGridViewVeiculo.CurrentRow.Cells[5].Value.ToString();
-            txtPlaca.Text = dataGridViewVeiculo.CurrentRow.Cells[6].Value.ToString();
-            cbCombustivel.Text = dataGridViewVeiculo.CurrentRow.Cells[7].Value.ToString();
-            txtObs.Text = dataGridViewVeiculo.CurrentRow.Cells[8].Value.ToString();
-            cbCliente.Text = dataGridViewVeiculo.CurrentRow.Cells[9].Value.ToString();
+            txtId.Text = gdvVeiculo.CurrentRow.Cells[0].Value.ToString();
+            txtNomeVeiculo.Text = gdvVeiculo.CurrentRow.Cells[1].Value.ToString();
+            txtAno.Text = gdvVeiculo.CurrentRow.Cells[2].Value.ToString();
+            txtCor.Text = gdvVeiculo.CurrentRow.Cells[3].Value.ToString();
+            cbCambio.Text = gdvVeiculo.CurrentRow.Cells[4].Value.ToString();
+            txtKM.Text = gdvVeiculo.CurrentRow.Cells[5].Value.ToString();
+            txtPlaca.Text = gdvVeiculo.CurrentRow.Cells[6].Value.ToString();
+            cbCombustivel.Text = gdvVeiculo.CurrentRow.Cells[7].Value.ToString();
+            txtObs.Text = gdvVeiculo.CurrentRow.Cells[8].Value.ToString();
+            cbCliente.Text = gdvVeiculo.CurrentRow.Cells[9].Value.ToString();
         }
 
         private void btnAtt_Click(object sender, EventArgs e)

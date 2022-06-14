@@ -99,13 +99,13 @@ namespace WF_OficinaTcc
         private void dataGridViewUsuario_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             LimparCampo();
-            txtIdUser.Text = dataGridViewUsuario.CurrentRow.Cells[0].Value.ToString();
-            txtUsuario.Text = dataGridViewUsuario.CurrentRow.Cells[1].Value.ToString();
-            txtNome.Text = dataGridViewUsuario.CurrentRow.Cells[2].Value.ToString();
-            txtSenha.Text = dataGridViewUsuario.CurrentRow.Cells[3].Value.ToString();
-            txtRepitaSenha.Text = dataGridViewUsuario.CurrentRow.Cells[4].Value.ToString();
-            cbNivelAcesso.Text = dataGridViewUsuario.CurrentRow.Cells[5].Value.ToString();
-            txtCadastradoPor.Text = dataGridViewUsuario.CurrentRow.Cells[6].Value.ToString();
+            txtIdUser.Text = gdvUsuario.CurrentRow.Cells[0].Value.ToString();
+            txtUsuario.Text = gdvUsuario.CurrentRow.Cells[1].Value.ToString();
+            txtNome.Text = gdvUsuario.CurrentRow.Cells[2].Value.ToString();
+            txtSenha.Text = gdvUsuario.CurrentRow.Cells[3].Value.ToString();
+            txtRepitaSenha.Text = gdvUsuario.CurrentRow.Cells[4].Value.ToString();
+            cbNivelAcesso.Text = gdvUsuario.CurrentRow.Cells[5].Value.ToString();
+            txtCadastradoPor.Text = gdvUsuario.CurrentRow.Cells[6].Value.ToString();
         }
 
         private void btnAtt_Click_1(object sender, EventArgs e)
@@ -140,7 +140,7 @@ namespace WF_OficinaTcc
         {
             Usuario user = new Usuario();
             var dt = user.GridViewUsuario();
-            dataGridViewUsuario.DataSource = dt;
+            gdvUsuario.DataSource = dt;
         }
 
         private void GridLoad()
@@ -151,7 +151,7 @@ namespace WF_OficinaTcc
 
             bs.DataSource = dt.GridViewUsuario();
 
-            dataGridViewUsuario.DataSource = bs;
+            gdvUsuario.DataSource = bs;
         }
 
         private void btnCadastrarUsuario_Click(object sender, EventArgs e)

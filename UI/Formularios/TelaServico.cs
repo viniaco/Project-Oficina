@@ -29,7 +29,7 @@ namespace WF_OficinaTcc
 
             bs.DataSource = dt.GridViewServico();
 
-            ServicoDataGridView.DataSource = bs;
+            gdvServico.DataSource = bs;
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
@@ -101,7 +101,7 @@ namespace WF_OficinaTcc
             Servico serv = new Servico();
             var dt = serv.GridViewServico();
 
-            ServicoDataGridView.DataSource = dt;
+            gdvServico.DataSource = dt;
         }
 
         private void LimparCampo()
@@ -119,13 +119,13 @@ namespace WF_OficinaTcc
         {
             LimparCampo();
 
-            txtIdServico.Text = ServicoDataGridView.CurrentRow.Cells[0].Value.ToString();
-            txtNome.Text = ServicoDataGridView.CurrentRow.Cells[1].Value.ToString();
-            txtDesc.Text = ServicoDataGridView.CurrentRow.Cells[2].Value.ToString();
-            txtObs.Text = ServicoDataGridView.CurrentRow.Cells[3].Value.ToString();
-            txtValor.Text = ServicoDataGridView.CurrentRow.Cells[4].Value.ToString();
-            txtDatadia.Text = ServicoDataGridView.CurrentRow.Cells[5].Value.ToString();
-            txtCadastradoPor.Text = ServicoDataGridView.CurrentRow.Cells[6].Value.ToString();
+            txtIdServico.Text = gdvServico.CurrentRow.Cells[0].Value.ToString();
+            txtNome.Text = gdvServico.CurrentRow.Cells[1].Value.ToString();
+            txtDesc.Text = gdvServico.CurrentRow.Cells[2].Value.ToString();
+            txtObs.Text = gdvServico.CurrentRow.Cells[3].Value.ToString();
+            txtValor.Text = gdvServico.CurrentRow.Cells[4].Value.ToString();
+            txtDatadia.Text = gdvServico.CurrentRow.Cells[5].Value.ToString();
+            txtCadastradoPor.Text = gdvServico.CurrentRow.Cells[6].Value.ToString();
 
         }
     }

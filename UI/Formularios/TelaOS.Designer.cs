@@ -44,6 +44,7 @@ namespace WF_OficinaTcc
             this.cbmFiltrar = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtNomeOS = new System.Windows.Forms.TextBox();
             this.cbVeiculo = new System.Windows.Forms.ComboBox();
             this.txtCadastradoPor = new System.Windows.Forms.TextBox();
             this.txtDatadia = new System.Windows.Forms.TextBox();
@@ -51,11 +52,10 @@ namespace WF_OficinaTcc
             this.cbCliente = new System.Windows.Forms.ComboBox();
             this.txtidOrdem = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.DataGridViewOS = new System.Windows.Forms.DataGridView();
+            this.gdvOS = new System.Windows.Forms.DataGridView();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnAtt = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
-            this.txtNomeOS = new System.Windows.Forms.TextBox();
             cadastradorPorLabel = new System.Windows.Forms.Label();
             dataDiaLabel = new System.Windows.Forms.Label();
             idServicoLabel = new System.Windows.Forms.Label();
@@ -66,7 +66,7 @@ namespace WF_OficinaTcc
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridViewOS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gdvOS)).BeginInit();
             this.SuspendLayout();
             // 
             // cadastradorPorLabel
@@ -128,6 +128,16 @@ namespace WF_OficinaTcc
             label1.Size = new System.Drawing.Size(124, 19);
             label1.TabIndex = 10;
             label1.Text = "Nome do Veiculo";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new System.Drawing.Point(98, 27);
+            label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(98, 19);
+            label2.TabIndex = 12;
+            label2.Text = "Nome da OS:";
             // 
             // label6
             // 
@@ -239,6 +249,14 @@ namespace WF_OficinaTcc
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados OS";
             // 
+            // txtNomeOS
+            // 
+            this.txtNomeOS.Location = new System.Drawing.Point(102, 47);
+            this.txtNomeOS.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNomeOS.Name = "txtNomeOS";
+            this.txtNomeOS.Size = new System.Drawing.Size(474, 26);
+            this.txtNomeOS.TabIndex = 13;
+            // 
             // cbVeiculo
             // 
             this.cbVeiculo.DisplayMember = "idCliente";
@@ -304,7 +322,7 @@ namespace WF_OficinaTcc
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox3.Controls.Add(this.DataGridViewOS);
+            this.groupBox3.Controls.Add(this.gdvOS);
             this.groupBox3.Location = new System.Drawing.Point(36, 362);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
@@ -314,19 +332,19 @@ namespace WF_OficinaTcc
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "OS(s)";
             // 
-            // DataGridViewOS
+            // gdvOS
             // 
-            this.DataGridViewOS.AllowUserToAddRows = false;
-            this.DataGridViewOS.AllowUserToDeleteRows = false;
-            this.DataGridViewOS.ColumnHeadersHeight = 29;
-            this.DataGridViewOS.Location = new System.Drawing.Point(27, 23);
-            this.DataGridViewOS.Margin = new System.Windows.Forms.Padding(4);
-            this.DataGridViewOS.Name = "DataGridViewOS";
-            this.DataGridViewOS.ReadOnly = true;
-            this.DataGridViewOS.RowHeadersWidth = 51;
-            this.DataGridViewOS.Size = new System.Drawing.Size(683, 357);
-            this.DataGridViewOS.TabIndex = 0;
-            this.DataGridViewOS.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.DataGridViewOS_MouseDoubleClick);
+            this.gdvOS.AllowUserToAddRows = false;
+            this.gdvOS.AllowUserToDeleteRows = false;
+            this.gdvOS.ColumnHeadersHeight = 29;
+            this.gdvOS.Location = new System.Drawing.Point(27, 23);
+            this.gdvOS.Margin = new System.Windows.Forms.Padding(4);
+            this.gdvOS.Name = "gdvOS";
+            this.gdvOS.ReadOnly = true;
+            this.gdvOS.RowHeadersWidth = 51;
+            this.gdvOS.Size = new System.Drawing.Size(683, 357);
+            this.gdvOS.TabIndex = 0;
+            this.gdvOS.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.DataGridViewOS_MouseDoubleClick);
             // 
             // btnExcluir
             // 
@@ -370,24 +388,6 @@ namespace WF_OficinaTcc
             this.btnCadastrar.UseVisualStyleBackColor = false;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(98, 27);
-            label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(98, 19);
-            label2.TabIndex = 12;
-            label2.Text = "Nome da OS:";
-            // 
-            // txtNomeOS
-            // 
-            this.txtNomeOS.Location = new System.Drawing.Point(102, 47);
-            this.txtNomeOS.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNomeOS.Name = "txtNomeOS";
-            this.txtNomeOS.Size = new System.Drawing.Size(474, 26);
-            this.txtNomeOS.TabIndex = 13;
-            // 
             // TelaOS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -409,7 +409,7 @@ namespace WF_OficinaTcc
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridViewOS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gdvOS)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -430,7 +430,7 @@ namespace WF_OficinaTcc
         private System.Windows.Forms.ComboBox cbCliente;
         private System.Windows.Forms.TextBox txtidOrdem;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.DataGridView DataGridViewOS;
+        private System.Windows.Forms.DataGridView gdvOS;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnAtt;
         private System.Windows.Forms.Button btnCadastrar;
