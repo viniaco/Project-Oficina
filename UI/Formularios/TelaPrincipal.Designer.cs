@@ -101,7 +101,7 @@ namespace WF_OficinaTcc
             this.btnSair});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1371, 55);
+            this.toolStrip1.Size = new System.Drawing.Size(825, 55);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
@@ -224,7 +224,7 @@ namespace WF_OficinaTcc
             this.panelForms.Location = new System.Drawing.Point(0, 55);
             this.panelForms.Margin = new System.Windows.Forms.Padding(4);
             this.panelForms.Name = "panelForms";
-            this.panelForms.Size = new System.Drawing.Size(1371, 459);
+            this.panelForms.Size = new System.Drawing.Size(825, 459);
             this.panelForms.TabIndex = 3;
             this.panelForms.Paint += new System.Windows.Forms.PaintEventHandler(this.panelForms_Paint);
             // 
@@ -235,7 +235,7 @@ namespace WF_OficinaTcc
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.BackgroundImage = global::WF_OficinaTcc.Properties.Resources.manutenção_1024x683;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1371, 514);
+            this.ClientSize = new System.Drawing.Size(825, 514);
             this.Controls.Add(this.panelForms);
             this.Controls.Add(this.toolStrip1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
