@@ -29,6 +29,8 @@ namespace WF_OficinaTcc
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -62,7 +64,7 @@ namespace WF_OficinaTcc
             // 
             this.txtNome.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNome.Location = new System.Drawing.Point(13, 164);
-            this.txtNome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(4);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(303, 27);
             this.txtNome.TabIndex = 0;
@@ -94,7 +96,7 @@ namespace WF_OficinaTcc
             // 
             this.txtSenha.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSenha.Location = new System.Drawing.Point(15, 239);
-            this.txtSenha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSenha.Margin = new System.Windows.Forms.Padding(4);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '●';
             this.txtSenha.Size = new System.Drawing.Size(301, 27);
@@ -120,7 +122,7 @@ namespace WF_OficinaTcc
             "Administrador",
             "Operador"});
             this.cbNivelAcesso.Location = new System.Drawing.Point(13, 316);
-            this.cbNivelAcesso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbNivelAcesso.Margin = new System.Windows.Forms.Padding(4);
             this.cbNivelAcesso.Name = "cbNivelAcesso";
             this.cbNivelAcesso.Size = new System.Drawing.Size(220, 28);
             this.cbNivelAcesso.TabIndex = 12;
@@ -151,7 +153,7 @@ namespace WF_OficinaTcc
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.Location = new System.Drawing.Point(101, 95);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(187, 27);
             this.txtUsuario.TabIndex = 30;
@@ -161,7 +163,7 @@ namespace WF_OficinaTcc
             // 
             this.txtRepitaSenha.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRepitaSenha.Location = new System.Drawing.Point(339, 239);
-            this.txtRepitaSenha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRepitaSenha.Margin = new System.Windows.Forms.Padding(4);
             this.txtRepitaSenha.Name = "txtRepitaSenha";
             this.txtRepitaSenha.PasswordChar = '●';
             this.txtRepitaSenha.Size = new System.Drawing.Size(300, 27);
@@ -180,7 +182,23 @@ namespace WF_OficinaTcc
             // 
             // gdvUsuario
             // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gdvUsuario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gdvUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gdvUsuario.DefaultCellStyle = dataGridViewCellStyle2;
             this.gdvUsuario.Location = new System.Drawing.Point(13, 476);
             this.gdvUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gdvUsuario.Name = "gdvUsuario";
@@ -196,7 +214,7 @@ namespace WF_OficinaTcc
             this.btnExcluir.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.ForeColor = System.Drawing.Color.Black;
             this.btnExcluir.Location = new System.Drawing.Point(863, 551);
-            this.btnExcluir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExcluir.Margin = new System.Windows.Forms.Padding(4);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(136, 31);
             this.btnExcluir.TabIndex = 38;
@@ -210,7 +228,7 @@ namespace WF_OficinaTcc
             this.btnAtt.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAtt.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnAtt.Location = new System.Drawing.Point(863, 514);
-            this.btnAtt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAtt.Margin = new System.Windows.Forms.Padding(4);
             this.btnAtt.Name = "btnAtt";
             this.btnAtt.Size = new System.Drawing.Size(136, 28);
             this.btnAtt.TabIndex = 37;
@@ -224,7 +242,7 @@ namespace WF_OficinaTcc
             this.btnCadastrarUsuario.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrarUsuario.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnCadastrarUsuario.Location = new System.Drawing.Point(863, 474);
-            this.btnCadastrarUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCadastrarUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.btnCadastrarUsuario.Name = "btnCadastrarUsuario";
             this.btnCadastrarUsuario.Size = new System.Drawing.Size(136, 33);
             this.btnCadastrarUsuario.TabIndex = 36;
@@ -243,9 +261,9 @@ namespace WF_OficinaTcc
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(13, 372);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(725, 85);
             this.groupBox2.TabIndex = 39;
             this.groupBox2.TabStop = false;
@@ -254,7 +272,7 @@ namespace WF_OficinaTcc
             // btnPesquisar
             // 
             this.btnPesquisar.Location = new System.Drawing.Point(465, 34);
-            this.btnPesquisar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPesquisar.Margin = new System.Windows.Forms.Padding(4);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(100, 28);
             this.btnPesquisar.TabIndex = 4;
@@ -265,7 +283,7 @@ namespace WF_OficinaTcc
             // 
             this.txtPesquisar.AcceptsReturn = true;
             this.txtPesquisar.Location = new System.Drawing.Point(281, 37);
-            this.txtPesquisar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPesquisar.Margin = new System.Windows.Forms.Padding(4);
             this.txtPesquisar.Name = "txtPesquisar";
             this.txtPesquisar.Size = new System.Drawing.Size(175, 26);
             this.txtPesquisar.TabIndex = 3;
@@ -288,7 +306,7 @@ namespace WF_OficinaTcc
             "Código",
             "Usuário"});
             this.cbmFiltrar.Location = new System.Drawing.Point(87, 37);
-            this.cbmFiltrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbmFiltrar.Margin = new System.Windows.Forms.Padding(4);
             this.cbmFiltrar.Name = "cbmFiltrar";
             this.cbmFiltrar.Size = new System.Drawing.Size(160, 27);
             this.cbmFiltrar.TabIndex = 1;
@@ -307,7 +325,7 @@ namespace WF_OficinaTcc
             // 
             this.txtCadastradoPor.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCadastradoPor.Location = new System.Drawing.Point(339, 316);
-            this.txtCadastradoPor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCadastradoPor.Margin = new System.Windows.Forms.Padding(4);
             this.txtCadastradoPor.Name = "txtCadastradoPor";
             this.txtCadastradoPor.Size = new System.Drawing.Size(300, 27);
             this.txtCadastradoPor.TabIndex = 41;
@@ -327,7 +345,7 @@ namespace WF_OficinaTcc
             // 
             this.txtIdUser.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIdUser.Location = new System.Drawing.Point(13, 95);
-            this.txtIdUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIdUser.Margin = new System.Windows.Forms.Padding(4);
             this.txtIdUser.Name = "txtIdUser";
             this.txtIdUser.Size = new System.Drawing.Size(45, 27);
             this.txtIdUser.TabIndex = 43;
@@ -369,7 +387,7 @@ namespace WF_OficinaTcc
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNome);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TelaUsuario";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.TelaUsuario_Load_1);

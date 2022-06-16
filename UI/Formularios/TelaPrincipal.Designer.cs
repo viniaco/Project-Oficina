@@ -123,14 +123,14 @@ namespace WF_OficinaTcc
             // clienteToolStripMenuItem
             // 
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(209, 26);
             this.clienteToolStripMenuItem.Text = "Cadastrar Cliente";
             this.clienteToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
             // 
             // usuárioToolStripMenuItem
             // 
             this.usuárioToolStripMenuItem.Name = "usuárioToolStripMenuItem";
-            this.usuárioToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.usuárioToolStripMenuItem.Size = new System.Drawing.Size(209, 26);
             this.usuárioToolStripMenuItem.Text = "Cadastrar Usuário";
             this.usuárioToolStripMenuItem.Click += new System.EventHandler(this.usuárioToolStripMenuItem_Click);
             // 
@@ -196,13 +196,13 @@ namespace WF_OficinaTcc
             // caixaToolStripMenuItem
             // 
             this.caixaToolStripMenuItem.Name = "caixaToolStripMenuItem";
-            this.caixaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.caixaToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
             this.caixaToolStripMenuItem.Text = "Caixa";
             // 
             // orçamentosToolStripMenuItem
             // 
             this.orçamentosToolStripMenuItem.Name = "orçamentosToolStripMenuItem";
-            this.orçamentosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.orçamentosToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
             this.orçamentosToolStripMenuItem.Text = "Orçamentos";
             this.orçamentosToolStripMenuItem.Click += new System.EventHandler(this.orçamentosToolStripMenuItem_Click);
             // 
@@ -220,10 +220,11 @@ namespace WF_OficinaTcc
             // 
             this.panelForms.AutoSize = true;
             this.panelForms.BackColor = System.Drawing.Color.Transparent;
-            this.panelForms.Location = new System.Drawing.Point(16, 71);
+            this.panelForms.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelForms.Location = new System.Drawing.Point(0, 55);
             this.panelForms.Margin = new System.Windows.Forms.Padding(4);
             this.panelForms.Name = "panelForms";
-            this.panelForms.Size = new System.Drawing.Size(1339, 971);
+            this.panelForms.Size = new System.Drawing.Size(1371, 459);
             this.panelForms.TabIndex = 3;
             this.panelForms.Paint += new System.Windows.Forms.PaintEventHandler(this.panelForms_Paint);
             // 
@@ -234,7 +235,7 @@ namespace WF_OficinaTcc
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.BackgroundImage = global::WF_OficinaTcc.Properties.Resources.manutenção_1024x683;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1371, 1055);
+            this.ClientSize = new System.Drawing.Size(1371, 514);
             this.Controls.Add(this.panelForms);
             this.Controls.Add(this.toolStrip1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;

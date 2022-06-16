@@ -29,6 +29,8 @@ namespace WF_OficinaTcc
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNomeVeiculo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -80,7 +82,7 @@ namespace WF_OficinaTcc
             // 
             this.txtNomeVeiculo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNomeVeiculo.Location = new System.Drawing.Point(56, 153);
-            this.txtNomeVeiculo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNomeVeiculo.Margin = new System.Windows.Forms.Padding(4);
             this.txtNomeVeiculo.Name = "txtNomeVeiculo";
             this.txtNomeVeiculo.Size = new System.Drawing.Size(325, 27);
             this.txtNomeVeiculo.TabIndex = 1;
@@ -100,7 +102,7 @@ namespace WF_OficinaTcc
             // 
             this.txtAno.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAno.Location = new System.Drawing.Point(393, 153);
-            this.txtAno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAno.Margin = new System.Windows.Forms.Padding(4);
             this.txtAno.Name = "txtAno";
             this.txtAno.Size = new System.Drawing.Size(160, 27);
             this.txtAno.TabIndex = 4;
@@ -120,7 +122,7 @@ namespace WF_OficinaTcc
             // 
             this.txtCor.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCor.Location = new System.Drawing.Point(61, 212);
-            this.txtCor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCor.Margin = new System.Windows.Forms.Padding(4);
             this.txtCor.Name = "txtCor";
             this.txtCor.Size = new System.Drawing.Size(227, 27);
             this.txtCor.TabIndex = 6;
@@ -140,7 +142,7 @@ namespace WF_OficinaTcc
             // 
             this.txtKM.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKM.Location = new System.Drawing.Point(563, 153);
-            this.txtKM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtKM.Margin = new System.Windows.Forms.Padding(4);
             this.txtKM.Name = "txtKM";
             this.txtKM.Size = new System.Drawing.Size(227, 27);
             this.txtKM.TabIndex = 8;
@@ -176,7 +178,7 @@ namespace WF_OficinaTcc
             "Manual",
             "Automático"});
             this.cbCambio.Location = new System.Drawing.Point(805, 153);
-            this.cbCambio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbCambio.Margin = new System.Windows.Forms.Padding(4);
             this.cbCambio.Name = "cbCambio";
             this.cbCambio.Size = new System.Drawing.Size(160, 28);
             this.cbCambio.TabIndex = 10;
@@ -185,7 +187,7 @@ namespace WF_OficinaTcc
             // 
             this.txtPlaca.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPlaca.Location = new System.Drawing.Point(316, 212);
-            this.txtPlaca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPlaca.Margin = new System.Windows.Forms.Padding(4);
             this.txtPlaca.Name = "txtPlaca";
             this.txtPlaca.Size = new System.Drawing.Size(227, 27);
             this.txtPlaca.TabIndex = 12;
@@ -222,7 +224,7 @@ namespace WF_OficinaTcc
             "Gasolina",
             "Diesel"});
             this.cbCombustivel.Location = new System.Drawing.Point(569, 209);
-            this.cbCombustivel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbCombustivel.Margin = new System.Windows.Forms.Padding(4);
             this.cbCombustivel.Name = "cbCombustivel";
             this.cbCombustivel.Size = new System.Drawing.Size(191, 29);
             this.cbCombustivel.TabIndex = 14;
@@ -242,7 +244,7 @@ namespace WF_OficinaTcc
             // 
             this.txtObs.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtObs.Location = new System.Drawing.Point(59, 325);
-            this.txtObs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtObs.Margin = new System.Windows.Forms.Padding(4);
             this.txtObs.Multiline = true;
             this.txtObs.Name = "txtObs";
             this.txtObs.Size = new System.Drawing.Size(665, 117);
@@ -263,7 +265,7 @@ namespace WF_OficinaTcc
             // 
             this.txtId.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtId.Location = new System.Drawing.Point(61, 98);
-            this.txtId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtId.Margin = new System.Windows.Forms.Padding(4);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(160, 27);
             this.txtId.TabIndex = 21;
@@ -273,7 +275,7 @@ namespace WF_OficinaTcc
             this.btnBuscaVeic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnBuscaVeic.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscaVeic.Location = new System.Drawing.Point(231, 98);
-            this.btnBuscaVeic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscaVeic.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscaVeic.Name = "btnBuscaVeic";
             this.btnBuscaVeic.Size = new System.Drawing.Size(139, 28);
             this.btnBuscaVeic.TabIndex = 22;
@@ -290,7 +292,7 @@ namespace WF_OficinaTcc
             "Gasolina",
             "Diesel"});
             this.cbCliente.Location = new System.Drawing.Point(59, 268);
-            this.cbCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbCliente.Margin = new System.Windows.Forms.Padding(4);
             this.cbCliente.Name = "cbCliente";
             this.cbCliente.Size = new System.Drawing.Size(465, 28);
             this.cbCliente.TabIndex = 24;
@@ -308,9 +310,25 @@ namespace WF_OficinaTcc
             // 
             // gdvVeiculo
             // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gdvVeiculo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gdvVeiculo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gdvVeiculo.DefaultCellStyle = dataGridViewCellStyle2;
             this.gdvVeiculo.Location = new System.Drawing.Point(56, 551);
-            this.gdvVeiculo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gdvVeiculo.Margin = new System.Windows.Forms.Padding(4);
             this.gdvVeiculo.Name = "gdvVeiculo";
             this.gdvVeiculo.RowHeadersWidth = 51;
             this.gdvVeiculo.Size = new System.Drawing.Size(908, 185);
@@ -324,7 +342,7 @@ namespace WF_OficinaTcc
             this.btnExcluir.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.ForeColor = System.Drawing.Color.Black;
             this.btnExcluir.Location = new System.Drawing.Point(985, 628);
-            this.btnExcluir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExcluir.Margin = new System.Windows.Forms.Padding(4);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(136, 31);
             this.btnExcluir.TabIndex = 44;
@@ -338,7 +356,7 @@ namespace WF_OficinaTcc
             this.btnAtt.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAtt.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnAtt.Location = new System.Drawing.Point(985, 592);
-            this.btnAtt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAtt.Margin = new System.Windows.Forms.Padding(4);
             this.btnAtt.Name = "btnAtt";
             this.btnAtt.Size = new System.Drawing.Size(136, 28);
             this.btnAtt.TabIndex = 43;
@@ -352,7 +370,7 @@ namespace WF_OficinaTcc
             this.btnCadastrarVeic.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrarVeic.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnCadastrarVeic.Location = new System.Drawing.Point(985, 551);
-            this.btnCadastrarVeic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCadastrarVeic.Margin = new System.Windows.Forms.Padding(4);
             this.btnCadastrarVeic.Name = "btnCadastrarVeic";
             this.btnCadastrarVeic.Size = new System.Drawing.Size(136, 33);
             this.btnCadastrarVeic.TabIndex = 42;
@@ -371,9 +389,9 @@ namespace WF_OficinaTcc
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(56, 465);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(707, 80);
             this.groupBox2.TabIndex = 45;
             this.groupBox2.TabStop = false;
@@ -382,7 +400,7 @@ namespace WF_OficinaTcc
             // txtPesquisar
             // 
             this.txtPesquisar.Location = new System.Drawing.Point(281, 36);
-            this.txtPesquisar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPesquisar.Margin = new System.Windows.Forms.Padding(4);
             this.txtPesquisar.Name = "txtPesquisar";
             this.txtPesquisar.Size = new System.Drawing.Size(175, 26);
             this.txtPesquisar.TabIndex = 10;
@@ -390,7 +408,7 @@ namespace WF_OficinaTcc
             // btnPesquisar
             // 
             this.btnPesquisar.Location = new System.Drawing.Point(465, 33);
-            this.btnPesquisar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPesquisar.Margin = new System.Windows.Forms.Padding(4);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(100, 28);
             this.btnPesquisar.TabIndex = 9;
@@ -416,7 +434,7 @@ namespace WF_OficinaTcc
             "Código Cliente",
             "Código Serviço"});
             this.cbmFiltrar.Location = new System.Drawing.Point(87, 36);
-            this.cbmFiltrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbmFiltrar.Margin = new System.Windows.Forms.Padding(4);
             this.cbmFiltrar.Name = "cbmFiltrar";
             this.cbmFiltrar.Size = new System.Drawing.Size(160, 27);
             this.cbmFiltrar.TabIndex = 7;
@@ -463,7 +481,7 @@ namespace WF_OficinaTcc
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtNomeVeiculo);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TelaVeiculo";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.TelaVeiculo_Load);
