@@ -93,6 +93,16 @@ namespace WF_OficinaTcc.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap floppy_disk {
+            get {
+                object obj = ResourceManager.GetObject("floppy-disk", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_adicionar_grupo_de_usuários_mulher_homem_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-adicionar-grupo-de-usuários-mulher-homem-48", resourceCulture);

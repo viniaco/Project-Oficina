@@ -170,5 +170,38 @@ namespace WF_OficinaTcc
             cbVeiculo.Text = gdvOS.CurrentRow.Cells[7].Value.ToString();
             cbVeiculo.Text = gdvOS.CurrentRow.Cells[8].Value.ToString();
         }
+
+        private void tsSalvar_Click(object sender, EventArgs e)
+        {
+            servi = new Servico();
+            var
+            cadastro = new OrdemServico();
+            cadastro.CadastradoPor = TelaLogin.usuarioConectado;
+            cadastro.Aprovada = 1;
+            cadastro.NomeOS = txtNomeOS.Text;
+            cadastro.Valor = servi.Valor;
+            cadastro.Data = Convert.ToString(DateTime.Now);
+            cadastro.IdCliente = Convert.ToInt32(cbCliente.SelectedValue);
+            cadastro.idVeiculo = Convert.ToInt32(cbVeiculo.SelectedValue);
+            cadastro.idServico = Convert.ToInt32(cbServico.SelectedValue);
+
+            if (cadastro.Cadastrar())
+            {
+                MessageBox.Show("CADASTRADO!");
+
+            }
+            else
+            {
+                MessageBox.Show("Cadastro não realizado!");
+            }
+
+            LimparCampo();
+            GridLoad();
+        }
+
+        private void gdvOS_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
