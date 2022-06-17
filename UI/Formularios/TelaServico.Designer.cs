@@ -36,8 +36,8 @@ namespace WF_OficinaTcc
             System.Windows.Forms.Label valorLabel;
             System.Windows.Forms.Label dataDiaLabel;
             System.Windows.Forms.Label cadastradoPorLabel;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtIdServico = new System.Windows.Forms.TextBox();
@@ -156,8 +156,11 @@ namespace WF_OficinaTcc
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.btnExcluir);
             this.groupBox1.Controls.Add(idServicoLabel);
+            this.groupBox1.Controls.Add(this.btnAtt);
             this.groupBox1.Controls.Add(this.txtIdServico);
+            this.groupBox1.Controls.Add(this.btnCadastrar);
             this.groupBox1.Controls.Add(nomeLabel);
             this.groupBox1.Controls.Add(this.txtNome);
             this.groupBox1.Controls.Add(descricaoLabel);
@@ -194,7 +197,7 @@ namespace WF_OficinaTcc
             this.txtNome.Location = new System.Drawing.Point(153, 53);
             this.txtNome.Margin = new System.Windows.Forms.Padding(4);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(564, 26);
+            this.txtNome.Size = new System.Drawing.Size(559, 26);
             this.txtNome.TabIndex = 3;
             // 
             // txtDesc
@@ -262,23 +265,23 @@ namespace WF_OficinaTcc
             // 
             this.gdvServico.AllowUserToAddRows = false;
             this.gdvServico.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gdvServico.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gdvServico.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.gdvServico.ColumnHeadersHeight = 29;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gdvServico.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gdvServico.DefaultCellStyle = dataGridViewCellStyle4;
             this.gdvServico.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gdvServico.Location = new System.Drawing.Point(4, 19);
             this.gdvServico.Margin = new System.Windows.Forms.Padding(4);
@@ -294,10 +297,10 @@ namespace WF_OficinaTcc
             this.btnExcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnExcluir.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.ForeColor = System.Drawing.Color.Black;
-            this.btnExcluir.Location = new System.Drawing.Point(1037, 543);
+            this.btnExcluir.Location = new System.Drawing.Point(755, 147);
             this.btnExcluir.Margin = new System.Windows.Forms.Padding(4);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(136, 28);
+            this.btnExcluir.Size = new System.Drawing.Size(149, 28);
             this.btnExcluir.TabIndex = 47;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = false;
@@ -308,10 +311,10 @@ namespace WF_OficinaTcc
             this.btnAtt.BackColor = System.Drawing.Color.Transparent;
             this.btnAtt.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAtt.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnAtt.Location = new System.Drawing.Point(1037, 507);
+            this.btnAtt.Location = new System.Drawing.Point(755, 99);
             this.btnAtt.Margin = new System.Windows.Forms.Padding(4);
             this.btnAtt.Name = "btnAtt";
-            this.btnAtt.Size = new System.Drawing.Size(136, 28);
+            this.btnAtt.Size = new System.Drawing.Size(149, 28);
             this.btnAtt.TabIndex = 46;
             this.btnAtt.Text = "Atualizar";
             this.btnAtt.UseVisualStyleBackColor = false;
@@ -322,10 +325,10 @@ namespace WF_OficinaTcc
             this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnCadastrar.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnCadastrar.Location = new System.Drawing.Point(1037, 466);
+            this.btnCadastrar.Location = new System.Drawing.Point(755, 49);
             this.btnCadastrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(136, 33);
+            this.btnCadastrar.Size = new System.Drawing.Size(149, 30);
             this.btnCadastrar.TabIndex = 45;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = false;
@@ -407,12 +410,9 @@ namespace WF_OficinaTcc
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1288, 602);
-            this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.btnAtt);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.label6);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TelaServico";
