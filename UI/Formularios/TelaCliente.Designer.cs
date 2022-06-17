@@ -449,6 +449,7 @@ namespace WF_OficinaTcc
             this.gdvCliente.RowHeadersWidth = 51;
             this.gdvCliente.Size = new System.Drawing.Size(803, 279);
             this.gdvCliente.TabIndex = 0;
+            this.gdvCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gdvCliente_CellContentClick);
             this.gdvCliente.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.DataGridViewCliente_MouseDoubleClick);
             // 
             // txtEndereco

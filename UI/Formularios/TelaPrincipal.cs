@@ -41,13 +41,14 @@ namespace WF_OficinaTcc
 
         private void TelaPrincipal_Load(object sender, EventArgs e)
         {
-
-            //this.TopMost = true;
-
-            //this.FormBorderStyle = FormBorderStyle.None; // Full-Screen 
-
-            //this.WindowState = FormWindowState.Maximized;
+            if (TelaLogin.NivelAcesso == "Operador")
+            {
+                //Nível de Operador não podera cadastrar usuário
+                usuárioToolStripMenuItem.Visible = false;
+            }
         }
+
+
 
         private void toolStripButton5_Click(object sender, EventArgs e)
         {

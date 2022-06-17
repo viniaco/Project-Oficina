@@ -63,8 +63,23 @@ namespace WF_OficinaTcc
                     //Se tiver coisa pra lê faça:
                     if (reader.Read())
                     {
+                        /*Representa um conjunto de comandos de dados e uma conexão de banco de dados 
+                        que são usados para preencher o DataSet e atualizar um banco de dados SQL Server.*/
+                        MySqlDataAdapter da = new MySqlDataAdapter(comm);
+
+                        //Representa uma tabela de dados na memória.
+                        DataTable usuario = new DataTable();
+
+                        //Finalizar Conexão para o novo SqlDataAdapter do DataTable usuario
+                        conn.Close();
+
+                        /* Adiciona ou atualiza linhas em um DataTable para que correspondam na fonte de 
+                            * dados usando o DataTable.*/
+                        da.Fill(usuario);
+
                         //Variaveil usuarioConectado recebe campo usuarioComboBox.Text
                         usuarioConectado = usuarioTextBox.Text;
+                        NivelAcesso = usuario.Rows[0]["nivelAcesso"].ToString();
 
                         //Variavei nivelAcesso recebe o campo nivelAcessoComboBox.Text
                         NivelAcesso = nivelAcessoComboBox.Text;

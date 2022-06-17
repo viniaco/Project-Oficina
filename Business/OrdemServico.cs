@@ -16,6 +16,7 @@ namespace Business
         public string NomeOS { get; set; }
         public string Data { get; set; }
         public double Valor { get; set; }
+        public string Finalizada { get; set; }
         public int IdCliente { get; set; }
         public int idVeiculo { get; set; }
         public int idServico { get; set; }
@@ -25,8 +26,8 @@ namespace Business
         public bool Cadastrar()
         {
             con = new Conexao();
-            string sql = "INSERT INTO tbordemservico(`cadastradoPor`,`aprovada`,`nomeOS`,`valor`,`dataDia`,`idCliente`,`idVeiculo`,`idServico`) values " +
-                "('" + CadastradoPor + "', '" + Aprovada + "', '" + NomeOS + "', '" + Valor + "', '" + Data + "','" + IdCliente + "','" + idVeiculo + "','" + idServico + "');";
+            string sql = "INSERT INTO tbordemservico(`cadastradoPor`,`aprovada`,`nomeOS`,`valor`,`dataDia`,`finalizada`,`idCliente`,`idVeiculo`,`idServico`) values " +
+                "('" + CadastradoPor + "', '" + Aprovada + "', '" + NomeOS + "', '" + Valor + "', '" + Data + "','" + Finalizada + "','" + IdCliente + "','" + idVeiculo + "','" + idServico + "');";
             return con.ComandoSQL(sql);
         }
 
@@ -39,6 +40,7 @@ namespace Business
                 "', nomeOS='" + NomeOS +
                 "', valor='" + Valor +
                 "', dataDia='" + Data +
+                "', finalizada='" + Finalizada +
                 "' WHERE idOrdemservico=" + IdOrdem;
             return con.ComandoSQL(sql);
         }
@@ -81,5 +83,6 @@ namespace Business
             string sql = "select * from tbordemservico";
             return con.CarregarGridView(sql);
         }
+
     }
 }

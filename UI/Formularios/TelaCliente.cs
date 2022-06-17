@@ -188,5 +188,10 @@ namespace WF_OficinaTcc
             cbTipoCliente.Text = gdvCliente.CurrentRow.Cells[11].Value.ToString();
 
         }
+
+        private void gdvCliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

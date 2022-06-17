@@ -71,6 +71,7 @@ namespace WF_OficinaTcc
             cadastro.Placa = txtPlaca.Text;
             cadastro.Combustivel = cbCombustivel.Text;
             cadastro.Observacao = txtObs.Text;
+            cadastro.IdCliente = Convert.ToInt32(cbCliente.SelectedValue);
 
             if (cadastro.Atualizar())
             {
@@ -168,7 +169,7 @@ namespace WF_OficinaTcc
             txtPlaca.Text = gdvVeiculo.CurrentRow.Cells[6].Value.ToString();
             cbCombustivel.Text = gdvVeiculo.CurrentRow.Cells[7].Value.ToString();
             txtObs.Text = gdvVeiculo.CurrentRow.Cells[8].Value.ToString();
-            cbCliente.Text = gdvVeiculo.CurrentRow.Cells[9].Value.ToString();
+            cbCliente.SelectedValue = Convert.ToInt32(gdvVeiculo.CurrentRow.Cells[9].Value);
         }
 
         private void btnAtt_Click(object sender, EventArgs e)

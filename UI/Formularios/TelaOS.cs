@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using iText.Commons.Actions;
+using excel = Microsoft.Office.Interop.Excel;
 
 namespace WF_OficinaTcc
 {
@@ -35,11 +37,11 @@ namespace WF_OficinaTcc
             gdvOS.DataSource = dt;
 
 
-            cbVeiculo.DropDownStyle = ComboBoxStyle.DropDownList;
-            cbVeiculo.DataSource = veic.GridViewVeiculo();
-            cbVeiculo.ValueMember = "idveiculo";
-            cbVeiculo.DisplayMember = "nome";
-            cbVeiculo.Update();
+            //cbVeiculo.DropDownStyle = ComboBoxStyle.DropDownList;
+            //cbVeiculo.DataSource = veic.GridViewVeiculo();
+            //cbVeiculo.ValueMember = "idveiculo";
+            //cbVeiculo.DisplayMember = "nome";
+            //cbVeiculo.Update();
 
 
             cbCliente.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -59,6 +61,12 @@ namespace WF_OficinaTcc
             cbCliente.SelectedIndex = -1;
             cbServico.SelectedIndex = -1;
 
+            if (TelaLogin.NivelAcesso == "Operador")
+            {
+                //Nível de Operador não podera cadastrar usuário
+                btnGerarRelatorio.Visible = false;
+            }
+
         }
 
         private void GridLoad()
@@ -75,13 +83,14 @@ namespace WF_OficinaTcc
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             servi = new Servico();
-            var 
+            var
             cadastro = new OrdemServico();
             cadastro.CadastradoPor = TelaLogin.usuarioConectado;
             cadastro.Aprovada = 1;
             cadastro.NomeOS = txtNomeOS.Text;
             cadastro.Valor = servi.Valor;
             cadastro.Data = Convert.ToString(DateTime.Now);
+            cadastro.Finalizada = cbFinalizada.SelectedItem.ToString();
             cadastro.IdCliente = Convert.ToInt32(cbCliente.SelectedValue);
             cadastro.idVeiculo = Convert.ToInt32(cbVeiculo.SelectedValue);
             cadastro.idServico = Convert.ToInt32(cbServico.SelectedValue);
@@ -89,7 +98,7 @@ namespace WF_OficinaTcc
             if (cadastro.Cadastrar())
             {
                 MessageBox.Show("CADASTRADO!");
-                
+
             }
             else
             {
@@ -109,6 +118,7 @@ namespace WF_OficinaTcc
             cadastro.Aprovada = 1;
             cadastro.NomeOS = txtNomeOS.Text;
             cadastro.Valor = servi.Valor;
+            cadastro.Finalizada = cbFinalizada.SelectedItem.ToString();
             cadastro.Data = Convert.ToString(DateTime.Now);
             cadastro.IdCliente = Convert.ToInt32(cbCliente.SelectedValue);
             cadastro.idVeiculo = Convert.ToInt32(cbVeiculo.SelectedValue);
@@ -152,6 +162,7 @@ namespace WF_OficinaTcc
             cbCliente.SelectedIndex = -1;
             cbServico.SelectedIndex = -1;
             cbVeiculo.SelectedIndex = -1;
+            cbFinalizada.SelectedIndex = -1;
             txtDatadia.Clear();
             txtCadastradoPor.Clear();
         }
@@ -166,21 +177,22 @@ namespace WF_OficinaTcc
             txtNomeOS.Text = gdvOS.CurrentRow.Cells[3].Value.ToString();
             //.Text = dataGridViewVeiculo.CurrentRow.Cells[4].Value.ToString(); - VALOR 
             txtDatadia.Text = gdvOS.CurrentRow.Cells[5].Value.ToString();
-            cbCliente.Text = gdvOS.CurrentRow.Cells[6].Value.ToString();
-            cbVeiculo.Text = gdvOS.CurrentRow.Cells[7].Value.ToString();
-            cbVeiculo.Text = gdvOS.CurrentRow.Cells[8].Value.ToString();
+            cbFinalizada.Text = gdvOS.CurrentRow.Cells[6].Value.ToString();
+            cbCliente.SelectedValue = Convert.ToInt32(gdvOS.CurrentRow.Cells[7].Value);
+            cbVeiculo.SelectedValue = Convert.ToInt32(gdvOS.CurrentRow.Cells[8].Value);
+            cbServico.SelectedValue = Convert.ToInt32(gdvOS.CurrentRow.Cells[9].Value);
         }
 
         private void tsSalvar_Click(object sender, EventArgs e)
         {
             servi = new Servico();
-            var
             cadastro = new OrdemServico();
             cadastro.CadastradoPor = TelaLogin.usuarioConectado;
             cadastro.Aprovada = 1;
             cadastro.NomeOS = txtNomeOS.Text;
             cadastro.Valor = servi.Valor;
             cadastro.Data = Convert.ToString(DateTime.Now);
+            cadastro.Finalizada = cbFinalizada.SelectedText.ToString();
             cadastro.IdCliente = Convert.ToInt32(cbCliente.SelectedValue);
             cadastro.idVeiculo = Convert.ToInt32(cbVeiculo.SelectedValue);
             cadastro.idServico = Convert.ToInt32(cbServico.SelectedValue);
@@ -201,6 +213,59 @@ namespace WF_OficinaTcc
 
         private void gdvOS_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private void btnGerarRelatorio_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog salvaraquivo = new SaveFileDialog();
+            excel.Application app;
+            excel.Workbook workbook;
+            excel.Worksheet worksheet;
+            object misvalue = System.Reflection.Missing.Value;
+
+            app = new excel.Application();
+            workbook = app.Workbooks.Add(misvalue);
+            worksheet = (excel.Worksheet)workbook.Worksheets.get_Item(1);
+            int i = 0;
+            int j = 0;
+
+            for (i = 0; i <= gdvOS.RowCount - 1; i++)
+            {
+                for (j = 0; j <= gdvOS.ColumnCount - 1; j++)
+                {
+                    DataGridViewCell cell = gdvOS[j, i];
+                    worksheet.Cells[i + 1, j + 1] = cell.Value;
+                }
+            }
+
+            salvaraquivo.Title = "Relatorio_OS";
+            salvaraquivo.Filter = "Arquivo do excel *.xls | *.xls";
+            salvaraquivo.ShowDialog();
+
+            workbook.SaveAs(salvaraquivo.FileName, excel.XlFileFormat.xlWorkbookNormal, misvalue, misvalue,
+                misvalue, misvalue,
+
+            excel.XlSaveAsAccessMode.xlExclusive, misvalue, misvalue, misvalue, misvalue);
+            workbook.Close(true, misvalue, misvalue);
+            app.Quit();
+
+            MessageBox.Show("Exportado com Sucesso");
+        }
+
+        private void cbCliente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbCliente.SelectedIndex != -1 && cbCliente.SelectedIndex != 0)
+            {
+                veic = new Veiculo();
+                veic.IdCliente = Convert.ToInt32(cbCliente.SelectedValue);
+                cbVeiculo.DropDownStyle = ComboBoxStyle.DropDownList;
+                cbVeiculo.DataSource = veic.listaVeiculo();
+                cbVeiculo.ValueMember = "idVeiculo";
+                cbVeiculo.DisplayMember = "nome";
+                cbVeiculo.Update();
+            }
+
 
         }
     }

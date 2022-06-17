@@ -53,6 +53,7 @@ namespace Business
                 "', placa='" + Placa +
                 "', combustivel='" + Combustivel +
                 "', observacao='" + Observacao +
+                "', idCliente='" + IdCliente +
                 "' WHERE idVeiculo=" + Id; ;
             return con.ComandoSQL(sql);
         }
@@ -94,6 +95,13 @@ namespace Business
         {
             con = new Conexao();
             string sql = "select * from tbveiculo";
+            return con.CarregarGridView(sql);
+        }
+        public DataTable listaVeiculo()
+        {
+            //i = IdCliente;
+            con = new Conexao();
+            string sql = "select idVeiculo, nome from tbveiculo where idCliente=" + IdCliente;
             return con.CarregarGridView(sql);
         }
     }
