@@ -142,6 +142,12 @@ namespace WF_OficinaTcc
 
             cbCliente.SelectedIndex = -1;
 
+            if (TelaLogin.NivelAcesso == "Operador")
+            {
+                //Nível de Operador não podera cadastrar usuário
+                btnExcluir.Visible = false;
+            }
+
         }
         private void LimparCampo()
         {

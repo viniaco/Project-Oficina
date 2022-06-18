@@ -84,7 +84,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ServicoItem.cs" />
+    <Compile Include="DiarioOS.cs" />
     <Compile Include="Servico .cs" />
     <Compile Include="OrdemServico.cs" />
     <Compile Include="Cliente.cs" />

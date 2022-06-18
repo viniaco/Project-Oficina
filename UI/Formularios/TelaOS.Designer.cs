@@ -36,9 +36,10 @@ namespace WF_OficinaTcc
             System.Windows.Forms.Label idOrdemLabel;
             System.Windows.Forms.Label label1;
             System.Windows.Forms.Label label2;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.Label label3;
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.Label label7;
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtPesquisar = new System.Windows.Forms.MaskedTextBox();
@@ -47,6 +48,7 @@ namespace WF_OficinaTcc
             this.cbmFiltrar = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbFinalizada = new System.Windows.Forms.ComboBox();
             this.btnGerarRelatorio = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.txtNomeOS = new System.Windows.Forms.TextBox();
@@ -60,7 +62,7 @@ namespace WF_OficinaTcc
             this.txtidOrdem = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.gdvOS = new System.Windows.Forms.DataGridView();
-            this.cbFinalizada = new System.Windows.Forms.ComboBox();
+            this.txtValorServico = new System.Windows.Forms.TextBox();
             cadastradorPorLabel = new System.Windows.Forms.Label();
             dataDiaLabel = new System.Windows.Forms.Label();
             idServicoLabel = new System.Windows.Forms.Label();
@@ -69,6 +71,7 @@ namespace WF_OficinaTcc
             label1 = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
+            label7 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -145,6 +148,16 @@ namespace WF_OficinaTcc
             label2.TabIndex = 12;
             label2.Text = "Nome da OS:";
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new System.Drawing.Point(580, 125);
+            label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(80, 19);
+            label3.TabIndex = 44;
+            label3.Text = "Finalizada:";
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -167,9 +180,9 @@ namespace WF_OficinaTcc
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(39, 274);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(1143, 80);
             this.groupBox2.TabIndex = 17;
             this.groupBox2.TabStop = false;
@@ -178,7 +191,7 @@ namespace WF_OficinaTcc
             // txtPesquisar
             // 
             this.txtPesquisar.Location = new System.Drawing.Point(281, 36);
-            this.txtPesquisar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPesquisar.Margin = new System.Windows.Forms.Padding(4);
             this.txtPesquisar.Name = "txtPesquisar";
             this.txtPesquisar.Size = new System.Drawing.Size(175, 26);
             this.txtPesquisar.TabIndex = 10;
@@ -186,7 +199,7 @@ namespace WF_OficinaTcc
             // btnPesquisar
             // 
             this.btnPesquisar.Location = new System.Drawing.Point(465, 33);
-            this.btnPesquisar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPesquisar.Margin = new System.Windows.Forms.Padding(4);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(100, 28);
             this.btnPesquisar.TabIndex = 9;
@@ -212,7 +225,7 @@ namespace WF_OficinaTcc
             "Código Cliente",
             "Código Serviço"});
             this.cbmFiltrar.Location = new System.Drawing.Point(87, 36);
-            this.cbmFiltrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbmFiltrar.Margin = new System.Windows.Forms.Padding(4);
             this.cbmFiltrar.Name = "cbmFiltrar";
             this.cbmFiltrar.Size = new System.Drawing.Size(160, 27);
             this.cbmFiltrar.TabIndex = 7;
@@ -231,6 +244,8 @@ namespace WF_OficinaTcc
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(label7);
+            this.groupBox1.Controls.Add(this.txtValorServico);
             this.groupBox1.Controls.Add(label3);
             this.groupBox1.Controls.Add(this.cbFinalizada);
             this.groupBox1.Controls.Add(this.btnGerarRelatorio);
@@ -253,185 +268,13 @@ namespace WF_OficinaTcc
             this.groupBox1.Controls.Add(this.txtidOrdem);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(39, 79);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(1143, 188);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados OS";
-            // 
-            // btnGerarRelatorio
-            // 
-            this.btnGerarRelatorio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnGerarRelatorio.Font = new System.Drawing.Font("Times New Roman", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGerarRelatorio.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnGerarRelatorio.Location = new System.Drawing.Point(960, 135);
-            this.btnGerarRelatorio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnGerarRelatorio.Name = "btnGerarRelatorio";
-            this.btnGerarRelatorio.Size = new System.Drawing.Size(136, 33);
-            this.btnGerarRelatorio.TabIndex = 42;
-            this.btnGerarRelatorio.Text = "Gerar Relatório";
-            this.btnGerarRelatorio.UseVisualStyleBackColor = false;
-            this.btnGerarRelatorio.Click += new System.EventHandler(this.btnGerarRelatorio_Click);
-            // 
-            // btnExcluir
-            // 
-            this.btnExcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnExcluir.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluir.ForeColor = System.Drawing.Color.Black;
-            this.btnExcluir.Location = new System.Drawing.Point(960, 97);
-            this.btnExcluir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(136, 31);
-            this.btnExcluir.TabIndex = 41;
-            this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.UseVisualStyleBackColor = false;
-            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
-            // 
-            // txtNomeOS
-            // 
-            this.txtNomeOS.Location = new System.Drawing.Point(101, 47);
-            this.txtNomeOS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtNomeOS.Name = "txtNomeOS";
-            this.txtNomeOS.Size = new System.Drawing.Size(473, 26);
-            this.txtNomeOS.TabIndex = 13;
-            // 
-            // btnAtt
-            // 
-            this.btnAtt.BackColor = System.Drawing.Color.Transparent;
-            this.btnAtt.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtt.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnAtt.Location = new System.Drawing.Point(960, 62);
-            this.btnAtt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnAtt.Name = "btnAtt";
-            this.btnAtt.Size = new System.Drawing.Size(136, 28);
-            this.btnAtt.TabIndex = 40;
-            this.btnAtt.Text = "Atualizar";
-            this.btnAtt.UseVisualStyleBackColor = false;
-            this.btnAtt.Click += new System.EventHandler(this.btnAtt_Click);
-            // 
-            // btnCadastrar
-            // 
-            this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnCadastrar.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnCadastrar.Location = new System.Drawing.Point(960, 21);
-            this.btnCadastrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(136, 33);
-            this.btnCadastrar.TabIndex = 39;
-            this.btnCadastrar.Text = "Cadastrar";
-            this.btnCadastrar.UseVisualStyleBackColor = false;
-            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
-            // 
-            // cbVeiculo
-            // 
-            this.cbVeiculo.DisplayMember = "idCliente";
-            this.cbVeiculo.FormattingEnabled = true;
-            this.cbVeiculo.Location = new System.Drawing.Point(584, 94);
-            this.cbVeiculo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.cbVeiculo.Name = "cbVeiculo";
-            this.cbVeiculo.Size = new System.Drawing.Size(343, 27);
-            this.cbVeiculo.TabIndex = 11;
-            this.cbVeiculo.ValueMember = "idCliente";
-            // 
-            // txtCadastradoPor
-            // 
-            this.txtCadastradoPor.Enabled = false;
-            this.txtCadastradoPor.Location = new System.Drawing.Point(241, 149);
-            this.txtCadastradoPor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtCadastradoPor.Name = "txtCadastradoPor";
-            this.txtCadastradoPor.Size = new System.Drawing.Size(335, 26);
-            this.txtCadastradoPor.TabIndex = 9;
-            // 
-            // txtDatadia
-            // 
-            this.txtDatadia.Enabled = false;
-            this.txtDatadia.Location = new System.Drawing.Point(13, 149);
-            this.txtDatadia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtDatadia.Name = "txtDatadia";
-            this.txtDatadia.Size = new System.Drawing.Size(211, 26);
-            this.txtDatadia.TabIndex = 7;
-            // 
-            // cbServico
-            // 
-            this.cbServico.DisplayMember = "idServico";
-            this.cbServico.FormattingEnabled = true;
-            this.cbServico.Location = new System.Drawing.Point(13, 94);
-            this.cbServico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.cbServico.Name = "cbServico";
-            this.cbServico.Size = new System.Drawing.Size(563, 27);
-            this.cbServico.TabIndex = 5;
-            this.cbServico.ValueMember = "idServico";
-            // 
-            // cbCliente
-            // 
-            this.cbCliente.DisplayMember = "idCliente";
-            this.cbCliente.FormattingEnabled = true;
-            this.cbCliente.Location = new System.Drawing.Point(584, 47);
-            this.cbCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.cbCliente.Name = "cbCliente";
-            this.cbCliente.Size = new System.Drawing.Size(343, 27);
-            this.cbCliente.TabIndex = 3;
-            this.cbCliente.ValueMember = "idCliente";
-            this.cbCliente.SelectedIndexChanged += new System.EventHandler(this.cbCliente_SelectedIndexChanged);
-            // 
-            // txtidOrdem
-            // 
-            this.txtidOrdem.Enabled = false;
-            this.txtidOrdem.Location = new System.Drawing.Point(13, 47);
-            this.txtidOrdem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtidOrdem.Name = "txtidOrdem";
-            this.txtidOrdem.Size = new System.Drawing.Size(81, 26);
-            this.txtidOrdem.TabIndex = 1;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox3.Controls.Add(this.gdvOS);
-            this.groupBox3.Location = new System.Drawing.Point(36, 362);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox3.Size = new System.Drawing.Size(1145, 377);
-            this.groupBox3.TabIndex = 19;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "OS(s)";
-            // 
-            // gdvOS
-            // 
-            this.gdvOS.AllowUserToAddRows = false;
-            this.gdvOS.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gdvOS.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
-            this.gdvOS.ColumnHeadersHeight = 29;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gdvOS.DefaultCellStyle = dataGridViewCellStyle12;
-            this.gdvOS.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gdvOS.Location = new System.Drawing.Point(4, 19);
-            this.gdvOS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gdvOS.Name = "gdvOS";
-            this.gdvOS.ReadOnly = true;
-            this.gdvOS.RowHeadersWidth = 51;
-            this.gdvOS.Size = new System.Drawing.Size(1137, 354);
-            this.gdvOS.TabIndex = 0;
-            this.gdvOS.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gdvOS_CellContentClick);
-            this.gdvOS.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.DataGridViewOS_MouseDoubleClick);
             // 
             // cbFinalizada
             // 
@@ -448,15 +291,197 @@ namespace WF_OficinaTcc
             this.cbFinalizada.TabIndex = 43;
             this.cbFinalizada.ValueMember = "idCliente";
             // 
-            // label3
+            // btnGerarRelatorio
             // 
-            label3.AutoSize = true;
-            label3.Location = new System.Drawing.Point(580, 125);
-            label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(80, 19);
-            label3.TabIndex = 44;
-            label3.Text = "Finalizada:";
+            this.btnGerarRelatorio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnGerarRelatorio.Font = new System.Drawing.Font("Times New Roman", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGerarRelatorio.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnGerarRelatorio.Location = new System.Drawing.Point(960, 135);
+            this.btnGerarRelatorio.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGerarRelatorio.Name = "btnGerarRelatorio";
+            this.btnGerarRelatorio.Size = new System.Drawing.Size(136, 33);
+            this.btnGerarRelatorio.TabIndex = 42;
+            this.btnGerarRelatorio.Text = "Gerar Relatório";
+            this.btnGerarRelatorio.UseVisualStyleBackColor = false;
+            this.btnGerarRelatorio.Click += new System.EventHandler(this.btnGerarRelatorio_Click);
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnExcluir.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.ForeColor = System.Drawing.Color.Black;
+            this.btnExcluir.Location = new System.Drawing.Point(960, 97);
+            this.btnExcluir.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(136, 31);
+            this.btnExcluir.TabIndex = 41;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
+            // txtNomeOS
+            // 
+            this.txtNomeOS.Location = new System.Drawing.Point(101, 47);
+            this.txtNomeOS.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNomeOS.Name = "txtNomeOS";
+            this.txtNomeOS.Size = new System.Drawing.Size(473, 26);
+            this.txtNomeOS.TabIndex = 13;
+            // 
+            // btnAtt
+            // 
+            this.btnAtt.BackColor = System.Drawing.Color.Transparent;
+            this.btnAtt.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtt.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnAtt.Location = new System.Drawing.Point(960, 62);
+            this.btnAtt.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAtt.Name = "btnAtt";
+            this.btnAtt.Size = new System.Drawing.Size(136, 28);
+            this.btnAtt.TabIndex = 40;
+            this.btnAtt.Text = "Atualizar";
+            this.btnAtt.UseVisualStyleBackColor = false;
+            this.btnAtt.Click += new System.EventHandler(this.btnAtt_Click);
+            // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnCadastrar.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnCadastrar.Location = new System.Drawing.Point(960, 21);
+            this.btnCadastrar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(136, 33);
+            this.btnCadastrar.TabIndex = 39;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
+            // 
+            // cbVeiculo
+            // 
+            this.cbVeiculo.DisplayMember = "idCliente";
+            this.cbVeiculo.FormattingEnabled = true;
+            this.cbVeiculo.Location = new System.Drawing.Point(584, 94);
+            this.cbVeiculo.Margin = new System.Windows.Forms.Padding(4);
+            this.cbVeiculo.Name = "cbVeiculo";
+            this.cbVeiculo.Size = new System.Drawing.Size(343, 27);
+            this.cbVeiculo.TabIndex = 11;
+            this.cbVeiculo.ValueMember = "idCliente";
+            // 
+            // txtCadastradoPor
+            // 
+            this.txtCadastradoPor.Enabled = false;
+            this.txtCadastradoPor.Location = new System.Drawing.Point(241, 149);
+            this.txtCadastradoPor.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCadastradoPor.Name = "txtCadastradoPor";
+            this.txtCadastradoPor.Size = new System.Drawing.Size(335, 26);
+            this.txtCadastradoPor.TabIndex = 9;
+            // 
+            // txtDatadia
+            // 
+            this.txtDatadia.Enabled = false;
+            this.txtDatadia.Location = new System.Drawing.Point(13, 149);
+            this.txtDatadia.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDatadia.Name = "txtDatadia";
+            this.txtDatadia.Size = new System.Drawing.Size(211, 26);
+            this.txtDatadia.TabIndex = 7;
+            // 
+            // cbServico
+            // 
+            this.cbServico.DisplayMember = "idServico";
+            this.cbServico.FormattingEnabled = true;
+            this.cbServico.Location = new System.Drawing.Point(13, 94);
+            this.cbServico.Margin = new System.Windows.Forms.Padding(4);
+            this.cbServico.Name = "cbServico";
+            this.cbServico.Size = new System.Drawing.Size(563, 27);
+            this.cbServico.TabIndex = 5;
+            this.cbServico.ValueMember = "idServico";
+            this.cbServico.SelectedIndexChanged += new System.EventHandler(this.cbServico_SelectedIndexChanged);
+            // 
+            // cbCliente
+            // 
+            this.cbCliente.DisplayMember = "idCliente";
+            this.cbCliente.FormattingEnabled = true;
+            this.cbCliente.Location = new System.Drawing.Point(584, 47);
+            this.cbCliente.Margin = new System.Windows.Forms.Padding(4);
+            this.cbCliente.Name = "cbCliente";
+            this.cbCliente.Size = new System.Drawing.Size(343, 27);
+            this.cbCliente.TabIndex = 3;
+            this.cbCliente.ValueMember = "idCliente";
+            this.cbCliente.SelectedIndexChanged += new System.EventHandler(this.cbCliente_SelectedIndexChanged);
+            // 
+            // txtidOrdem
+            // 
+            this.txtidOrdem.Enabled = false;
+            this.txtidOrdem.Location = new System.Drawing.Point(13, 47);
+            this.txtidOrdem.Margin = new System.Windows.Forms.Padding(4);
+            this.txtidOrdem.Name = "txtidOrdem";
+            this.txtidOrdem.Size = new System.Drawing.Size(81, 26);
+            this.txtidOrdem.TabIndex = 1;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox3.Controls.Add(this.gdvOS);
+            this.groupBox3.Location = new System.Drawing.Point(36, 362);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox3.Size = new System.Drawing.Size(1145, 377);
+            this.groupBox3.TabIndex = 19;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "OS(s)";
+            // 
+            // gdvOS
+            // 
+            this.gdvOS.AllowUserToAddRows = false;
+            this.gdvOS.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gdvOS.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.gdvOS.ColumnHeadersHeight = 29;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gdvOS.DefaultCellStyle = dataGridViewCellStyle4;
+            this.gdvOS.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gdvOS.Location = new System.Drawing.Point(4, 19);
+            this.gdvOS.Margin = new System.Windows.Forms.Padding(4);
+            this.gdvOS.Name = "gdvOS";
+            this.gdvOS.ReadOnly = true;
+            this.gdvOS.RowHeadersWidth = 51;
+            this.gdvOS.Size = new System.Drawing.Size(1137, 354);
+            this.gdvOS.TabIndex = 0;
+            this.gdvOS.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gdvOS_CellContentClick);
+            this.gdvOS.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.DataGridViewOS_MouseDoubleClick);
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new System.Drawing.Point(712, 128);
+            label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label7.Name = "label7";
+            label7.Size = new System.Drawing.Size(103, 19);
+            label7.TabIndex = 45;
+            label7.Text = "Valor Serviço:";
+            // 
+            // txtValorServico
+            // 
+            this.txtValorServico.Enabled = false;
+            this.txtValorServico.Location = new System.Drawing.Point(716, 148);
+            this.txtValorServico.Margin = new System.Windows.Forms.Padding(4);
+            this.txtValorServico.Name = "txtValorServico";
+            this.txtValorServico.Size = new System.Drawing.Size(211, 26);
+            this.txtValorServico.TabIndex = 46;
             // 
             // TelaOS
             // 
@@ -467,7 +492,7 @@ namespace WF_OficinaTcc
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label6);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TelaOS";
             this.Text = "TelaAgendamento";
             this.Load += new System.EventHandler(this.TelaAgendamento_Load);
@@ -505,5 +530,6 @@ namespace WF_OficinaTcc
         private System.Windows.Forms.TextBox txtNomeOS;
         private System.Windows.Forms.Button btnGerarRelatorio;
         private System.Windows.Forms.ComboBox cbFinalizada;
+        private System.Windows.Forms.TextBox txtValorServico;
     }
 }

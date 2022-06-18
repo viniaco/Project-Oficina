@@ -152,6 +152,12 @@ namespace WF_OficinaTcc
             Cliente cli = new Cliente();
             var dt = cli.GridViewCliente();
             gdvCliente.DataSource = dt;
+
+            if (TelaLogin.NivelAcesso == "Operador")
+            {
+                //Nível de Operador não podera cadastrar usuário
+                btnExcluir.Visible = false;
+            }
         }
 
         private void LimparCampo()

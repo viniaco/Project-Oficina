@@ -74,5 +74,13 @@ namespace Business
             string sql = "select * from tbservico";
             return con.CarregarGridView(sql);
         }
+
+        public void listaValorServico()
+        {
+            con = new Conexao();
+            string sql = "select valor from tbservico where idServico=" + IdServico;
+            DataSet ds;
+            ds = con.Retorna(sql);
+        }
     }
 }

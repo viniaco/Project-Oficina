@@ -30,191 +30,246 @@ namespace WF_OficinaTcc
         private void InitializeComponent()
         {
             System.Windows.Forms.Label diarioLabel;
-            System.Windows.Forms.Label idServicoLabel;
             System.Windows.Forms.Label idOrdemLabel;
             System.Windows.Forms.Label assuntoLabel;
             System.Windows.Forms.Label dataLabel;
+            System.Windows.Forms.Label label1;
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnLookupServico = new System.Windows.Forms.Button();
-            this.btnLookupOrdem = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.ocorrenciaRichTextBox = new System.Windows.Forms.RichTextBox();
-            this.idServicoTextBox = new System.Windows.Forms.TextBox();
-            this.idOrdemTextBox = new System.Windows.Forms.TextBox();
-            this.assuntoTextBox = new System.Windows.Forms.TextBox();
-            this.dataDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.txtOcorrencia = new System.Windows.Forms.RichTextBox();
+            this.txtIdOrdem = new System.Windows.Forms.TextBox();
+            this.txtAssunto = new System.Windows.Forms.TextBox();
+            this.dtOcorrencia = new System.Windows.Forms.DateTimePicker();
+            this.gdvDiarioOS = new System.Windows.Forms.DataGridView();
+            this.cbOrdemServico = new System.Windows.Forms.ComboBox();
+            this.btnInserir = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtIdDiario = new System.Windows.Forms.TextBox();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
             diarioLabel = new System.Windows.Forms.Label();
-            idServicoLabel = new System.Windows.Forms.Label();
             idOrdemLabel = new System.Windows.Forms.Label();
             assuntoLabel = new System.Windows.Forms.Label();
             dataLabel = new System.Windows.Forms.Label();
+            label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gdvDiarioOS)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // diarioLabel
+            // 
+            diarioLabel.AutoSize = true;
+            diarioLabel.Location = new System.Drawing.Point(27, 187);
+            diarioLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            diarioLabel.Name = "diarioLabel";
+            diarioLabel.Size = new System.Drawing.Size(87, 19);
+            diarioLabel.TabIndex = 8;
+            diarioLabel.Text = "Ocorrência:";
+            // 
+            // idOrdemLabel
+            // 
+            idOrdemLabel.AutoSize = true;
+            idOrdemLabel.Location = new System.Drawing.Point(31, 127);
+            idOrdemLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            idOrdemLabel.Name = "idOrdemLabel";
+            idOrdemLabel.Size = new System.Drawing.Size(77, 19);
+            idOrdemLabel.TabIndex = 4;
+            idOrdemLabel.Text = "id Ordem:";
+            // 
+            // assuntoLabel
+            // 
+            assuntoLabel.AutoSize = true;
+            assuntoLabel.Location = new System.Drawing.Point(31, 79);
+            assuntoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            assuntoLabel.Name = "assuntoLabel";
+            assuntoLabel.Size = new System.Drawing.Size(65, 19);
+            assuntoLabel.TabIndex = 2;
+            assuntoLabel.Text = "Assunto:";
+            // 
+            // dataLabel
+            // 
+            dataLabel.AutoSize = true;
+            dataLabel.Location = new System.Drawing.Point(122, 32);
+            dataLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            dataLabel.Name = "dataLabel";
+            dataLabel.Size = new System.Drawing.Size(44, 19);
+            dataLabel.TabIndex = 0;
+            dataLabel.Text = "Data:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(12, 9);
+            this.label6.Location = new System.Drawing.Point(16, 11);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(212, 40);
+            this.label6.Size = new System.Drawing.Size(270, 50);
             this.label6.TabIndex = 14;
             this.label6.Text = "Diário das O.S";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnLookupServico);
-            this.groupBox1.Controls.Add(this.btnLookupOrdem);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.ocorrenciaRichTextBox);
+            this.groupBox1.Controls.Add(this.btnEditar);
+            this.groupBox1.Controls.Add(this.btnExcluir);
+            this.groupBox1.Controls.Add(label1);
+            this.groupBox1.Controls.Add(this.txtIdDiario);
+            this.groupBox1.Controls.Add(this.btnInserir);
+            this.groupBox1.Controls.Add(this.cbOrdemServico);
+            this.groupBox1.Controls.Add(this.txtOcorrencia);
             this.groupBox1.Controls.Add(diarioLabel);
-            this.groupBox1.Controls.Add(idServicoLabel);
-            this.groupBox1.Controls.Add(this.idServicoTextBox);
             this.groupBox1.Controls.Add(idOrdemLabel);
-            this.groupBox1.Controls.Add(this.idOrdemTextBox);
+            this.groupBox1.Controls.Add(this.txtIdOrdem);
             this.groupBox1.Controls.Add(assuntoLabel);
-            this.groupBox1.Controls.Add(this.assuntoTextBox);
+            this.groupBox1.Controls.Add(this.txtAssunto);
             this.groupBox1.Controls.Add(dataLabel);
-            this.groupBox1.Controls.Add(this.dataDateTimePicker);
+            this.groupBox1.Controls.Add(this.dtOcorrencia);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(19, 52);
+            this.groupBox1.Location = new System.Drawing.Point(25, 64);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(567, 359);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(768, 459);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ocorrência do diário";
             // 
-            // btnLookupServico
+            // txtOcorrencia
             // 
-            this.btnLookupServico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLookupServico.Location = new System.Drawing.Point(529, 158);
-            this.btnLookupServico.Name = "btnLookupServico";
-            this.btnLookupServico.Size = new System.Drawing.Size(28, 20);
-            this.btnLookupServico.TabIndex = 14;
-            this.btnLookupServico.Text = "...";
-            this.btnLookupServico.UseVisualStyleBackColor = true;
+            this.txtOcorrencia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtOcorrencia.Location = new System.Drawing.Point(31, 206);
+            this.txtOcorrencia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtOcorrencia.Name = "txtOcorrencia";
+            this.txtOcorrencia.Size = new System.Drawing.Size(708, 192);
+            this.txtOcorrencia.TabIndex = 10;
+            this.txtOcorrencia.Text = "";
             // 
-            // btnLookupOrdem
+            // txtIdOrdem
             // 
-            this.btnLookupOrdem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLookupOrdem.Location = new System.Drawing.Point(529, 119);
-            this.btnLookupOrdem.Name = "btnLookupOrdem";
-            this.btnLookupOrdem.Size = new System.Drawing.Size(28, 20);
-            this.btnLookupOrdem.TabIndex = 13;
-            this.btnLookupOrdem.Text = "...";
-            this.btnLookupOrdem.UseVisualStyleBackColor = true;
+            this.txtIdOrdem.Enabled = false;
+            this.txtIdOrdem.Location = new System.Drawing.Point(31, 146);
+            this.txtIdOrdem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIdOrdem.Name = "txtIdOrdem";
+            this.txtIdOrdem.Size = new System.Drawing.Size(83, 26);
+            this.txtIdOrdem.TabIndex = 5;
             // 
-            // textBox2
+            // txtAssunto
             // 
-            this.textBox2.Location = new System.Drawing.Point(92, 158);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(433, 22);
-            this.textBox2.TabIndex = 12;
+            this.txtAssunto.Location = new System.Drawing.Point(31, 98);
+            this.txtAssunto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAssunto.Name = "txtAssunto";
+            this.txtAssunto.Size = new System.Drawing.Size(711, 26);
+            this.txtAssunto.TabIndex = 3;
             // 
-            // textBox1
+            // dtOcorrencia
             // 
-            this.textBox1.Location = new System.Drawing.Point(92, 119);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(433, 22);
-            this.textBox1.TabIndex = 11;
+            this.dtOcorrencia.Location = new System.Drawing.Point(122, 51);
+            this.dtOcorrencia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtOcorrencia.Name = "dtOcorrencia";
+            this.dtOcorrencia.Size = new System.Drawing.Size(303, 26);
+            this.dtOcorrencia.TabIndex = 1;
             // 
-            // ocorrenciaRichTextBox
+            // gdvDiarioOS
             // 
-            this.ocorrenciaRichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ocorrenciaRichTextBox.Location = new System.Drawing.Point(26, 197);
-            this.ocorrenciaRichTextBox.Name = "ocorrenciaRichTextBox";
-            this.ocorrenciaRichTextBox.Size = new System.Drawing.Size(531, 156);
-            this.ocorrenciaRichTextBox.TabIndex = 10;
-            this.ocorrenciaRichTextBox.Text = "";
+            this.gdvDiarioOS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gdvDiarioOS.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gdvDiarioOS.Location = new System.Drawing.Point(3, 20);
+            this.gdvDiarioOS.Name = "gdvDiarioOS";
+            this.gdvDiarioOS.RowHeadersWidth = 51;
+            this.gdvDiarioOS.RowTemplate.Height = 24;
+            this.gdvDiarioOS.Size = new System.Drawing.Size(860, 436);
+            this.gdvDiarioOS.TabIndex = 16;
+            this.gdvDiarioOS.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gdvDiarioOS_MouseDoubleClick);
             // 
-            // diarioLabel
+            // cbOrdemServico
             // 
-            diarioLabel.AutoSize = true;
-            diarioLabel.Location = new System.Drawing.Point(23, 181);
-            diarioLabel.Name = "diarioLabel";
-            diarioLabel.Size = new System.Drawing.Size(65, 13);
-            diarioLabel.TabIndex = 8;
-            diarioLabel.Text = "Ocorrência:";
+            this.cbOrdemServico.FormattingEnabled = true;
+            this.cbOrdemServico.Location = new System.Drawing.Point(122, 146);
+            this.cbOrdemServico.Name = "cbOrdemServico";
+            this.cbOrdemServico.Size = new System.Drawing.Size(617, 27);
+            this.cbOrdemServico.TabIndex = 11;
             // 
-            // idServicoLabel
+            // btnInserir
             // 
-            idServicoLabel.AutoSize = true;
-            idServicoLabel.Location = new System.Drawing.Point(23, 142);
-            idServicoLabel.Name = "idServicoLabel";
-            idServicoLabel.Size = new System.Drawing.Size(60, 13);
-            idServicoLabel.TabIndex = 6;
-            idServicoLabel.Text = "id Servico:";
+            this.btnInserir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnInserir.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInserir.Location = new System.Drawing.Point(31, 405);
+            this.btnInserir.Name = "btnInserir";
+            this.btnInserir.Size = new System.Drawing.Size(151, 32);
+            this.btnInserir.TabIndex = 12;
+            this.btnInserir.Text = "Inserir ocorrência";
+            this.btnInserir.UseVisualStyleBackColor = false;
+            this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
             // 
-            // idServicoTextBox
+            // groupBox2
             // 
-            this.idServicoTextBox.Location = new System.Drawing.Point(23, 158);
-            this.idServicoTextBox.Name = "idServicoTextBox";
-            this.idServicoTextBox.Size = new System.Drawing.Size(63, 22);
-            this.idServicoTextBox.TabIndex = 7;
+            this.groupBox2.Controls.Add(this.gdvDiarioOS);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(800, 64);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(866, 459);
+            this.groupBox2.TabIndex = 17;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Ocorrências";
             // 
-            // idOrdemLabel
+            // label1
             // 
-            idOrdemLabel.AutoSize = true;
-            idOrdemLabel.Location = new System.Drawing.Point(23, 103);
-            idOrdemLabel.Name = "idOrdemLabel";
-            idOrdemLabel.Size = new System.Drawing.Size(58, 13);
-            idOrdemLabel.TabIndex = 4;
-            idOrdemLabel.Text = "id Ordem:";
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(31, 30);
+            label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(71, 19);
+            label1.TabIndex = 13;
+            label1.Text = "Id Diário:";
             // 
-            // idOrdemTextBox
+            // txtIdDiario
             // 
-            this.idOrdemTextBox.Location = new System.Drawing.Point(23, 119);
-            this.idOrdemTextBox.Name = "idOrdemTextBox";
-            this.idOrdemTextBox.Size = new System.Drawing.Size(63, 22);
-            this.idOrdemTextBox.TabIndex = 5;
+            this.txtIdDiario.Enabled = false;
+            this.txtIdDiario.Location = new System.Drawing.Point(31, 49);
+            this.txtIdDiario.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIdDiario.Name = "txtIdDiario";
+            this.txtIdDiario.Size = new System.Drawing.Size(83, 26);
+            this.txtIdDiario.TabIndex = 14;
             // 
-            // assuntoLabel
+            // btnExcluir
             // 
-            assuntoLabel.AutoSize = true;
-            assuntoLabel.Location = new System.Drawing.Point(23, 64);
-            assuntoLabel.Name = "assuntoLabel";
-            assuntoLabel.Size = new System.Drawing.Size(51, 13);
-            assuntoLabel.TabIndex = 2;
-            assuntoLabel.Text = "assunto:";
+            this.btnExcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnExcluir.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.Location = new System.Drawing.Point(188, 405);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(151, 32);
+            this.btnExcluir.TabIndex = 15;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
-            // assuntoTextBox
+            // btnEditar
             // 
-            this.assuntoTextBox.Location = new System.Drawing.Point(23, 80);
-            this.assuntoTextBox.Name = "assuntoTextBox";
-            this.assuntoTextBox.Size = new System.Drawing.Size(534, 22);
-            this.assuntoTextBox.TabIndex = 3;
-            // 
-            // dataLabel
-            // 
-            dataLabel.AutoSize = true;
-            dataLabel.Location = new System.Drawing.Point(23, 25);
-            dataLabel.Name = "dataLabel";
-            dataLabel.Size = new System.Drawing.Size(34, 13);
-            dataLabel.TabIndex = 0;
-            dataLabel.Text = "Data:";
-            // 
-            // dataDateTimePicker
-            // 
-            this.dataDateTimePicker.Location = new System.Drawing.Point(23, 41);
-            this.dataDateTimePicker.Name = "dataDateTimePicker";
-            this.dataDateTimePicker.Size = new System.Drawing.Size(228, 22);
-            this.dataDateTimePicker.TabIndex = 1;
+            this.btnEditar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.Location = new System.Drawing.Point(345, 405);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(151, 32);
+            this.btnEditar.TabIndex = 16;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // TelaDiarioOS
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(626, 469);
+            this.ClientSize = new System.Drawing.Size(1678, 566);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label6);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "TelaDiarioOS";
-            this.Text = "TelaAgendamento";
-            this.Load += new System.EventHandler(this.TelaAgendamento_Load);
+            this.Text = "Oficina VM";
+            this.Load += new System.EventHandler(this.TelaDiarioOS_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gdvDiarioOS)).EndInit();
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,14 +279,16 @@ namespace WF_OficinaTcc
 
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnLookupServico;
-        private System.Windows.Forms.Button btnLookupOrdem;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.RichTextBox ocorrenciaRichTextBox;
-        private System.Windows.Forms.TextBox idServicoTextBox;
-        private System.Windows.Forms.TextBox idOrdemTextBox;
-        private System.Windows.Forms.TextBox assuntoTextBox;
-        private System.Windows.Forms.DateTimePicker dataDateTimePicker;
+        private System.Windows.Forms.RichTextBox txtOcorrencia;
+        private System.Windows.Forms.TextBox txtIdOrdem;
+        private System.Windows.Forms.TextBox txtAssunto;
+        private System.Windows.Forms.DateTimePicker dtOcorrencia;
+        private System.Windows.Forms.DataGridView gdvDiarioOS;
+        private System.Windows.Forms.ComboBox cbOrdemServico;
+        private System.Windows.Forms.Button btnInserir;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox txtIdDiario;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnExcluir;
     }
 }

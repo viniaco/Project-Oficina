@@ -65,6 +65,7 @@ namespace WF_OficinaTcc
             {
                 //Nível de Operador não podera cadastrar usuário
                 btnGerarRelatorio.Visible = false;
+                btnExcluir.Visible = false;
             }
 
         }
@@ -82,13 +83,16 @@ namespace WF_OficinaTcc
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            servi = new Servico();
-            var
+            //servi = new Servico();
+            //servi.IdServico = Convert.ToInt32(cbServico.SelectedValue);
+            //decimal ValorServico = servi.listaValorServico();
+
+
             cadastro = new OrdemServico();
             cadastro.CadastradoPor = TelaLogin.usuarioConectado;
             cadastro.Aprovada = 1;
             cadastro.NomeOS = txtNomeOS.Text;
-            cadastro.Valor = servi.Valor;
+            cadastro.Valor = Convert.ToDouble(txtValorServico.Text);
             cadastro.Data = Convert.ToString(DateTime.Now);
             cadastro.Finalizada = cbFinalizada.SelectedItem.ToString();
             cadastro.IdCliente = Convert.ToInt32(cbCliente.SelectedValue);
@@ -117,7 +121,7 @@ namespace WF_OficinaTcc
             cadastro.CadastradoPor = TelaLogin.usuarioConectado;
             cadastro.Aprovada = 1;
             cadastro.NomeOS = txtNomeOS.Text;
-            cadastro.Valor = servi.Valor;
+            cadastro.Valor = Convert.ToDouble(txtValorServico.Text);
             cadastro.Finalizada = cbFinalizada.SelectedItem.ToString();
             cadastro.Data = Convert.ToString(DateTime.Now);
             cadastro.IdCliente = Convert.ToInt32(cbCliente.SelectedValue);
@@ -165,6 +169,7 @@ namespace WF_OficinaTcc
             cbFinalizada.SelectedIndex = -1;
             txtDatadia.Clear();
             txtCadastradoPor.Clear();
+            txtValorServico.Clear();
         }
 
         private void DataGridViewOS_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -175,7 +180,7 @@ namespace WF_OficinaTcc
             txtCadastradoPor.Text = gdvOS.CurrentRow.Cells[1].Value.ToString();
             //.Text = dataGridViewVeiculo.CurrentRow.Cells[2].Value.ToString(); - APROVADA
             txtNomeOS.Text = gdvOS.CurrentRow.Cells[3].Value.ToString();
-            //.Text = dataGridViewVeiculo.CurrentRow.Cells[4].Value.ToString(); - VALOR 
+            txtValorServico.Text = gdvOS.CurrentRow.Cells[4].Value.ToString();
             txtDatadia.Text = gdvOS.CurrentRow.Cells[5].Value.ToString();
             cbFinalizada.Text = gdvOS.CurrentRow.Cells[6].Value.ToString();
             cbCliente.SelectedValue = Convert.ToInt32(gdvOS.CurrentRow.Cells[7].Value);
@@ -190,7 +195,7 @@ namespace WF_OficinaTcc
             cadastro.CadastradoPor = TelaLogin.usuarioConectado;
             cadastro.Aprovada = 1;
             cadastro.NomeOS = txtNomeOS.Text;
-            cadastro.Valor = servi.Valor;
+            cadastro.Valor = Convert.ToDouble(txtValorServico.Text);
             cadastro.Data = Convert.ToString(DateTime.Now);
             cadastro.Finalizada = cbFinalizada.SelectedText.ToString();
             cadastro.IdCliente = Convert.ToInt32(cbCliente.SelectedValue);
@@ -266,7 +271,17 @@ namespace WF_OficinaTcc
                 cbVeiculo.Update();
             }
 
+        }
 
+        private void cbServico_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbServico.SelectedIndex != -1 && cbServico.SelectedIndex != 0)
+            {
+                servi = new Servico();
+                servi.IdServico = Convert.ToInt32(cbServico.SelectedValue);
+                servi.Pesquisar();
+                txtValorServico.Text = servi.Valor.ToString();
+            }
         }
     }
 }
