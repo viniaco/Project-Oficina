@@ -128,5 +128,10 @@ namespace WF_OficinaTcc
             txtCadastradoPor.Text = gdvServico.CurrentRow.Cells[6].Value.ToString();
 
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

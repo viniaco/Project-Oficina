@@ -57,38 +57,38 @@ namespace WF_OficinaTcc
                     conn.Open();
 
                     MySqlDataReader reader = null;
-                    //lê as linhas de uma base de dados SQL Server
+                    //lê as linhas de uma base de dados MySQL
                     reader = comm.ExecuteReader();
 
                     //Se tiver coisa pra lê faça:
                     if (reader.Read())
                     {
                         /*Representa um conjunto de comandos de dados e uma conexão de banco de dados 
-                        que são usados para preencher o DataSet e atualizar um banco de dados SQL Server.*/
+                        que são usados para preencher o DataSet e atualizar um banco de dados.*/
                         MySqlDataAdapter da = new MySqlDataAdapter(comm);
 
                         //Representa uma tabela de dados na memória.
                         DataTable usuario = new DataTable();
 
-                        //Finalizar Conexão para o novo SqlDataAdapter do DataTable usuario
+                        //Finalizar Conexão para o novo MySqlDataAdapter do DataTable usuario
                         conn.Close();
 
                         /* Adiciona ou atualiza linhas em um DataTable para que correspondam na fonte de 
                             * dados usando o DataTable.*/
                         da.Fill(usuario);
 
-                        //Variaveil usuarioConectado recebe campo usuarioComboBox.Text
+
                         usuarioConectado = usuarioTextBox.Text;
                         NivelAcesso = usuario.Rows[0]["nivelAcesso"].ToString();
 
                         //Variavei nivelAcesso recebe o campo nivelAcessoComboBox.Text
                         NivelAcesso = nivelAcessoComboBox.Text;
 
-                        //Declara a variavel que recebe o formulario frmTelaPrinciapal
+                        //Declara a variavel que recebe o formulario TelaPrincipal
                         TelaPrincipal p = new TelaPrincipal();
                         //Esconde o formulario Tela de Login
                         this.Hide();
-                        //Mostrar o formulario frmTelaPrinciapl
+                        //Mostrar o formulario TelaPrincipal
                         p.Show();
 
                     }

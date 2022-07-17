@@ -36,14 +36,6 @@ namespace WF_OficinaTcc
 
             gdvOS.DataSource = dt;
 
-
-            //cbVeiculo.DropDownStyle = ComboBoxStyle.DropDownList;
-            //cbVeiculo.DataSource = veic.GridViewVeiculo();
-            //cbVeiculo.ValueMember = "idveiculo";
-            //cbVeiculo.DisplayMember = "nome";
-            //cbVeiculo.Update();
-
-
             cbCliente.DropDownStyle = ComboBoxStyle.DropDownList;
             cbCliente.DataSource = cli.GridViewCliente();
             cbCliente.ValueMember = "idCliente";
@@ -83,11 +75,6 @@ namespace WF_OficinaTcc
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            //servi = new Servico();
-            //servi.IdServico = Convert.ToInt32(cbServico.SelectedValue);
-            //decimal ValorServico = servi.listaValorServico();
-
-
             cadastro = new OrdemServico();
             cadastro.CadastradoPor = TelaLogin.usuarioConectado;
             cadastro.Aprovada = 1;
@@ -282,6 +269,11 @@ namespace WF_OficinaTcc
                 servi.Pesquisar();
                 txtValorServico.Text = servi.Valor.ToString();
             }
+        }
+
+        private void txtCadastradoPor_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

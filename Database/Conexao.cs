@@ -58,18 +58,6 @@ namespace Database
             }
         }
 
-        //public DataTable CarregarUsuario(string sql)
-        //{
-
-        //    conexao.Open();
-        //    MySqlCommand cmd = new MySqlCommand(sql, conexao);
-        //    DataTable data = new DataTable();
-        //    data.Load(cmd.ExecuteReader());
-        //    conexao.Close();
-        //    conexao.Dispose();
-        //    return data;
-        //}
-
         public DataTable CarregarGridView(string sql)
         {
             string retorno = "";

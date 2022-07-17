@@ -30,6 +30,7 @@ namespace Business
 
         public bool Atualizar()
         {
+
             con = new Conexao();
             string sql = "UPDATE tbusuario SET " +
                 "usuario='" + User + "', nome='" + Nome + "', senha='" + Senha + "', repitaSenha='" + RepitaSenha + "', nivelAcesso='" + NivelAcesso + "', cadastradoPor='" + CadastradoPor + "' WHERE idUsuario=" + IdUsuario;

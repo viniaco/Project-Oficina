@@ -37,9 +37,10 @@ namespace WF_OficinaTcc
             System.Windows.Forms.Label label1;
             System.Windows.Forms.Label label2;
             System.Windows.Forms.Label label3;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.Label label7;
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaOS));
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtPesquisar = new System.Windows.Forms.MaskedTextBox();
@@ -48,6 +49,7 @@ namespace WF_OficinaTcc
             this.cbmFiltrar = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtValorServico = new System.Windows.Forms.TextBox();
             this.cbFinalizada = new System.Windows.Forms.ComboBox();
             this.btnGerarRelatorio = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
@@ -62,7 +64,6 @@ namespace WF_OficinaTcc
             this.txtidOrdem = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.gdvOS = new System.Windows.Forms.DataGridView();
-            this.txtValorServico = new System.Windows.Forms.TextBox();
             cadastradorPorLabel = new System.Windows.Forms.Label();
             dataDiaLabel = new System.Windows.Forms.Label();
             idServicoLabel = new System.Windows.Forms.Label();
@@ -81,82 +82,92 @@ namespace WF_OficinaTcc
             // cadastradorPorLabel
             // 
             cadastradorPorLabel.AutoSize = true;
-            cadastradorPorLabel.Location = new System.Drawing.Point(241, 129);
+            cadastradorPorLabel.Location = new System.Drawing.Point(235, 155);
             cadastradorPorLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             cadastradorPorLabel.Name = "cadastradorPorLabel";
-            cadastradorPorLabel.Size = new System.Drawing.Size(123, 19);
+            cadastradorPorLabel.Size = new System.Drawing.Size(143, 23);
             cadastradorPorLabel.TabIndex = 8;
             cadastradorPorLabel.Text = "Cadastrado Por: ";
             // 
             // dataDiaLabel
             // 
             dataDiaLabel.AutoSize = true;
-            dataDiaLabel.Location = new System.Drawing.Point(9, 129);
+            dataDiaLabel.Location = new System.Drawing.Point(9, 155);
             dataDiaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             dataDiaLabel.Name = "dataDiaLabel";
-            dataDiaLabel.Size = new System.Drawing.Size(130, 19);
+            dataDiaLabel.Size = new System.Drawing.Size(155, 23);
             dataDiaLabel.TabIndex = 6;
             dataDiaLabel.Text = "Data do Cadastro:";
             // 
             // idServicoLabel
             // 
             idServicoLabel.AutoSize = true;
-            idServicoLabel.Location = new System.Drawing.Point(9, 74);
+            idServicoLabel.Location = new System.Drawing.Point(9, 89);
             idServicoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             idServicoLabel.Name = "idServicoLabel";
-            idServicoLabel.Size = new System.Drawing.Size(131, 19);
+            idServicoLabel.Size = new System.Drawing.Size(153, 23);
             idServicoLabel.TabIndex = 4;
             idServicoLabel.Text = "Nome do Serviço:";
             // 
             // idClienteLabel
             // 
             idClienteLabel.AutoSize = true;
-            idClienteLabel.Location = new System.Drawing.Point(584, 27);
+            idClienteLabel.Location = new System.Drawing.Point(635, 27);
             idClienteLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             idClienteLabel.Name = "idClienteLabel";
-            idClienteLabel.Size = new System.Drawing.Size(126, 19);
+            idClienteLabel.Size = new System.Drawing.Size(150, 23);
             idClienteLabel.TabIndex = 2;
             idClienteLabel.Text = "Nome do Cliente:";
             // 
             // idOrdemLabel
             // 
             idOrdemLabel.AutoSize = true;
-            idOrdemLabel.Location = new System.Drawing.Point(9, 27);
+            idOrdemLabel.Location = new System.Drawing.Point(9, 31);
             idOrdemLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             idOrdemLabel.Name = "idOrdemLabel";
-            idOrdemLabel.Size = new System.Drawing.Size(85, 19);
+            idOrdemLabel.Size = new System.Drawing.Size(101, 23);
             idOrdemLabel.TabIndex = 0;
             idOrdemLabel.Text = "Código OS:";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(584, 74);
+            label1.Location = new System.Drawing.Point(635, 89);
             label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(128, 19);
+            label1.Size = new System.Drawing.Size(151, 23);
             label1.TabIndex = 10;
             label1.Text = "Nome do Veiculo:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(99, 27);
+            label2.Location = new System.Drawing.Point(137, 31);
             label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(98, 19);
+            label2.Size = new System.Drawing.Size(116, 23);
             label2.TabIndex = 12;
             label2.Text = "Nome da OS:";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new System.Drawing.Point(580, 125);
+            label3.Location = new System.Drawing.Point(635, 154);
             label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(80, 19);
+            label3.Size = new System.Drawing.Size(95, 23);
             label3.TabIndex = 44;
             label3.Text = "Finalizada:";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new System.Drawing.Point(769, 155);
+            label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label7.Name = "label7";
+            label7.Size = new System.Drawing.Size(120, 23);
+            label7.TabIndex = 45;
+            label7.Text = "Valor Serviço:";
             // 
             // label6
             // 
@@ -178,30 +189,31 @@ namespace WF_OficinaTcc
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.cbmFiltrar);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(39, 274);
+            this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(39, 318);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(1143, 80);
+            this.groupBox2.Size = new System.Drawing.Size(1210, 80);
             this.groupBox2.TabIndex = 17;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "OS(s)";
             // 
             // txtPesquisar
             // 
-            this.txtPesquisar.Location = new System.Drawing.Point(281, 36);
+            this.txtPesquisar.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPesquisar.Location = new System.Drawing.Point(310, 35);
             this.txtPesquisar.Margin = new System.Windows.Forms.Padding(4);
             this.txtPesquisar.Name = "txtPesquisar";
-            this.txtPesquisar.Size = new System.Drawing.Size(175, 26);
+            this.txtPesquisar.Size = new System.Drawing.Size(175, 30);
             this.txtPesquisar.TabIndex = 10;
             // 
             // btnPesquisar
             // 
-            this.btnPesquisar.Location = new System.Drawing.Point(465, 33);
+            this.btnPesquisar.Location = new System.Drawing.Point(494, 35);
             this.btnPesquisar.Margin = new System.Windows.Forms.Padding(4);
             this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(100, 28);
+            this.btnPesquisar.Size = new System.Drawing.Size(106, 30);
             this.btnPesquisar.TabIndex = 9;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = true;
@@ -209,25 +221,26 @@ namespace WF_OficinaTcc
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(256, 39);
+            this.label4.Location = new System.Drawing.Point(285, 38);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(19, 19);
+            this.label4.Size = new System.Drawing.Size(22, 23);
             this.label4.TabIndex = 8;
             this.label4.Text = "=";
             // 
             // cbmFiltrar
             // 
+            this.cbmFiltrar.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbmFiltrar.FormattingEnabled = true;
             this.cbmFiltrar.Items.AddRange(new object[] {
             "",
             "Código OS",
             "Código Cliente",
             "Código Serviço"});
-            this.cbmFiltrar.Location = new System.Drawing.Point(87, 36);
+            this.cbmFiltrar.Location = new System.Drawing.Point(116, 35);
             this.cbmFiltrar.Margin = new System.Windows.Forms.Padding(4);
             this.cbmFiltrar.Name = "cbmFiltrar";
-            this.cbmFiltrar.Size = new System.Drawing.Size(160, 27);
+            this.cbmFiltrar.Size = new System.Drawing.Size(160, 31);
             this.cbmFiltrar.TabIndex = 7;
             // 
             // label5
@@ -236,7 +249,7 @@ namespace WF_OficinaTcc
             this.label5.Location = new System.Drawing.Point(8, 39);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(82, 19);
+            this.label5.Size = new System.Drawing.Size(98, 23);
             this.label5.TabIndex = 6;
             this.label5.Text = "Filtrar por:";
             // 
@@ -266,40 +279,51 @@ namespace WF_OficinaTcc
             this.groupBox1.Controls.Add(this.cbCliente);
             this.groupBox1.Controls.Add(idOrdemLabel);
             this.groupBox1.Controls.Add(this.txtidOrdem);
-            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(39, 79);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(1143, 188);
+            this.groupBox1.Size = new System.Drawing.Size(1212, 231);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados OS";
             // 
+            // txtValorServico
+            // 
+            this.txtValorServico.Enabled = false;
+            this.txtValorServico.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtValorServico.Location = new System.Drawing.Point(773, 182);
+            this.txtValorServico.Margin = new System.Windows.Forms.Padding(4);
+            this.txtValorServico.Name = "txtValorServico";
+            this.txtValorServico.Size = new System.Drawing.Size(209, 30);
+            this.txtValorServico.TabIndex = 46;
+            // 
             // cbFinalizada
             // 
             this.cbFinalizada.DisplayMember = "idCliente";
+            this.cbFinalizada.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbFinalizada.FormattingEnabled = true;
             this.cbFinalizada.Items.AddRange(new object[] {
             "",
             "Sim",
             "Não"});
-            this.cbFinalizada.Location = new System.Drawing.Point(584, 148);
+            this.cbFinalizada.Location = new System.Drawing.Point(639, 181);
             this.cbFinalizada.Margin = new System.Windows.Forms.Padding(4);
             this.cbFinalizada.Name = "cbFinalizada";
-            this.cbFinalizada.Size = new System.Drawing.Size(126, 27);
+            this.cbFinalizada.Size = new System.Drawing.Size(126, 31);
             this.cbFinalizada.TabIndex = 43;
             this.cbFinalizada.ValueMember = "idCliente";
             // 
             // btnGerarRelatorio
             // 
             this.btnGerarRelatorio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnGerarRelatorio.Font = new System.Drawing.Font("Times New Roman", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGerarRelatorio.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGerarRelatorio.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnGerarRelatorio.Location = new System.Drawing.Point(960, 135);
+            this.btnGerarRelatorio.Location = new System.Drawing.Point(999, 176);
             this.btnGerarRelatorio.Margin = new System.Windows.Forms.Padding(4);
             this.btnGerarRelatorio.Name = "btnGerarRelatorio";
-            this.btnGerarRelatorio.Size = new System.Drawing.Size(136, 33);
+            this.btnGerarRelatorio.Size = new System.Drawing.Size(159, 36);
             this.btnGerarRelatorio.TabIndex = 42;
             this.btnGerarRelatorio.Text = "Gerar Relatório";
             this.btnGerarRelatorio.UseVisualStyleBackColor = false;
@@ -308,12 +332,12 @@ namespace WF_OficinaTcc
             // btnExcluir
             // 
             this.btnExcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnExcluir.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.ForeColor = System.Drawing.Color.Black;
-            this.btnExcluir.Location = new System.Drawing.Point(960, 97);
+            this.btnExcluir.Location = new System.Drawing.Point(999, 134);
             this.btnExcluir.Margin = new System.Windows.Forms.Padding(4);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(136, 31);
+            this.btnExcluir.Size = new System.Drawing.Size(159, 34);
             this.btnExcluir.TabIndex = 41;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = false;
@@ -321,21 +345,22 @@ namespace WF_OficinaTcc
             // 
             // txtNomeOS
             // 
-            this.txtNomeOS.Location = new System.Drawing.Point(101, 47);
+            this.txtNomeOS.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomeOS.Location = new System.Drawing.Point(138, 55);
             this.txtNomeOS.Margin = new System.Windows.Forms.Padding(4);
             this.txtNomeOS.Name = "txtNomeOS";
-            this.txtNomeOS.Size = new System.Drawing.Size(473, 26);
+            this.txtNomeOS.Size = new System.Drawing.Size(473, 30);
             this.txtNomeOS.TabIndex = 13;
             // 
             // btnAtt
             // 
             this.btnAtt.BackColor = System.Drawing.Color.Transparent;
-            this.btnAtt.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtt.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAtt.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnAtt.Location = new System.Drawing.Point(960, 62);
+            this.btnAtt.Location = new System.Drawing.Point(999, 95);
             this.btnAtt.Margin = new System.Windows.Forms.Padding(4);
             this.btnAtt.Name = "btnAtt";
-            this.btnAtt.Size = new System.Drawing.Size(136, 28);
+            this.btnAtt.Size = new System.Drawing.Size(159, 31);
             this.btnAtt.TabIndex = 40;
             this.btnAtt.Text = "Atualizar";
             this.btnAtt.UseVisualStyleBackColor = false;
@@ -344,12 +369,12 @@ namespace WF_OficinaTcc
             // btnCadastrar
             // 
             this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnCadastrar.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnCadastrar.Location = new System.Drawing.Point(960, 21);
+            this.btnCadastrar.Location = new System.Drawing.Point(999, 54);
             this.btnCadastrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(136, 33);
+            this.btnCadastrar.Size = new System.Drawing.Size(159, 36);
             this.btnCadastrar.TabIndex = 39;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = false;
@@ -358,40 +383,45 @@ namespace WF_OficinaTcc
             // cbVeiculo
             // 
             this.cbVeiculo.DisplayMember = "idCliente";
+            this.cbVeiculo.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbVeiculo.FormattingEnabled = true;
-            this.cbVeiculo.Location = new System.Drawing.Point(584, 94);
+            this.cbVeiculo.Location = new System.Drawing.Point(639, 116);
             this.cbVeiculo.Margin = new System.Windows.Forms.Padding(4);
             this.cbVeiculo.Name = "cbVeiculo";
-            this.cbVeiculo.Size = new System.Drawing.Size(343, 27);
+            this.cbVeiculo.Size = new System.Drawing.Size(343, 31);
             this.cbVeiculo.TabIndex = 11;
             this.cbVeiculo.ValueMember = "idCliente";
             // 
             // txtCadastradoPor
             // 
             this.txtCadastradoPor.Enabled = false;
-            this.txtCadastradoPor.Location = new System.Drawing.Point(241, 149);
+            this.txtCadastradoPor.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCadastradoPor.Location = new System.Drawing.Point(239, 182);
             this.txtCadastradoPor.Margin = new System.Windows.Forms.Padding(4);
             this.txtCadastradoPor.Name = "txtCadastradoPor";
-            this.txtCadastradoPor.Size = new System.Drawing.Size(335, 26);
+            this.txtCadastradoPor.Size = new System.Drawing.Size(372, 30);
             this.txtCadastradoPor.TabIndex = 9;
+            this.txtCadastradoPor.TextChanged += new System.EventHandler(this.txtCadastradoPor_TextChanged);
             // 
             // txtDatadia
             // 
             this.txtDatadia.Enabled = false;
-            this.txtDatadia.Location = new System.Drawing.Point(13, 149);
+            this.txtDatadia.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDatadia.Location = new System.Drawing.Point(13, 182);
             this.txtDatadia.Margin = new System.Windows.Forms.Padding(4);
             this.txtDatadia.Name = "txtDatadia";
-            this.txtDatadia.Size = new System.Drawing.Size(211, 26);
+            this.txtDatadia.Size = new System.Drawing.Size(211, 30);
             this.txtDatadia.TabIndex = 7;
             // 
             // cbServico
             // 
             this.cbServico.DisplayMember = "idServico";
+            this.cbServico.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbServico.FormattingEnabled = true;
-            this.cbServico.Location = new System.Drawing.Point(13, 94);
+            this.cbServico.Location = new System.Drawing.Point(12, 116);
             this.cbServico.Margin = new System.Windows.Forms.Padding(4);
             this.cbServico.Name = "cbServico";
-            this.cbServico.Size = new System.Drawing.Size(563, 27);
+            this.cbServico.Size = new System.Drawing.Size(599, 31);
             this.cbServico.TabIndex = 5;
             this.cbServico.ValueMember = "idServico";
             this.cbServico.SelectedIndexChanged += new System.EventHandler(this.cbServico_SelectedIndexChanged);
@@ -399,11 +429,12 @@ namespace WF_OficinaTcc
             // cbCliente
             // 
             this.cbCliente.DisplayMember = "idCliente";
+            this.cbCliente.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCliente.FormattingEnabled = true;
-            this.cbCliente.Location = new System.Drawing.Point(584, 47);
+            this.cbCliente.Location = new System.Drawing.Point(639, 54);
             this.cbCliente.Margin = new System.Windows.Forms.Padding(4);
             this.cbCliente.Name = "cbCliente";
-            this.cbCliente.Size = new System.Drawing.Size(343, 27);
+            this.cbCliente.Size = new System.Drawing.Size(343, 31);
             this.cbCliente.TabIndex = 3;
             this.cbCliente.ValueMember = "idCliente";
             this.cbCliente.SelectedIndexChanged += new System.EventHandler(this.cbCliente_SelectedIndexChanged);
@@ -411,10 +442,11 @@ namespace WF_OficinaTcc
             // txtidOrdem
             // 
             this.txtidOrdem.Enabled = false;
-            this.txtidOrdem.Location = new System.Drawing.Point(13, 47);
+            this.txtidOrdem.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtidOrdem.Location = new System.Drawing.Point(13, 55);
             this.txtidOrdem.Margin = new System.Windows.Forms.Padding(4);
             this.txtidOrdem.Name = "txtidOrdem";
-            this.txtidOrdem.Size = new System.Drawing.Size(81, 26);
+            this.txtidOrdem.Size = new System.Drawing.Size(97, 30);
             this.txtidOrdem.TabIndex = 1;
             // 
             // groupBox3
@@ -423,11 +455,11 @@ namespace WF_OficinaTcc
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.gdvOS);
-            this.groupBox3.Location = new System.Drawing.Point(36, 362);
+            this.groupBox3.Location = new System.Drawing.Point(39, 406);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(1145, 377);
+            this.groupBox3.Size = new System.Drawing.Size(1212, 424);
             this.groupBox3.TabIndex = 19;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "OS(s)";
@@ -436,65 +468,49 @@ namespace WF_OficinaTcc
             // 
             this.gdvOS.AllowUserToAddRows = false;
             this.gdvOS.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gdvOS.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.gdvOS.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.gdvOS.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gdvOS.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gdvOS.ColumnHeadersHeight = 29;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gdvOS.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gdvOS.DefaultCellStyle = dataGridViewCellStyle2;
             this.gdvOS.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gdvOS.Location = new System.Drawing.Point(4, 19);
             this.gdvOS.Margin = new System.Windows.Forms.Padding(4);
             this.gdvOS.Name = "gdvOS";
             this.gdvOS.ReadOnly = true;
             this.gdvOS.RowHeadersWidth = 51;
-            this.gdvOS.Size = new System.Drawing.Size(1137, 354);
+            this.gdvOS.Size = new System.Drawing.Size(1204, 401);
             this.gdvOS.TabIndex = 0;
             this.gdvOS.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gdvOS_CellContentClick);
             this.gdvOS.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.DataGridViewOS_MouseDoubleClick);
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new System.Drawing.Point(712, 128);
-            label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            label7.Name = "label7";
-            label7.Size = new System.Drawing.Size(103, 19);
-            label7.TabIndex = 45;
-            label7.Text = "Valor Serviço:";
-            // 
-            // txtValorServico
-            // 
-            this.txtValorServico.Enabled = false;
-            this.txtValorServico.Location = new System.Drawing.Point(716, 148);
-            this.txtValorServico.Margin = new System.Windows.Forms.Padding(4);
-            this.txtValorServico.Name = "txtValorServico";
-            this.txtValorServico.Size = new System.Drawing.Size(211, 26);
-            this.txtValorServico.TabIndex = 46;
             // 
             // TelaOS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1289, 750);
+            this.ClientSize = new System.Drawing.Size(1356, 797);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label6);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TelaOS";
-            this.Text = "TelaAgendamento";
+            this.Text = "Oficina VM";
             this.Load += new System.EventHandler(this.TelaAgendamento_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

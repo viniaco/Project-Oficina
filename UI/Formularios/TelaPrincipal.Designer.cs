@@ -44,9 +44,6 @@ namespace WF_OficinaTcc
             this.ordemDeServiçoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAgendamento = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.btnCaixa = new System.Windows.Forms.ToolStripDropDownButton();
-            this.caixaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.orçamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnSair = new System.Windows.Forms.ToolStripButton();
             this.panelForms = new System.Windows.Forms.Panel();
             this.toolStrip1.SuspendLayout();
@@ -97,7 +94,6 @@ namespace WF_OficinaTcc
             this.btnCadVeiculo,
             this.btnAgendamento,
             this.toolStripButton2,
-            this.btnCaixa,
             this.btnSair});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
@@ -181,31 +177,6 @@ namespace WF_OficinaTcc
             this.toolStripButton2.Text = "btnDiarioOS";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click_1);
             // 
-            // btnCaixa
-            // 
-            this.btnCaixa.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnCaixa.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.caixaToolStripMenuItem,
-            this.orçamentosToolStripMenuItem});
-            this.btnCaixa.Image = global::WF_OficinaTcc.Properties.Resources.cash_register;
-            this.btnCaixa.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnCaixa.Name = "btnCaixa";
-            this.btnCaixa.Size = new System.Drawing.Size(62, 52);
-            this.btnCaixa.Text = "Caixa";
-            // 
-            // caixaToolStripMenuItem
-            // 
-            this.caixaToolStripMenuItem.Name = "caixaToolStripMenuItem";
-            this.caixaToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
-            this.caixaToolStripMenuItem.Text = "Caixa";
-            // 
-            // orçamentosToolStripMenuItem
-            // 
-            this.orçamentosToolStripMenuItem.Name = "orçamentosToolStripMenuItem";
-            this.orçamentosToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
-            this.orçamentosToolStripMenuItem.Text = "Orçamentos";
-            this.orçamentosToolStripMenuItem.Click += new System.EventHandler(this.orçamentosToolStripMenuItem_Click);
-            // 
             // btnSair
             // 
             this.btnSair.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -239,9 +210,12 @@ namespace WF_OficinaTcc
             this.Controls.Add(this.panelForms);
             this.Controls.Add(this.toolStrip1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TelaPrincipal";
-            this.Text = "TelaPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Oficina VM";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.TelaPrincipal_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
@@ -267,8 +241,5 @@ namespace WF_OficinaTcc
         private System.Windows.Forms.ToolStripMenuItem veiculosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ordemDeServiçoToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.ToolStripDropDownButton btnCaixa;
-        private System.Windows.Forms.ToolStripMenuItem caixaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem orçamentosToolStripMenuItem;
     }
 }

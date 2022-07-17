@@ -164,12 +164,6 @@ namespace WF_OficinaTcc
                     //Se as senhas forem igual faça
                     if (txtSenha.Text == txtRepitaSenha.Text)
                     {
-                        ////Mostrar a Data do Cadastro na Hora
-                        //if (dataDiaTextBox.Text == "")
-                        //{
-                        //    dataDiaTextBox.Text = DateTime.Now.ToString();
-                        //}
-
                         //Mostrar quem Cadastrou o usuario
                         if (txtCadastradoPor.Text == "")
                         {
@@ -186,9 +180,6 @@ namespace WF_OficinaTcc
                         user.CadastradoPor = txtCadastradoPor.Text;
                         user.Cadastrar();
                         MessageBox.Show("Usuário cadastrado!");
-                        //this.Validate();
-                        //this.tbUsuarioBindingSource.EndEdit();
-                        //this.tbUsuarioTableAdapter.Update(this.servicoDataSet.tbUsuario);
                     }
                     else
                     {

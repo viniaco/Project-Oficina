@@ -52,7 +52,10 @@ namespace WF_OficinaTcc
 
         private void toolStripButton5_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            TelaLogin tLogin = new TelaLogin();
+            tLogin.Show();
+            this.Close();
+
         }
 
         private void btnAgendamento_Click(object sender, EventArgs e)
@@ -135,14 +138,6 @@ namespace WF_OficinaTcc
 
         private void orçamentosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Tela?.Close();
-            Tela = new TelaOrcamento
-            {
-                TopLevel = false,
-                Dock = DockStyle.Fill,
-            };
-            panelForms.Controls.Add(Tela);
-            Tela.Show();
         }
     }
 }
